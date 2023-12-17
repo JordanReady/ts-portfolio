@@ -1,0 +1,118 @@
+.menuContainer a {
+  color: var(--primary-color);
+}
+.menuContainer a:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-color-muted);
+  background-color: #fffefe1f;
+  border-image: linear-gradient(45deg, purple, blue);
+  border-image-slice: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  animation: spinBorderGlowBackground infinite 5s;
+}
+
+.listContainer a {
+  color: var(--primary-color);
+}
+.listContainer a:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-color-muted);
+  background-color: #fffefe1f;
+  border-image: linear-gradient(45deg, purple, blue);
+  border-image-slice: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  animation: spinBorderGlowBackground infinite 5s;
+}
+
+.lastItem {
+  border: 1px solid plum;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffefe1f;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, purple, blue);
+  border-image-slice: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  animation: spinBorderGlowBackground infinite 5s;
+  z-index: 1 !important;
+}
+.lastItem:hover {
+  background-color: var(--primary-color-muted);
+  animation: none;
+}
+
+.logoContainer {
+  border-radius: 15px;
+  padding: 1rem;
+  width: 99%;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffefe1f;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, purple, blue);
+  border-image-slice: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  animation: spinBorderGlowBackground infinite 5s;
+  z-index: 1 !important;
+  cursor: default;
+}
+
+.logoContainer img {
+  margin-top: -0.75rem;
+  margin-bottom: -0.75rem;
+}
+
+@keyframes spinBorderGlowBackground {
+  0% {
+    border-image-source: linear-gradient(
+      45deg,
+      var(--primary-color),
+      rgb(54, 3, 66)
+    );
+    background-color: rgba(245, 245, 245, 0.101);
+  }
+  25% {
+    border-image-source: linear-gradient(135deg, #3498db, #3498db);
+    background-color: var(--primary-color-muted);
+  }
+  50% {
+    border-image-source: linear-gradient(
+      225deg,
+      var(--primary-color),
+      rgb(54, 3, 66)
+    );
+    background-color: rgba(245, 245, 245, 0.048);
+  }
+  75% {
+    border-image-source: linear-gradient(315deg, #783ce7, rgb(54, 3, 66));
+    background-color: var(--primary-color-muted);
+  }
+  100% {
+    border-image-source: linear-gradient(
+      45deg,
+      var(--primary-color),
+      rgb(54, 3, 66)
+    );
+    background-color: rgba(245, 245, 245, 0.105);
+  }
+}
+
+/* screen sizes */
+@media (max-width: 768px) {
+}

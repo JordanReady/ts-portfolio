@@ -1,0 +1,31 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.h1 {
+  text-shadow: 0rem 0.031rem white !important;
+  text-shadow: 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.774) !important;
+}
+
+.navRow {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.spacerLong {
+  width: 3.5rem;
+}
+
+.spacer {
+  width: 0.25rem;
+}
+
+/* screen sizes */
+@media (max-width: 768px) {
+  .navRow {
+    margin-top: 0rem !important;
+  }
+}
