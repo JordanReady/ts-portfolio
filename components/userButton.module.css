@@ -2,3 +2,12 @@
   border-radius: 50%;
   border: 1px solid black;
 }
+
+.title {
+  color: var(--primary-color) !important;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.13);
+}
+
+/* .contentContainer a {
+  color: rgb(94, 92, 92);
+} */

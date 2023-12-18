@@ -24,7 +24,7 @@ export default function Header() {
       <div className="flex flex-col sm:flex-row items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className=" w-full flex items-center justify-center py-3 md:py-5 md:justify-start ">
           <Link href="/" className={styles.h1}>
-            <h1 className="text-3xl font-bold text-purple-400 dark:text-purple-300 text-center justify-center shadow-black">
+            <h1 className="text-3xl font-bold text-purple-700  text-center justify-center shadow-black">
               Jordan Ready
             </h1>
           </Link>
@@ -34,9 +34,11 @@ export default function Header() {
         >
           <NavigationMenuDemo />
           <div className={styles.spacerLong}></div>
-          <DarkModeToggle></DarkModeToggle>
-          <div className={styles.spacer}></div>
-          <UserButton></UserButton>
+          <div className={styles.utilBtns}>
+            <DarkModeToggle></DarkModeToggle>
+            <div className={styles.spacer}></div>
+            <UserButton></UserButton>
+          </div>
         </div>
 
         <div

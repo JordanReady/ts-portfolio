@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { getSession } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
+import styles from "./userButton.module.css";
 
-function userButton() {
+function UserButton() {
+  const [userName, setUserName] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchSession = async () => {
+      const session = await getSession();
+
+      // Check if the user is logged in
+      if (session && session.user) {
+        // Assuming you have a field for user's name in the session user object
+        setUserName(session.user.name || null);
+      }
+    };
+
+    fetchSession();
+  }, []);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -27,18 +41,51 @@ function userButton() {
           Open
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      <DropdownMenuContent className={styles.contentContainer}>
+        <DropdownMenuLabel
+          className={` ${styles.title} text-purple-400 dark:text-purple-600`}
+        >
+          {userName ? `${userName}` : "Create Account"}
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Link href={"/login"}>Profile</Link>
+          <Link
+            className="text-gray-500 dark:text-gray-400"
+            href={userName ? "/profile" : "/login"}
+          >
+            {userName ? "Profile" : "Login"}
+          </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+        {userName && (
+          <>
+            <DropdownMenuItem>
+              <Link
+                className=" text-gray-500 dark:text-gray-400"
+                href={"/review"}
+              >
+                Leave Review
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link
+                className="text-gray-500 dark:text-gray-400"
+                href={"/support"}
+              >
+                Support Me
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              className={styles.title}
+              onClick={() => signOut()}
+            >
+              Log out
+            </DropdownMenuItem>
+          </>
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   );
 }
 
-export default userButton;
+export default UserButton;

@@ -23,9 +23,22 @@
   width: 0.25rem;
 }
 
+.utilBtns {
+  flex-direction: row;
+  display: flex;
+}
+
 /* screen sizes */
 @media (max-width: 768px) {
   .navRow {
     margin-top: 0rem !important;
+    flex-direction: column;
+  }
+  .utilBtns {
+    margin-top: 0.5rem;
+    margin-bottom: -1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }

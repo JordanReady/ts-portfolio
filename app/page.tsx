@@ -1,13 +1,21 @@
 import Image from "next/image";
-import styles from "./HomePage.module.css";
+import styles from "./HomePage.module.css"; // Assuming you have a CSS module file
+import HeroImage from "@/public/MyLogo.png";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container grid grid-cols-2">
-      <div className={`${styles.heroTextContainer} flex flex-col`}>
-        <h2>Hello there,</h2>
-        <h1>I'm Jordan Ready</h1>
-        <h3>I'm a Full-stack Web Developer!</h3>
+    <div className={`container grid grid-cols-1 md:grid-cols-2 gap-8`}>
+      <div className={`${styles.heroContent}`}>
+        <h3 className={``}>Hello there! My name is</h3>
+        <h1 className={` text-purple-700 `}>Jordan Ready</h1>
+        <h3 className={` ${styles.typedContainer}`}>
+          <div>
+            And I'm a<span> Full-Stack Web Developer</span>
+          </div>
+          <span className={`typed ${styles.typed}`}></span>
+        </h3>
         <p>
           My expertise lies in both front-end and back-end technologies, which
           allows me to tackle projects with a comprehensive perspective. I
@@ -15,25 +23,46 @@ export default function Home() {
           efficient, scalable, and user-friendly applications. Welcome to my
           website, and thank you for taking the time to learn more about me.
         </p>
+        <div className={styles.heroIcons}>
+          <div className={styles.button}>
+            <Button
+              id="github"
+              className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2"
+              variant={"outline"}
+            >
+              <Link href="https://github.com/JordanReady" target="blank">
+                Github
+              </Link>
+            </Button>
+          </div>
+          <div className={styles.button}>
+            <Button
+              id="linkedin"
+              className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2"
+              variant={"outline"}
+            >
+              <Link href="https://github.com/JordanReady" target="blank">
+                LinkedIn
+              </Link>
+            </Button>
+          </div>
+          <div className={styles.button}>
+            <Button
+              id="website"
+              className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2"
+              variant={"outline"}
+            >
+              <Link href="/contact" target="blank">
+                Need a Website?
+              </Link>
+            </Button>
+          </div>
+        </div>
       </div>
-      <div className={styles.heroImgContainer}>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto a sed
-          eligendi id voluptate in quibusdam cupiditate iure excepturi harum.
-          Explicabo laboriosam, beatae laborum alias doloremque nemo corrupti
-          dolor ducimus nesciunt expedita amet saepe tempora quod quam ad
-          quaerat dignissimos ipsa quos, repudiandae soluta molestiae. Ipsum
-          reiciendis atque autem maxime laborum cumque unde magni, et quod neque
-          distinctio corrupti vitae, odit dolorum mollitia beatae quaerat
-          repellendus consequuntur, deleniti minus placeat rerum voluptate
-          consectetur. Blanditiis corporis quo expedita voluptatibus ut, at
-          totam soluta numquam neque temporibus officiis, ea perspiciatis nihil
-          voluptates perferendis ducimus, quia aliquam nam quaerat ullam
-          quisquam. Eos, labore odit! Praesentium rerum expedita impedit
-          voluptate, ea porro. Maxime, itaque deleniti? Explicabo ratione quo
-          beatae alias ullam molestias quisquam vitae. Alias, eaque debitis?
-          Nulla repellendus ab, provident corrupti minus
-        </p>
+      <div className={`${styles.heroImg}`}>
+        <div className={styles.heroImg}>
+          <Image src={HeroImage} alt="Logo Image"></Image>
+        </div>
       </div>
     </div>
   );
