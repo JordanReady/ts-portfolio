@@ -14,6 +14,7 @@ import { getSession, useSession } from "next-auth/react";
 import { signIn, signOut } from "next-auth/react";
 import styles from "./userButton.module.css";
 import UserAvatar from "@/components/UserAvatar";
+import { CircleUserRound } from "lucide-react";
 
 function UserButton() {
   const [userName, setUserName] = useState<string | null>(null);
@@ -42,10 +43,10 @@ function UserButton() {
         ) : (
           // User is not signed in, render the Open button
           <Button
-            className="shadow-purple-300 dark:shadow-purple-700 shadow-sm border border-b-1 gap-2 dark:text-purple-300"
+            className="shadow-purple-300 dark:shadow-purple-700 shadow-sm border border-b-1 gap-2 dark:text-purple-300  p-0"
             variant={"outline"}
           >
-            Account
+            <CircleUserRound strokeWidth={1} />
           </Button>
         )}
       </DropdownMenuTrigger>

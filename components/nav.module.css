@@ -1,3 +1,7 @@
+.menuContainer {
+  z-index: 999;
+}
+
 .menuContainer a {
   color: var(--primary-color);
 }

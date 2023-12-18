@@ -20,7 +20,9 @@ export default function Header() {
   ];
 
   return (
-    <nav className="bg-white shadow-sm dark:shadow-purple-700 shadow-purple-400 dark:bg-gray-900 w-full border-b md:border-0">
+    <nav
+      className={`${styles.nav} bg-white shadow-sm dark:shadow-purple-700 shadow-purple-400 dark:bg-gray-900 w-full border-b md:border-0`}
+    >
       <div className="flex flex-col sm:flex-row items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className=" w-full flex items-center justify-center py-3 md:py-5 md:justify-start ">
           <Link href="/" className={styles.h1}>
