@@ -5,6 +5,17 @@
   justify-content: center;
   align-items: flex-start;
   height: 80dvh;
+  opacity: 0;
+  animation: fadeInSlow 1s ease forwards;
+}
+
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .heroContent h3:nth-child(1) {
