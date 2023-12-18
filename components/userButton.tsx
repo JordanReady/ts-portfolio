@@ -10,12 +10,13 @@ import {
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { getSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
 import { signIn, signOut } from "next-auth/react";
 import styles from "./userButton.module.css";
 
 function UserButton() {
   const [userName, setUserName] = useState<string | null>(null);
+  const { data: session } = useSession();
 
   useEffect(() => {
     const fetchSession = async () => {
@@ -49,12 +50,20 @@ function UserButton() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Link
-            className="text-gray-500 dark:text-gray-400"
-            href={userName ? "/profile" : "/login"}
-          >
-            {userName ? "Profile" : "Login"}
-          </Link>
+          {session ? (
+            // Render a link to "/profile" if the user is logged in
+            <Link href="/profile" className="text-gray-500 dark:text-gray-400">
+              Profile
+            </Link>
+          ) : (
+            // Render a button that calls signIn if the user is not logged in
+            <button
+              className="text-gray-500 dark:text-gray-400"
+              onClick={() => signIn()}
+            >
+              Login
+            </button>
+          )}
         </DropdownMenuItem>
         {userName && (
           <>
