@@ -5,14 +5,14 @@
 }
 
 .h1 {
-  text-shadow: 0rem 0.031rem white !important;
-  text-shadow: 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.774) !important;
+  color: var(--primary-color);
 }
 
 .navRow {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  align-items: center;
 }
 
 .spacerLong {
@@ -26,6 +26,12 @@
 .utilBtns {
   flex-direction: row;
   display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.utilBtns button {
+  min-width: 40px;
 }
 
 /* screen sizes */

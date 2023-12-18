@@ -13,6 +13,7 @@ import Link from "next/link";
 import { getSession, useSession } from "next-auth/react";
 import { signIn, signOut } from "next-auth/react";
 import styles from "./userButton.module.css";
+import UserAvatar from "@/components/UserAvatar";
 
 function UserButton() {
   const [userName, setUserName] = useState<string | null>(null);
@@ -35,20 +36,20 @@ function UserButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Button
-          className="shadow-purple-300 dark:shadow-purple-700 shadow-sm border border-b-1 gap-2 dark:text-purple-300"
-          variant={"outline"}
-        >
-          Open
-        </Button>
+        {session ? (
+          // User is signed in, render ProfileCard
+          <UserAvatar />
+        ) : (
+          // User is not signed in, render the Open button
+          <Button
+            className="shadow-purple-300 dark:shadow-purple-700 shadow-sm border border-b-1 gap-2 dark:text-purple-300"
+            variant={"outline"}
+          >
+            Account
+          </Button>
+        )}
       </DropdownMenuTrigger>
       <DropdownMenuContent className={styles.contentContainer}>
-        <DropdownMenuLabel
-          className={` ${styles.title} text-purple-400 dark:text-purple-600`}
-        >
-          {userName ? `${userName}` : "Create Account"}
-        </DropdownMenuLabel>
-        <DropdownMenuSeparator />
         <DropdownMenuItem>
           {session ? (
             // Render a link to "/profile" if the user is logged in

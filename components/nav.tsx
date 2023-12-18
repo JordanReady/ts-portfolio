@@ -55,26 +55,28 @@ export function NavigationMenuDemo() {
             <NavigationMenuContent className={styles.menuContainer}>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
-                  <NavigationMenuLink className={styles.logoContainer}>
-                    <div>
-                      <Image
-                        src={Logo}
-                        alt="Logo"
-                        width={130}
-                        height={130}
-                        className="rounded-full"
-                        loading="lazy"
-                      />
-                    </div>
+                  <Link href={"/"}>
+                    <NavigationMenuLink className={styles.logoContainer}>
+                      <div>
+                        <Image
+                          src={Logo}
+                          alt="Logo"
+                          width={130}
+                          height={130}
+                          className="rounded-full"
+                          loading="lazy"
+                        />
+                      </div>
 
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Check these out!
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      These are some of the projects I've made on my web
-                      development journey!
-                    </p>
-                  </NavigationMenuLink>
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Check these out!
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        These are some of the projects I've made on my web
+                        development journey!
+                      </p>
+                    </NavigationMenuLink>
+                  </Link>
                 </li>
                 <ListItem href="/frontend" title="Front End">
                   Here are some layout designs and front end projects.
