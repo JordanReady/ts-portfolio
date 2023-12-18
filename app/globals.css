@@ -79,7 +79,9 @@
   }
 }
 
-/* animations */
+.typed-cursor {
+  color: var(--primary-color);
+}
 /* Animations */
 
 @keyframes slideBottom {

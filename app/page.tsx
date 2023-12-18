@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import styles from "./HomePage.module.css"; // Assuming you have a CSS module file
 import HeroImage from "@/public/MyLogo.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import HeroTyped from "@/components/HeroTyped";
 
 export default function Home() {
   return (
@@ -12,9 +14,12 @@ export default function Home() {
         <h1 className={` text-purple-700 `}>Jordan Ready</h1>
         <h3 className={` ${styles.typedContainer}`}>
           <div>
-            And I'm a<span> Full-Stack Web Developer</span>
+            And I'm a
+            <span>
+              {" "}
+              <HeroTyped />
+            </span>
           </div>
-          <span className={`typed ${styles.typed}`}></span>
         </h3>
         <p>
           My expertise lies in both front-end and back-end technologies, which
