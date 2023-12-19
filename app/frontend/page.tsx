@@ -17,6 +17,7 @@ import YoutubePage from "@/public/PageYoutube1.png";
 import YoutubePage2 from "@/public/PageYoutube2.png";
 import YoutubePage3 from "@/public/PageYoutube3.png";
 import YoutubePage4 from "@/public/PageYoutube4.png";
+import Reveal from "@/components/Reveal";
 
 function FrontEnd() {
   const type = "frontend";
@@ -54,15 +55,36 @@ function FrontEnd() {
   return (
     <div className="container">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div className={`${styles.card} mt-4`}>
-          <ProjectCard {...projectData} />
-        </div>
-        <div className={`${styles.card} mt-4`}>
-          <ProjectCard {...projectData2} />
-        </div>
-        <div className={`${styles.card} mb-4`}>
-          <ProjectCard {...projectData3} />
-        </div>
+        <Reveal direction="right" width="100%">
+          <div className={`${styles.card} mt-4`}>
+            <ProjectCard {...projectData} />
+          </div>
+        </Reveal>
+        <Reveal direction="left" delayTime={0.2} width="100%">
+          <div className={`${styles.card} mt-4`}>
+            <ProjectCard {...projectData2} />
+          </div>
+        </Reveal>
+        <Reveal direction="right" delayTime={0.4} width="100%">
+          <div className={`${styles.card} mt-4`}>
+            <ProjectCard {...projectData3} />
+          </div>
+        </Reveal>
+        <Reveal direction="left" delayTime={0.6} width="100%">
+          <div className={`${styles.card} mt-4`}>
+            <ProjectCard {...projectData} />
+          </div>
+        </Reveal>
+        <Reveal direction="right" delayTime={0.8} width="100%">
+          <div className={`${styles.card} mb-4`}>
+            <ProjectCard {...projectData2} />
+          </div>
+        </Reveal>
+        <Reveal direction="left" delayTime={1} width="100%">
+          <div className={`${styles.card} mb-4`}>
+            <ProjectCard {...projectData3} />
+          </div>
+        </Reveal>
       </div>
     </div>
   );
