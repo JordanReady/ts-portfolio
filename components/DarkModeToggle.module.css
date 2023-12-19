@@ -1,1 +1,5 @@
-
+.menu {
+  z-index: 999 !important;
+  margin-right: -2.75rem;
+  max-width: 75px !important;
+}
