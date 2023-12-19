@@ -1,5 +1,5 @@
 .menuContainer {
-  z-index: 999;
+  z-index: 999 !important;
 }
 
 .menuContainer a {
@@ -119,4 +119,7 @@
 
 /* screen sizes */
 @media (max-width: 768px) {
+  .listContainer {
+    max-width: 336px;
+  }
 }

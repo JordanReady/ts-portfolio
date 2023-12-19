@@ -37,9 +37,16 @@
 
 /* screen sizes */
 @media (max-width: 768px) {
+  .header {
+    width: 100dvw;
+  }
+
   .navRow {
     margin-top: 0rem !important;
     flex-direction: column;
+  }
+  .navRow button {
+    max-width: 80px;
   }
   .utilBtns {
     margin-top: 0.5rem;
