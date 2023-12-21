@@ -3,18 +3,10 @@ import React, { useState } from "react";
 import Reveal from "@/components/Reveal";
 import Image, { StaticImageData } from "next/image";
 import styles from "./ProjectMoreCard.module.css";
-import Photo from "@/public/PageNews1.png";
-import Photo2 from "@/public/PageNews2.png";
-import Photo3 from "@/public/PageNews3.png";
-import Photo4 from "@/public/PageNews4.png";
 import LanguageCard from "./LanguageCard";
 import { BarChart3 } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import {
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from "@radix-ui/react-navigation-menu";
 import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 
 // Define a TypeScript interface for the component props
