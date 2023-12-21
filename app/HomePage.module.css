@@ -48,8 +48,9 @@
   animation-delay: 1.2s;
 }
 
-.button {
+.button button {
   /* opacity: 0; */
+  margin: 0.25rem;
 }
 
 .heroIcons > *:nth-child(1) {

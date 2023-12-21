@@ -42,7 +42,7 @@ export default function Home() {
             <Reveal delayTime={0.8}>
               <Button
                 id="github"
-                className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2"
+                className="shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2"
                 variant={"outline"}
               >
                 <Link href="https://github.com/JordanReady" target="blank">
@@ -55,7 +55,7 @@ export default function Home() {
             <Reveal delayTime={1}>
               <Button
                 id="linkedin"
-                className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2"
+                className="shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2"
                 variant={"outline"}
               >
                 <Link href="https://github.com/JordanReady" target="blank">
@@ -68,7 +68,7 @@ export default function Home() {
             <Reveal delayTime={1.2}>
               <Button
                 id="website"
-                className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2"
+                className="shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2"
                 variant={"outline"}
               >
                 <Link href="/contact" target="blank">
