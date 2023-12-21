@@ -1,16 +1,12 @@
 import React from "react";
-import AirBnb from "@/public/MainPageNews.png";
+import BookingImg from "@/public/MainPageBooking.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
 
 function Project() {
   return (
     <ProjectMoreCard
-      projectName="AirBnb News Clone"
+      projectName="AirBnb Booking Clone"
       technologies={[
-        {
-          name: "React",
-          description: "JavaScript library for building user interfaces.",
-        },
         {
           name: "HTML",
           description: "Standard markup language for creating web pages.",
@@ -26,7 +22,7 @@ function Project() {
             "Open-source CSS framework directed at responsive, mobile-first front-end web development.",
         },
       ]}
-      image={AirBnb}
+      image={BookingImg}
     />
   );
 }

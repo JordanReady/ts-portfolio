@@ -15,6 +15,12 @@ import { signIn, signOut } from "next-auth/react";
 import styles from "./userButton.module.css";
 import UserAvatar from "@/components/UserAvatar";
 import { CircleUserRound } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function UserButton() {
   const [userName, setUserName] = useState<string | null>(null);
@@ -39,6 +45,7 @@ function UserButton() {
       <DropdownMenuTrigger>
         {session ? (
           // User is signed in, render ProfileCard
+
           <UserAvatar />
         ) : (
           // User is not signed in, render the Open button

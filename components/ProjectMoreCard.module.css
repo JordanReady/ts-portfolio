@@ -1,0 +1,47 @@
+.img {
+  /* background-color: var(--primary-color-muted); */
+}
+
+.languageRow {
+  align-items: center;
+  justify-content: center;
+}
+
+.languageBreakdownRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.barLogo {
+  margin-left: -0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.button {
+  color: var(--primary-color);
+}
+.button:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-color-muted);
+  background-color: #fffefe1f;
+  border-image: linear-gradient(45deg, purple, blue);
+  border-image-slice: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  animation: spinBorderGlowBackground infinite 5s;
+}
+
+.btnRow {
+  max-width: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnRow div {
+  margin-top: 0.75rem;
+  margin-left: 0.35rem;
+}
