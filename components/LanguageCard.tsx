@@ -24,7 +24,7 @@ function LanguageCard({
   useEffect(() => {
     const timer = setTimeout(() => setProgress(percentage), delay);
     return () => clearTimeout(timer);
-  }, [percentage]);
+  }, [percentage, delay]);
 
   return (
     <div className={styles.container}>

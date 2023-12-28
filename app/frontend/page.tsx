@@ -60,27 +60,27 @@ function FrontEnd() {
             <ProjectCard {...projectData} />
           </div>
         </Reveal>
-        <Reveal direction="left" delayTime={0.2} width="100%">
+        <Reveal direction="left" width="100%" delayTime={0.2}>
           <div className={`${styles.card} mt-4`}>
             <ProjectCard {...projectData2} />
           </div>
         </Reveal>
-        <Reveal direction="right" delayTime={0.4} width="100%">
+        <Reveal direction="right" width="100%" delayTime={0.4}>
           <div className={`${styles.card} mt-4`}>
             <ProjectCard {...projectData3} />
           </div>
         </Reveal>
-        <Reveal direction="left" delayTime={0.6} width="100%">
+        <Reveal direction="left" width="100%" delayTime={0.6}>
           <div className={`${styles.card} mt-4`}>
             <ProjectCard {...projectData} />
           </div>
         </Reveal>
-        <Reveal direction="right" delayTime={0.8} width="100%">
+        <Reveal direction="right" width="100%" delayTime={0.8}>
           <div className={`${styles.card} mb-4`}>
             <ProjectCard {...projectData2} />
           </div>
         </Reveal>
-        <Reveal direction="left" delayTime={1} width="100%">
+        <Reveal direction="left" width="100%" delayTime={1}>
           <div className={`${styles.card} mb-4`}>
             <ProjectCard {...projectData3} />
           </div>

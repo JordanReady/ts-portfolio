@@ -29,7 +29,7 @@ function Reveal({
       controls.start("visible");
       slideControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, controls, slideControls]);
 
   const getSlideDirection = () => {
     switch (direction) {

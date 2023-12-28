@@ -30,7 +30,7 @@ function Project() {
       javascript={0}
       html={70}
       css={30}
-      typeScript={20}
+      typeScript={0}
       overviewParagraphs={[
         `The project represents a contemporary web application constructed with React JS and styled using Material UI 5. It faithfully emulates the fundamental features of YouTube, empowering users to seamlessly browse and view videos, explore diverse content, and engage with the video player and associated details. Notable functionalities encompass video playback, personalized video recommendations, an efficient video search mechanism, and a responsive design for optimal user experience.`,
         `The application's user interface is thoughtfully designed, leveraging the aesthetic components of Material UI 5 to enhance visual appeal. To ensure the availability of current video data, the application seamlessly integrates with the YouTube Data API through Rapid API. This integration empowers users to retrieve comprehensive video information, including titles, descriptions, channel specifics, and view counts.`,

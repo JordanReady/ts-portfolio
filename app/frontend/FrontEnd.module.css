@@ -23,6 +23,7 @@
 .card {
   animation: bounceUp 0s ease-in forwards;
   opacity: 0;
+  width: 100%;
 }
 .card:nth-child(1) {
   animation-delay: 0.2s;
