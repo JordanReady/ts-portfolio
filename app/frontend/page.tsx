@@ -5,6 +5,7 @@ import MoreButton from "@/public/MoreBtn.png";
 import News from "@/public/1MainNewsLogo.png";
 import Booking from "@/public/1MainBookingLogo.png";
 import Youtube from "@/public/1MainYoutubeLogo.png";
+import Portfolio from "@/public/1MainPortfolioLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -17,6 +18,10 @@ import YoutubePage from "@/public/PageYoutube1.png";
 import YoutubePage2 from "@/public/PageYoutube2.png";
 import YoutubePage3 from "@/public/PageYoutube3.png";
 import YoutubePage4 from "@/public/PageYoutube4.png";
+import PortfolioPage from "@/public/PagePortfolio.png";
+import PortfolioPage2 from "@/public/PagePortfolio2.png";
+import PortfolioPage3 from "@/public/PagePortfolio3.png";
+import PortfolioPage4 from "@/public/PagePortfolio4.png";
 import Reveal from "@/components/Reveal";
 
 function FrontEnd() {
@@ -56,9 +61,9 @@ function FrontEnd() {
     number: 4,
     name: "Portfolio Website",
     description: "My first iteration of a portfolio website",
-    technologies: "TypeScript, React, Bootstrap, typed.js ",
-    background: Booking,
-    logos: [BookingPage, BookingPage2, BookingPage3, BookingPage4],
+    technologies: "TypeScript, React, Bootstrap, Typed.js ",
+    background: Portfolio,
+    logos: [PortfolioPage, PortfolioPage2, PortfolioPage3, PortfolioPage4],
     moreButton: MoreButton,
   };
 
@@ -82,7 +87,7 @@ function FrontEnd() {
         </Reveal>
         <Reveal direction="left" width="100%" delayTime={0.6}>
           <div className={`${styles.card} mt-4`}>
-            <ProjectCard {...projectData} />
+            <ProjectCard {...projectData4} />
           </div>
         </Reveal>
         <Reveal direction="right" width="100%" delayTime={0.8}>

@@ -1,48 +1,59 @@
 import React from "react";
-import BookingImg from "@/public/1MainBookingDisplay.png";
-import BookingImg2 from "@/public/1MainBookingDisplay2.png";
-import BookingImg3 from "@/public/1MainBookingDisplay3.png";
-import BookingImg4 from "@/public/1MainBookingDisplay4.png";
+import PortfolioImg from "@/public/1MainPortfolioDisplay.png";
+import PortfolioImg2 from "@/public/1MainPortfolioDisplay2.png";
+import PortfolioImg3 from "@/public/1MainPortfolioDisplay3.png";
+import PortfolioImg4 from "@/public/1MainPortfolioDisplay4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
-import Photo from "@/public/PageBooking1.png";
-import Photo2 from "@/public/PageBooking2.png";
-import Photo3 from "@/public/PageBooking3.png";
-import Photo4 from "@/public/PageBooking4.png";
+import Photo from "@/public/PagePortfolio.png";
+import Photo2 from "@/public/PagePortfolio2.png";
+import Photo3 from "@/public/PagePortfolio3.png";
+import Photo4 from "@/public/PagePortfolio4.png";
 
 function Project() {
-  const imageArray = [BookingImg, BookingImg2, BookingImg3, BookingImg4];
+  const imageArray = [
+    PortfolioImg,
+    PortfolioImg2,
+    PortfolioImg3,
+    PortfolioImg4,
+  ];
   return (
     <ProjectMoreCard
       projectName="Portfolio Website"
       technologies={[
         {
-          name: "HTML",
-          description: "Standard markup language for creating web pages.",
+          name: "TypeScript",
+          description:
+            "TypeScript enhances JavaScript by adding static typing, improving code quality and developer productivity.",
         },
         {
-          name: "CSS",
+          name: "React",
           description:
-            "Style sheet language used for describing the look and formatting of a document written in HTML.",
+            "React is a JavaScript library for building efficient and reusable user interfaces, widely used for single-page applications.",
         },
         {
           name: "Bootstrap",
           description:
             "Open-source CSS framework directed at responsive, mobile-first front-end web development.",
         },
+        {
+          name: "Typed.js",
+          description:
+            "Typed.js is a JavaScript library that creates a typewriter effect, enhancing textual animations on webpages.",
+        },
       ]}
       image={imageArray}
       javascript={0}
-      html={70}
-      css={30}
-      typeScript={0}
+      html={0}
+      css={45}
+      typeScript={55}
       overviewParagraphs={[
-        `The project represents a contemporary web application constructed with React JS and styled using Material UI 5. It faithfully emulates the fundamental features of YouTube, empowering users to seamlessly browse and view videos, explore diverse content, and engage with the video player and associated details. Notable functionalities encompass video playback, personalized video recommendations, an efficient video search mechanism, and a responsive design for optimal user experience.`,
-        `The application's user interface is thoughtfully designed, leveraging the aesthetic components of Material UI 5 to enhance visual appeal. To ensure the availability of current video data, the application seamlessly integrates with the YouTube Data API through Rapid API. This integration empowers users to retrieve comprehensive video information, including titles, descriptions, channel specifics, and view counts.`,
-        `Throughout the development journey, navigating challenges and implementing key features, the project provided valuable insights and learnings. Not only did it hone technical skills in React JS and Material UI, but it also deepened understanding regarding API integrations and responsive design considerations.`,
+        `My personal portfolio website marks the initial iteration of a dynamic showcase for my diverse range of projects. Crafted using React JS, it delivers a modern and engaging user experience. The interface is designed with a touch of creativity, making project exploration a fun and intuitive journey.`,
+        `Utilizing the power of React, the website seamlessly presents each project, offering an interactive platform for visitors to delve into my work. The design aesthetic prioritizes user-friendly navigation, ensuring a delightful experience while exploring showcased projects.`,
+        `This portfolio site reflects my commitment to creating not only functional but also visually appealing web applications. The initial version allowed me to experiment with various design elements, laying the foundation for future iterations that will continue to evolve with new projects and improved user interactions.`,
       ]}
       images={[Photo, Photo2, Photo3, Photo4]}
-      repoLink="https://github.com/JordanReady/Airbnb-press-clone"
-      siteLink="https://trusting-swirles-c46c81.netlify.app/"
+      repoLink="https://github.com/JordanReady/my-portfolio-website"
+      siteLink="https://jordanready.com"
     />
   );
 }
