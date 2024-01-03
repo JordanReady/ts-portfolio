@@ -13,7 +13,7 @@ function Project() {
   const imageArray = [BookingImg, BookingImg2, BookingImg3, BookingImg4];
   return (
     <ProjectMoreCard
-      projectName="AirBnb Booking Clone"
+      projectName="Portfolio Website"
       technologies={[
         {
           name: "HTML",

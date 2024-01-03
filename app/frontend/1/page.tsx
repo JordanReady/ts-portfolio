@@ -1,5 +1,8 @@
 import React from "react";
-import AirBnb from "@/public/MainPageNews.png";
+import NewsImg from "@/public/1MainNewsDisplay.png";
+import NewsImg2 from "@/public/1MainNewsDisplay2.png";
+import NewsImg3 from "@/public/1MainNewsDisplay3.png";
+import NewsImg4 from "@/public/1MainNewsDisplay4.png";
 import Photo from "@/public/PageNews1.png";
 import Photo2 from "@/public/PageNews2.png";
 import Photo3 from "@/public/PageNews3.png";
@@ -7,6 +10,8 @@ import Photo4 from "@/public/PageNews4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
 
 function Project() {
+  const imageArray = [NewsImg, NewsImg2, NewsImg3, NewsImg4];
+
   return (
     <ProjectMoreCard
       projectName="AirBnb News Clone"
@@ -30,7 +35,7 @@ function Project() {
             "Open-source CSS framework directed at responsive, mobile-first front-end web development.",
         },
       ]}
-      image={AirBnb}
+      image={imageArray}
       javascript={0}
       html={70}
       css={30}

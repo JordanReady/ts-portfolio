@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./FrontEnd.module.css";
 import ProjectCard from "@/components/ProjectCard";
 import MoreButton from "@/public/MoreBtn.png";
-import News from "@/public/LogoDesktopNews.png";
-import Booking from "@/public/LogoDesktopBooking.png";
-import Youtube from "@/public/LogoDesktopYoutube.png";
+import News from "@/public/1MainNewsLogo.png";
+import Booking from "@/public/1MainBookingLogo.png";
+import Youtube from "@/public/1MainYoutubeLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -47,6 +47,16 @@ function FrontEnd() {
     name: "AirBnb Booking",
     description: "Responsive AirBnb Booking website clone",
     technologies: "HTML, CSS, Bootstrap",
+    background: Booking,
+    logos: [BookingPage, BookingPage2, BookingPage3, BookingPage4],
+    moreButton: MoreButton,
+  };
+  const projectData4 = {
+    type: type,
+    number: 4,
+    name: "Portfolio Website",
+    description: "My first iteration of a portfolio website",
+    technologies: "TypeScript, React, Bootstrap, typed.js ",
     background: Booking,
     logos: [BookingPage, BookingPage2, BookingPage3, BookingPage4],
     moreButton: MoreButton,

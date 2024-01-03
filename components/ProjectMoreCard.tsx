@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Reveal from "@/components/Reveal";
 import Image, { StaticImageData } from "next/image";
 import styles from "./ProjectMoreCard.module.css";
@@ -13,7 +13,7 @@ import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 interface ProjectMoreCardProps {
   projectName: string;
   technologies: { name: string; description: string }[];
-  image: StaticImageData;
+  image: StaticImageData[];
   javascript: number;
   html: number;
   css: number;
@@ -40,6 +40,15 @@ function ProjectMoreCard({
   siteLink,
 }: ProjectMoreCardProps) {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedMainImage, setSelectedMainImage] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSelectedMainImage((prevIndex) => (prevIndex + 1) % image.length);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, [image]);
 
   const handleClick = (index: any) => {
     setSelectedImage(index);
@@ -68,7 +77,11 @@ function ProjectMoreCard({
 
             <Reveal delayTime={0.35} color="gray">
               <div className={`${styles.img}`}>
-                <Image src={image} alt="Logo" width={1000}></Image>
+                <Image
+                  src={image[selectedMainImage]}
+                  alt={`Photo ${selectedMainImage + 1}`}
+                  width={1000}
+                />
               </div>
             </Reveal>
           </div>

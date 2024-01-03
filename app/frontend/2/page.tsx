@@ -1,5 +1,8 @@
 import React from "react";
-import YoutubeImg from "@/public/MainPageYoutube.png";
+import YoutubeImg from "@/public/1MainYoutubeDisplay.png";
+import YoutubeImg2 from "@/public/1MainYoutubeDisplay2.png";
+import YoutubeImg3 from "@/public/1MainYoutubeDisplay3.png";
+import YoutubeImg4 from "@/public/1MainYoutubeDisplay4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
 import Photo from "@/public/PageYoutube1.png";
 import Photo2 from "@/public/PageYoutube2.png";
@@ -7,6 +10,7 @@ import Photo3 from "@/public/PageYoutube3.png";
 import Photo4 from "@/public/PageYoutube4.png";
 
 function Project() {
+  const imageArray = [YoutubeImg, YoutubeImg2, YoutubeImg3, YoutubeImg4];
   return (
     <ProjectMoreCard
       projectName="Youtube Clone"
@@ -35,7 +39,7 @@ function Project() {
             "RapidAPI is a platform that allows developers to discover, connect, and manage APIs. This made use of an api to fetch data from youtube so it could be displayed in the app.",
         },
       ]}
-      image={YoutubeImg}
+      image={imageArray}
       javascript={80}
       html={10}
       css={10}
