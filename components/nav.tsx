@@ -45,7 +45,7 @@ const components: { title: string; href: string; description: string[] }[] = [
 
 export function NavigationMenuDemo() {
   return (
-    <div>
+    <div className={styles.container}>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2">
@@ -55,7 +55,7 @@ export function NavigationMenuDemo() {
             <NavigationMenuContent className={styles.menuContainer}>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
-                  <Link href={"/"}>
+                  <Link href={"/projects"}>
                     <NavigationMenuLink className={styles.logoContainer}>
                       <div>
                         <Image
@@ -65,6 +65,8 @@ export function NavigationMenuDemo() {
                           height={130}
                           className="rounded-full"
                           loading="lazy"
+                          placeholder="blur"
+                          sizes="fill"
                         />
                       </div>
 

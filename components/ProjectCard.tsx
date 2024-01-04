@@ -65,7 +65,10 @@ function ProjectCard({
                 className={`${styles.img}`}
                 src={logo}
                 alt={`Logo ${index + 1}`}
-              ></Image>
+                loading="lazy"
+                placeholder="blur"
+                sizes="fill"
+              />
             ))}
           </div>
           {/* <Image

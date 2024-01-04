@@ -83,7 +83,13 @@ export default function Home() {
       <div className={`${styles.heroImg}`}>
         <Reveal duration={1} delayTime={0.5}>
           <div className={styles.heroImg}>
-            <Image src={HeroImage} alt="Logo Image"></Image>
+            <Image
+              loading="lazy"
+              placeholder="blur"
+              sizes="fill"
+              src={HeroImage}
+              alt="Logo Image"
+            />
           </div>
         </Reveal>
       </div>

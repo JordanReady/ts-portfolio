@@ -81,6 +81,9 @@ function ProjectMoreCard({
                   src={image[selectedMainImage]}
                   alt={`Photo ${selectedMainImage + 1}`}
                   width={1000}
+                  loading="lazy"
+                  placeholder="blur"
+                  sizes="fill"
                 />
               </div>
             </Reveal>
@@ -266,6 +269,9 @@ function ProjectMoreCard({
                         objectFit="contain"
                         className="pb-2 "
                         onClick={() => handleClick(index)}
+                        loading="lazy"
+                        placeholder="blur"
+                        sizes="fill"
                       />
                     </Reveal>
                   </div>
@@ -281,6 +287,9 @@ function ProjectMoreCard({
                         src={images[selectedImage]}
                         alt={`Photo ${selectedImage + 1}`}
                         objectFit="contain"
+                        loading="lazy"
+                        placeholder="blur"
+                        sizes="fill"
                       />
                     </Reveal>
                   </div>
