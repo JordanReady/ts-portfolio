@@ -82,3 +82,44 @@
   margin-top: 0.75rem;
   margin-left: 0.35rem;
 }
+
+.techName {
+  font-size: 24px;
+}
+
+/* screen sizes */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.25rem;
+  }
+  .container h2 {
+    font-size: 1.75rem;
+    width: 100dvw;
+    text-align: center;
+    height: 60px;
+  }
+  .container p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  .techName {
+    font-size: 1.25rem !important;
+    text-align: center;
+    width: 100dvw;
+  }
+  .languageCard {
+    max-width: 158px;
+  }
+  .imgRow {
+    display: none !important;
+  }
+  .barLogo {
+    display: none;
+  }
+  .btnRow {
+    max-width: 100dvw;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -60,7 +60,7 @@ function ProjectMoreCard({
 
   return (
     <>
-      <div className="container">
+      <div className={` ${styles.container} container ${styles.container} `}>
         <div className="grid grid-cols-2 gap-4">
           {/* First column */}
           <div className="col-span-2 md:col-span-1 ">
@@ -99,12 +99,12 @@ function ProjectMoreCard({
               </h2>
             </Reveal>
 
-            <div>
+            <div className={styles.techRow}>
               {technologies.map((tech) => (
                 <div key={tech.name}>
                   <Reveal delayTime={0.35} color="var(--primary-color)">
                     <p
-                      className="text-2x px-4"
+                      className={` ${styles.techName} text-2x px-4`}
                       style={{
                         color: "var(--primary-color)",
                       }}
@@ -132,7 +132,7 @@ function ProjectMoreCard({
                 }}
                 className={` ${styles.languageBreakdownRow}`}
               >
-                <h2 className="text-2xl px-4">Language Breakdown</h2>
+                <h2 className="text-2xl p-4">Language Breakdown</h2>
                 <div className={styles.barLogo}>
                   <BarChart3 />
                 </div>
@@ -250,7 +250,7 @@ function ProjectMoreCard({
             </div>
           </section>
           <div className="sm:w-1/3 md:1/4 w-full flex-shrink flex-grow-0 p-4">
-            <div className="sticky top-0 p-4 w-full">
+            <div className={` ${styles.imgRow} sticky top-0 p-4 w-full`}>
               <ul className="flex sm:flex-col overflow-hidden content-center justify-between">
                 {images.map((img, index) => (
                   <div key={index} className={styles.imageContainer}>

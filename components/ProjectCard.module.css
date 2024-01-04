@@ -1,14 +1,12 @@
 .projectCard {
   min-height: 400px;
   max-width: 680px;
-
   display: flex;
   flex-direction: column;
   position: relative;
   transition: all 0.3s ease;
   z-index: 0;
   backdrop-filter: blur(1px);
-
   z-index: -1;
 }
 
@@ -262,6 +260,15 @@
   .projectCard {
     background-position: top !important;
     background-size: 120dvw !important;
+    min-height: 310px;
+  }
+
+  .technologies {
+    display: none;
+  }
+
+  .innerBox {
+    bottom: 0.25rem;
   }
 
   .btn {

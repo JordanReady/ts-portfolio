@@ -69,7 +69,7 @@ function FrontEnd() {
 
   return (
     <div className="container">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 mb-4">
         <Reveal direction="right" width="100%">
           <div className={`${styles.card} mt-4`}>
             <ProjectCard {...projectData} />
