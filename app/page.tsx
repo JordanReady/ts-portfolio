@@ -20,7 +20,7 @@ export default function Home() {
         <Reveal direction="bottom" delayTime={0.4} color="gray">
           <h3 className={` ${styles.typedContainer}`}>
             <div>
-              And I'm a
+              And I'm a<span className={styles.spacer}></span>
               <span>
                 {" "}
                 <HeroTyped />
@@ -37,6 +37,7 @@ export default function Home() {
             website, and thank you for taking the time to learn more about me.
           </p>
         </Reveal>
+
         <div className={styles.heroIcons}>
           <div className={styles.button}>
             <Reveal delayTime={0.8}>

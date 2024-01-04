@@ -97,6 +97,41 @@
   animation-delay: 1.4s;
 }
 
+/* Screen Sizes */
+@media (max-width: 768px) {
+  .heroContent {
+    height: 100%;
+    margin-top: 0.5rem;
+  }
+  .heroContent h3 {
+    font-size: 1.5rem;
+  }
+  .heroContent h1 {
+    font-size: 1.75rem;
+  }
+  .heroContent p {
+    font-size: 1rem;
+  }
+  .spacer {
+    width: 100%;
+    display: block;
+  }
+  .heroIcons {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .button {
+    padding: 0;
+  }
+  .button button {
+    margin: 0;
+    padding: 0.5rem;
+  }
+  .heroImg img {
+    margin-bottom: 1rem;
+  }
+}
+
 /* Animations */
 
 /* @keyframes slideBottom {

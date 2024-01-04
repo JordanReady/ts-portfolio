@@ -8,7 +8,7 @@ export default function App() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Full-Stack Web Developer",
+        "Full-Stack Developer",
         "Software Engineer",
         "Coding Enthusiast",
         "Thrill Seeker",

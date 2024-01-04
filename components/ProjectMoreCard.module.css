@@ -5,8 +5,8 @@
 }
 
 .imageContainer:hover {
-  scale: 1.3;
-  border-bottom: 0.1rem solid pink;
+  scale: 1.1;
+  border-bottom: 0.1rem solid transparent;
 }
 
 .selectedImage {

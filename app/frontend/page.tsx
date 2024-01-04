@@ -90,16 +90,6 @@ function FrontEnd() {
             <ProjectCard {...projectData4} />
           </div>
         </Reveal>
-        <Reveal direction="right" width="100%" delayTime={0.8}>
-          <div className={`${styles.card} mb-4`}>
-            <ProjectCard {...projectData2} />
-          </div>
-        </Reveal>
-        <Reveal direction="left" width="100%" delayTime={1}>
-          <div className={`${styles.card} mb-4`}>
-            <ProjectCard {...projectData3} />
-          </div>
-        </Reveal>
       </div>
     </div>
   );
