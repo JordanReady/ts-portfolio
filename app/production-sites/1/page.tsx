@@ -1,68 +1,79 @@
 import React from "react";
-import NewsImg from "@/public/1MainNewsDisplay.png";
-import NewsImg2 from "@/public/1MainNewsDisplay2.png";
-import NewsImg3 from "@/public/1MainNewsDisplay3.png";
-import NewsImg4 from "@/public/1MainNewsDisplay4.png";
-import Photo from "@/public/PageNews1.png";
-import Photo2 from "@/public/PageNews2.png";
-import Photo3 from "@/public/PageNews3.png";
-import Photo4 from "@/public/PageNews4.png";
+import JWMImg from "@/public/1MainJWMDisplay.png";
+import JWMImg2 from "@/public/1MainJWMDisplay2.png";
+import JWMImg3 from "@/public/1MainJWMDisplay3.png";
+import JWMImg4 from "@/public/1MainJWMDisplay4.png";
+import Photo from "@/public/PageJWM.png";
+import Photo2 from "@/public/PageJWM2.png";
+import Photo3 from "@/public/PageJWM3.png";
+import Photo4 from "@/public/PageJWM4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
 
 function Project() {
-  const imageArray = [NewsImg, NewsImg2, NewsImg3, NewsImg4];
+  const imageArray = [JWMImg, JWMImg2, JWMImg3, JWMImg4];
 
   return (
     <ProjectMoreCard
       projectName="AirBnb News Clone"
       technologies={[
         {
+          name: "Next.js",
+          description:
+            "React framework for building server-rendered and static web applications.",
+        },
+        {
           name: "React",
           description: "JavaScript library for building user interfaces.",
         },
         {
-          name: "HTML",
-          description: "Standard markup language for creating web pages.",
+          name: "TypeScript",
+          description:
+            "Superset of JavaScript that adds static typing to the language.",
         },
         {
-          name: "CSS",
+          name: "Tailwind CSS",
           description:
-            "Style sheet language used for describing the look and formatting of a document written in HTML.",
+            "Utility-first CSS framework for rapidly building modern user interfaces.",
         },
         {
-          name: "Bootstrap",
+          name: "Shadcn",
           description:
-            "Open-source CSS framework directed at responsive, mobile-first front-end web development.",
+            "It seems there might be a typo. Did you mean 'Shadow DOM' or another technology?",
+        },
+        {
+          name: "CSS Modules",
+          description:
+            "CSS files in which all class names and animation names are scoped locally by default.",
+        },
+        {
+          name: "Firebase",
+          description:
+            "Platform developed by Google for creating mobile and web applications.",
+        },
+        {
+          name: "NextAuth",
+          description: "Authentication library for Next.js applications.",
+        },
+        {
+          name: "Stripe Payments",
+          description: "Online payment processing for internet businesses.",
         },
       ]}
       image={imageArray}
       javascript={0}
-      html={70}
-      css={30}
-      typeScript={0}
+      html={0}
+      css={10}
+      typeScript={90}
       overviewParagraphs={[
-        `The Airbnb News Website Clone is a frontend project meticulously
-        crafted with React, HTML, CSS, and Bootstrap. The website boasts
-        a prominent top news story section, showcasing the day's most
-        important articles. It features multiple grid-based sections
-        that highlight the latest news and provide convenient links to
-        various social media platforms.`,
-        `The design is anchored in thoughtfully designed grids created
-        using Bootstrap, ensuring a seamless and intuitive user
-        experience. From the engaging picture reel section to the
-        organized news categories, the user-friendly sign-up for the
-        newsletter, and the polished footer – each component is
-        strategically crafted with Bootstrap grids for optimal display
-        on various devices.`,
-        `This website's primary objective is to offer users a clean and
-        straightforward means to stay informed about Airbnb news. With a
-        responsive design, users can effortlessly access the site from
-        desktops, tablets, or smartphones, ensuring a consistently
-        enjoyable experience across different devices.`,
+        `Junior Web Masters is a dedicated educational platform designed to introduce 6th graders to the exciting world of web development and programming. The initiative is driven by the goal of empowering young learners with essential coding skills, preparing them for the challenges and opportunities of the digital future.`,
+        `At Junior Web Masters, we strive to provide a comprehensive and supportive learning platform for 6th graders embarking on their coding journey. The program features a structured curriculum that covers fundamental concepts in web development, ensuring a solid foundation for young learners.`,
+        `One of the key pillars of Junior Web Masters is mentorship. We believe in fostering a supportive community where students can receive guidance from experienced mentors, encouraging the development of crucial problem-solving skills and unleashing their creativity.`,
+        `In our engaging learning environment, inclusivity is a core value. Junior Web Masters is committed to creating a space where every student feels welcome and supported. Personalized assistance is provided to cater to individual learning styles, ensuring that each young learner can thrive.`,
+        `Junior Web Masters is not just an educational program; it's a stepping stone for young talents to become the web developers of the future. By combining structured learning, mentorship, and a safe environment, we aim to instill a passion for coding and technology in the next generation.`,
       ]}
       images={[Photo, Photo2, Photo3, Photo4]}
-      repoLink="https://github.com/JordanReady/Airbnb-press-clone"
-      siteLink="https://trusting-swirles-c46c81.netlify.app/"
+      repoLink="https://github.com/JordanReady/sass-jwm-app"
+      siteLink="https://www.juniorwebmasters.org/"
     />
   );
 }

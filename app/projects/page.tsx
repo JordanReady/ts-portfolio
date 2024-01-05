@@ -7,6 +7,7 @@ import News from "@/public/1MainNewsLogo.png";
 import Booking from "@/public/1MainBookingLogo.png";
 import Youtube from "@/public/1MainYoutubeLogo.png";
 import Portfolio from "@/public/1MainPortfolioLogo.png";
+import JWM from "@/public/1MainJWMLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -23,6 +24,10 @@ import PortfolioPage from "@/public/PagePortfolio.png";
 import PortfolioPage2 from "@/public/PagePortfolio2.png";
 import PortfolioPage3 from "@/public/PagePortfolio3.png";
 import PortfolioPage4 from "@/public/PagePortfolio4.png";
+import JWMPage from "@/public/PageJWM.png";
+import JWMPage2 from "@/public/PageJWM2.png";
+import JWMPage3 from "@/public/PageJWM3.png";
+import JWMPage4 from "@/public/PageJWM4.png";
 import Reveal from "@/components/Reveal";
 import ProjectTypeControls from "@/components/ProjectTypeControls";
 import { StaticImageData } from "next/image";
@@ -42,6 +47,29 @@ function Projects() {
   const [selectedType, setSelectedType] = useState<string>("all");
 
   const projectData: ProjectData[] = [
+    // Production Projects
+    {
+      type: "production-sites",
+      number: 1,
+      name: "Junior Web Masters",
+      description:
+        "Web development learning and mentoring platform tailored for young minds.",
+      technologies: "Next.js, React, TypeScript, Firebase, NextAuth, Stripe,",
+      background: JWM,
+      logos: [JWMPage, JWMPage2, JWMPage3, JWMPage4],
+      moreButton: MoreButton,
+    },
+    // Fullstack Projects
+    {
+      type: "fullstack",
+      number: 1,
+      name: "FullStack",
+      description: "My first iteration of a portfolio website",
+      technologies: "TypeScript, React, Bootstrap, Typed.js ",
+      background: Portfolio,
+      logos: [PortfolioPage, PortfolioPage2, PortfolioPage3, PortfolioPage4],
+      moreButton: MoreButton,
+    },
     // Frontend Projects
     {
       type: "frontend",
@@ -81,28 +109,6 @@ function Projects() {
       technologies: "TypeScript, React, Bootstrap, Typed.js ",
       background: Portfolio,
       logos: [PortfolioPage, PortfolioPage2, PortfolioPage3, PortfolioPage4],
-      moreButton: MoreButton,
-    },
-    // Fullstack Projects
-    {
-      type: "fullstack",
-      number: 1,
-      name: "FullStack",
-      description: "My first iteration of a portfolio website",
-      technologies: "TypeScript, React, Bootstrap, Typed.js ",
-      background: Portfolio,
-      logos: [PortfolioPage, PortfolioPage2, PortfolioPage3, PortfolioPage4],
-      moreButton: MoreButton,
-    },
-    // Production Projects
-    {
-      type: "production-sites",
-      number: 1,
-      name: "Production",
-      description: "Responsive AirBnb Booking website clone",
-      technologies: "HTML, CSS, Bootstrap",
-      background: Booking,
-      logos: [BookingPage, BookingPage2, BookingPage3, BookingPage4],
       moreButton: MoreButton,
     },
   ];

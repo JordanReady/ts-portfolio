@@ -95,22 +95,28 @@
   animation-delay: 0.8s;
 }
 .projectCard:hover .technologies p:nth-child(4) {
-  animation-delay: 1s;
+  animation-delay: 0.95s;
 }
 .projectCard:hover .technologies p:nth-child(5) {
-  animation-delay: 1.2s;
+  animation-delay: 1.1s;
 }
 .projectCard:hover .technologies p:nth-child(6) {
-  animation-delay: 1.4s;
+  animation-delay: 1.25s;
 }
 .projectCard:hover .technologies p:nth-child(7) {
-  animation-delay: 1.6s;
+  animation-delay: 1.4s;
 }
 .projectCard:hover .technologies p:nth-child(8) {
-  animation-delay: 1.8;
+  animation-delay: 1.5;
 }
 .projectCard:hover .technologies p:nth-child(9) {
-  animation-delay: 2s;
+  animation-delay: 1.6s;
+}
+.projectCard:hover .technologies p:nth-child(10) {
+  animation-delay: 1.7s;
+}
+.projectCard:hover .technologies p:nth-child(11) {
+  animation-delay: 1.75s;
 }
 
 .projectCard:hover .pages img:nth-child(1) {

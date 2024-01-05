@@ -1,1 +1,38 @@
+@keyframes bounceUp {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+.card {
+  animation: bounceUp 0s ease-in forwards;
+  opacity: 0;
+  width: 100%;
+}
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.8s;
+}
