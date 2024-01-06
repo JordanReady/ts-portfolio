@@ -40,8 +40,6 @@ function ProjectCard({
         style={backgroundStyle}
       >
         <div className={styles.content}>
-          {/* <h2 className={`${styles.number}`}>0{number}</h2>
-          <h2 className={`${styles.numberMain}`}>0{number}</h2> */}
           <div className={`${styles.innerBox}`}>
             <h3 className={`${styles.name}`}>{name}</h3>
             <p

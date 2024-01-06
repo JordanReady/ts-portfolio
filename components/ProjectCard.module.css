@@ -34,6 +34,10 @@
   opacity: 0;
 }
 
+.spacer {
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 200px;
+}
 .innerBox {
   position: absolute;
   bottom: 2rem;
@@ -154,12 +158,14 @@
 }
 
 .img {
-  padding: 1rem;
+  margin: 0.25rem;
   font-size: 5rem;
   z-index: -2;
-  width: 150px;
+  width: 140px;
+  height: 100px;
   opacity: 0;
   border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.507);
 }
 
 .btn {
@@ -181,7 +187,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: -0.5rem;
+
   z-index: -1;
 }
 
@@ -266,7 +272,7 @@
   .projectCard {
     background-position: top !important;
     background-size: 120dvw !important;
-    min-height: 310px;
+    min-height: 360px;
   }
 
   .technologies {

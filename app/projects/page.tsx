@@ -8,6 +8,7 @@ import Booking from "@/public/1MainBookingLogo.png";
 import Youtube from "@/public/1MainYoutubeLogo.png";
 import Portfolio from "@/public/1MainPortfolioLogo.png";
 import JWM from "@/public/1MainJWMLogo.png";
+import Zazous from "@/public/1MainZazousLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -28,6 +29,10 @@ import JWMPage from "@/public/PageJWM.png";
 import JWMPage2 from "@/public/PageJWM2.png";
 import JWMPage3 from "@/public/PageJWM3.png";
 import JWMPage4 from "@/public/PageJWM4.png";
+import ZazousPage from "@/public/PageZazous.png";
+import ZazousPage2 from "@/public/PageZazous2.png";
+import ZazousPage3 from "@/public/PageZazous3.png";
+import ZazousPage4 from "@/public/PageZazous4.png";
 import Reveal from "@/components/Reveal";
 import ProjectTypeControls from "@/components/ProjectTypeControls";
 import { StaticImageData } from "next/image";
@@ -57,6 +62,17 @@ function Projects() {
       technologies: "Next.js, React, TypeScript, Firebase, NextAuth, Stripe,",
       background: JWM,
       logos: [JWMPage, JWMPage2, JWMPage3, JWMPage4],
+      moreButton: MoreButton,
+    },
+    {
+      type: "production-sites",
+      number: 2,
+      name: "Zazou's Bridal Boutique",
+      description:
+        "Web development learning and mentoring platform tailored for young minds.",
+      technologies: "Next.js, React, TypeScript, Firebase, NextAuth, Stripe,",
+      background: Zazous,
+      logos: [ZazousPage, ZazousPage2, ZazousPage3, ZazousPage4],
       moreButton: MoreButton,
     },
     // Fullstack Projects

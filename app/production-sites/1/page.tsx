@@ -14,7 +14,7 @@ function Project() {
 
   return (
     <ProjectMoreCard
-      projectName="AirBnb News Clone"
+      projectName="Junior Web Masters"
       technologies={[
         {
           name: "Next.js",
@@ -38,7 +38,7 @@ function Project() {
         {
           name: "Shadcn",
           description:
-            "It seems there might be a typo. Did you mean 'Shadow DOM' or another technology?",
+            "Beautifully designed components library that are accessible, customizable, and open source. ",
         },
         {
           name: "CSS Modules",
