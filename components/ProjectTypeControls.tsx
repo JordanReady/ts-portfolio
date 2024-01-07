@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ProjectTypeControls.module.css";
 import { Button } from "./ui/button";
 import Reveal from "./Reveal";
 
 interface ProjectTypeControlsProps {
   onTypeChange: (type: string) => void;
+  selectedType: string;
 }
 
-function ProjectTypeControls({ onTypeChange }: ProjectTypeControlsProps) {
-  const [selectedType, setSelectedType] = useState("all");
+function ProjectTypeControls({
+  onTypeChange,
+  selectedType,
+}: ProjectTypeControlsProps) {
+  const [localSelectedType, setLocalSelectedType] = useState(selectedType);
+
+  useEffect(() => {
+    setLocalSelectedType(selectedType);
+  }, [selectedType]);
 
   const handleTypeChange = (type: string) => {
-    setSelectedType(type);
+    setLocalSelectedType(type);
     onTypeChange(type);
   };
 
@@ -26,7 +34,7 @@ function ProjectTypeControls({ onTypeChange }: ProjectTypeControlsProps) {
             <Button
               onClick={() => handleTypeChange("all")}
               className={`shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2 ${
-                selectedType === "all"
+                localSelectedType === "all"
                   ? "active dark:bg-slate-700 opacity-80 bg-slate-100"
                   : ""
               }`}
@@ -41,7 +49,7 @@ function ProjectTypeControls({ onTypeChange }: ProjectTypeControlsProps) {
             <Button
               onClick={() => handleTypeChange("production-sites")}
               className={`shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2 ${
-                selectedType === "production-sites"
+                localSelectedType === "production-sites"
                   ? "active dark:bg-slate-700 opacity-80 bg-slate-100"
                   : ""
               }`}
@@ -56,7 +64,7 @@ function ProjectTypeControls({ onTypeChange }: ProjectTypeControlsProps) {
             <Button
               onClick={() => handleTypeChange("fullstack")}
               className={`shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2 ${
-                selectedType === "fullstack"
+                localSelectedType === "fullstack"
                   ? "active dark:bg-slate-700 opacity-80 bg-slate-100"
                   : ""
               }`}
@@ -71,7 +79,7 @@ function ProjectTypeControls({ onTypeChange }: ProjectTypeControlsProps) {
             <Button
               onClick={() => handleTypeChange("frontend")}
               className={`shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2 ${
-                selectedType === "frontend"
+                localSelectedType === "frontend"
                   ? "active dark:bg-slate-700 opacity-80 bg-slate-100"
                   : ""
               }`}

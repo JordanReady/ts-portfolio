@@ -1,12 +1,16 @@
 .imageContainer {
   position: relative;
   cursor: pointer;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .imageContainer:hover {
-  scale: 1.1;
+  scale: 0.95;
   border-bottom: 0.1rem solid transparent;
+}
+
+.imageContainer img {
+  margin: 0.125rem;
 }
 
 .selectedImage {

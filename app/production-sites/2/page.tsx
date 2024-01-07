@@ -35,6 +35,11 @@ function Project() {
           description:
             "CSS files in which all class names and animation names are scoped locally by default.",
         },
+        {
+          name: "Bridal Live",
+          description:
+            "A comprehensive platform for bridal stores to enhance their online presence and customer experience.",
+        },
       ]}
       image={imageArray}
       javascript={75}
