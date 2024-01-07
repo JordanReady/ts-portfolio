@@ -9,6 +9,7 @@ import Youtube from "@/public/1MainYoutubeLogo.png";
 import Portfolio from "@/public/1MainPortfolioLogo.png";
 import JWM from "@/public/1MainJWMLogo.png";
 import Zazous from "@/public/1MainZazousLogo.png";
+import Bridal from "@/public/1MainBridalLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -33,6 +34,10 @@ import ZazousPage from "@/public/PageZazous.png";
 import ZazousPage2 from "@/public/PageZazous2.png";
 import ZazousPage3 from "@/public/PageZazous3.png";
 import ZazousPage4 from "@/public/PageZazous4.png";
+import BridalPage from "@/public/PageBridal.png";
+import BridalPage2 from "@/public/PageBridal2.png";
+import BridalPage3 from "@/public/PageBridal3.png";
+import BridalPage4 from "@/public/PageBridal4.png";
 import Reveal from "@/components/Reveal";
 import ProjectTypeControls from "@/components/ProjectTypeControls";
 import { StaticImageData } from "next/image";
@@ -87,6 +92,16 @@ function Projects() {
       moreButton: MoreButton,
     },
     // Frontend Projects
+    {
+      type: "frontend",
+      number: 5,
+      name: "Local Buisness Rebrand",
+      description: "A complete UI/UX overhaul to a local bridal store website.",
+      technologies: "React, CSS, Bootstrap ",
+      background: Bridal,
+      logos: [BridalPage, BridalPage2, BridalPage3, BridalPage4],
+      moreButton: MoreButton,
+    },
     {
       type: "frontend",
       number: 1,
