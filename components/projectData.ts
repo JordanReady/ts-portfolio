@@ -8,6 +8,7 @@ import Zazous from "@/public/1MainZazousLogo.png";
 import Bridal from "@/public/1MainBridalLogo.png";
 import Twitter from "@/public/1MainTwitterLogo.png";
 import Chess from "@/public/1MainChessLogo.png";
+import Airbnb from "@/public/1MainAirbnbLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -44,6 +45,11 @@ import ChessPage from "@/public/PageChess.png";
 import ChessPage2 from "@/public/PageChess2.png";
 import ChessPage3 from "@/public/PageChess3.png";
 import ChessPage4 from "@/public/PageChess4.png";
+import AirbnbPage from "@/public/PageAirbnb.png";
+import AirbnbPage2 from "@/public/PageAirbnb2.png";
+import AirbnbPage3 from "@/public/PageAirbnb3.png";
+import AirbnbPage4 from "@/public/PageAirbnb4.png";
+
 import { StaticImageData } from "next/image";
 
 export interface ProjectData {
@@ -92,6 +98,17 @@ export const projects: ProjectData[] = [
       "React, Ruby on Rails, ActionCable, Chess.js, Bootstrap, Heroku",
     background: Chess,
     logos: [ChessPage, ChessPage2, ChessPage3, ChessPage4],
+    moreButton: MoreButton,
+  },
+  {
+    type: "fullstack",
+    number: 3,
+    name: "Airbnb Clone",
+    description: "Booking platfrom for vacation rental properties.",
+    technologies:
+      "React, Ruby on Rails, Amazon S3, Stripe Webhooks, Bootstrap, Heroku",
+    background: Airbnb,
+    logos: [AirbnbPage, AirbnbPage2, AirbnbPage3, AirbnbPage4],
     moreButton: MoreButton,
   },
   {
