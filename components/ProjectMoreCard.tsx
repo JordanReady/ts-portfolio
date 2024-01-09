@@ -14,10 +14,11 @@ interface ProjectMoreCardProps {
   projectName: string;
   technologies: { name: string; description: string }[];
   image: StaticImageData[];
-  javascript: number;
-  html: number;
-  css: number;
-  typeScript: number;
+  javascript?: number;
+  html?: number;
+  css?: number;
+  typeScript?: number;
+  ruby?: number;
   overviewParagraphs: string[];
   images: StaticImageData[];
   repoLink: string;
@@ -34,6 +35,7 @@ function ProjectMoreCard({
   html,
   css,
   typeScript,
+  ruby,
   overviewParagraphs,
   images,
   repoLink,
@@ -143,7 +145,7 @@ function ProjectMoreCard({
               <div
                 className={`${styles.languageRow} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4`}
               >
-                {html !== 0 && (
+                {html !== undefined && html !== 0 && (
                   <LanguageCard
                     img={require("@/public/HTMLLogo.png")}
                     language="HTML"
@@ -152,7 +154,7 @@ function ProjectMoreCard({
                     delay={1200}
                   />
                 )}
-                {css !== 0 && (
+                {css !== undefined && css !== 0 && (
                   <LanguageCard
                     img={require("@/public/CSSLogo.png")}
                     language="CSS"
@@ -161,7 +163,7 @@ function ProjectMoreCard({
                     delay={1325}
                   />
                 )}
-                {javascript !== 0 && (
+                {javascript !== undefined && javascript !== 0 && (
                   <LanguageCard
                     img={require("@/public/JSLogo.png")}
                     language="JavaScript"
@@ -170,13 +172,22 @@ function ProjectMoreCard({
                     color="#f3e032"
                   />
                 )}
-                {typeScript !== 0 && (
+                {typeScript !== undefined && typeScript !== 0 && (
                   <LanguageCard
                     img={require("@/public/TSLogo.png")}
                     language="TypeScript"
                     percentage={typeScript}
                     delay={1450}
                     color="#2972b4"
+                  />
+                )}
+                {ruby !== undefined && ruby !== 0 && (
+                  <LanguageCard
+                    img={require("@/public/RubyLogo.png")}
+                    language="ruby"
+                    percentage={ruby}
+                    delay={1450}
+                    color="#b71807"
                   />
                 )}
               </div>

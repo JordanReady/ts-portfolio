@@ -1,64 +1,60 @@
 import React from "react";
-import NewsImg from "@/public/1MainNewsDisplay.png";
-import NewsImg2 from "@/public/1MainNewsDisplay2.png";
-import NewsImg3 from "@/public/1MainNewsDisplay3.png";
-import NewsImg4 from "@/public/1MainNewsDisplay4.png";
-import Photo from "@/public/PageNews1.png";
-import Photo2 from "@/public/PageNews2.png";
-import Photo3 from "@/public/PageNews3.png";
-import Photo4 from "@/public/PageNews4.png";
+import TwitterImg from "@/public/1MainTwitterDisplay.png";
+import TwitterImg2 from "@/public/1MainTwitterDisplay2.png";
+import TwitterImg3 from "@/public/1MainTwitterDisplay3.png";
+import TwitterImg4 from "@/public/1MainTwitterDisplay4.png";
+import Photo from "@/public/PageTwitter.png";
+import Photo2 from "@/public/PageTwitter2.png";
+import Photo3 from "@/public/PageTwitter3.png";
+import Photo4 from "@/public/PageTwitter4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
 
 function Project() {
-  const imageArray = [NewsImg, NewsImg2, NewsImg3, NewsImg4];
+  const imageArray = [TwitterImg, TwitterImg2, TwitterImg3, TwitterImg4];
 
   return (
     <ProjectMoreCard
-      projectName="AirBnb News Clone"
+      projectName="Twitter Clone"
       technologies={[
         {
           name: "React",
           description: "JavaScript library for building user interfaces.",
         },
         {
-          name: "HTML",
-          description: "Standard markup language for creating web pages.",
+          name: "Ruby on Rails",
+          description: "Server-side web application framework.",
         },
         {
-          name: "CSS",
-          description:
-            "Style sheet language used for describing the look and formatting of a document written in HTML.",
+          name: "Amazon S3",
+          description: "Scalable object storage in the cloud.",
+        },
+        {
+          name: "Sass",
+          description: "CSS preprocessor scripting language.",
         },
         {
           name: "Bootstrap",
           description:
-            "Open-source CSS framework directed at responsive, mobile-first front-end web development.",
+            "Open-source CSS framework for responsive web development.",
         },
       ]}
       image={imageArray}
-      javascript={0}
-      html={70}
-      css={30}
+      javascript={45}
+      html={5}
+      css={5}
       typeScript={0}
+      ruby={45}
       overviewParagraphs={[
-        `The Airbnb News Website Clone is a frontend project meticulously
-        crafted with React, HTML, CSS, and Bootstrap. The website boasts
-        a prominent top news story section, showcasing the day's most
-        important articles. It features multiple grid-based sections
-        that highlight the latest news and provide convenient links to
-        various social media platforms.`,
-        `The design is anchored in thoughtfully designed grids created
-        using Bootstrap, ensuring a seamless and intuitive user
-        experience. From the engaging picture reel section to the
-        organized news categories, the user-friendly sign-up for the
-        newsletter, and the polished footer – each component is
-        strategically crafted with Bootstrap grids for optimal display
-        on various devices.`,
-        `This website's primary objective is to offer users a clean and
-        straightforward means to stay informed about Airbnb news. With a
-        responsive design, users can effortlessly access the site from
-        desktops, tablets, or smartphones, ensuring a consistently
-        enjoyable experience across different devices.`,
+        `The full-stack Twitter Clone project is a web application
+        that replicates the core functionality of Twitter, allowing
+        users to create accounts, log in, and share their thoughts
+        with the world. Upon creating an account, users can log in
+        and access a variety of features including creating,
+        viewing, and deleting their own tweets. Users can also
+        browse a global feed of tweets from all users or navigate
+        to a specific user's profile to view only the tweets that
+        user has made.`,
+        `The styling, achieved through Sass and Bootstrap, allows for responsiveness across various devices. This combination of technologies results in a Twitter Clone that seamlessly combines functionality, aesthetics, and performance, offering users a compelling platform to connect and share in real-time.`,
       ]}
       images={[Photo, Photo2, Photo3, Photo4]}
       repoLink="https://github.com/JordanReady/Airbnb-press-clone"

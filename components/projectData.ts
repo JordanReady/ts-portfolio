@@ -6,6 +6,7 @@ import Portfolio from "@/public/1MainPortfolioLogo.png";
 import JWM from "@/public/1MainJWMLogo.png";
 import Zazous from "@/public/1MainZazousLogo.png";
 import Bridal from "@/public/1MainBridalLogo.png";
+import Twitter from "@/public/1MainTwitterLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -34,6 +35,10 @@ import BridalPage from "@/public/PageBridal.png";
 import BridalPage2 from "@/public/PageBridal2.png";
 import BridalPage3 from "@/public/PageBridal3.png";
 import BridalPage4 from "@/public/PageBridal4.png";
+import TwitterPage from "@/public/PageTwitter.png";
+import TwitterPage2 from "@/public/PageTwitter2.png";
+import TwitterPage3 from "@/public/PageTwitter3.png";
+import TwitterPage4 from "@/public/PageTwitter4.png";
 import { StaticImageData } from "next/image";
 
 export interface ProjectData {
@@ -75,11 +80,11 @@ export const projects: ProjectData[] = [
   {
     type: "fullstack",
     number: 1,
-    name: "FullStack",
-    description: "My first iteration of a portfolio website",
-    technologies: "TypeScript, React, Bootstrap, Typed.js ",
-    background: Portfolio,
-    logos: [PortfolioPage, PortfolioPage2, PortfolioPage3, PortfolioPage4],
+    name: "Twitter Clone",
+    description: "Social media platform for sharing thoughts and images.",
+    technologies: "React, Ruby on Rails, Amazon S3, Sass, Bootstrap ",
+    background: Twitter,
+    logos: [TwitterPage, TwitterPage2, TwitterPage3, TwitterPage4],
     moreButton: MoreButton,
   },
   // Frontend Projects
