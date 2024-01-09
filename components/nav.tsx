@@ -50,7 +50,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuList>
           <NavigationMenuItem className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2">
             <NavigationMenuTrigger className=" dark:text-purple-300">
-              Projects
+              <Link href={"/projects"}>Projects</Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent className={styles.menuContainer}>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">

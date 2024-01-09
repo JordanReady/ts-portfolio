@@ -7,6 +7,7 @@ import JWM from "@/public/1MainJWMLogo.png";
 import Zazous from "@/public/1MainZazousLogo.png";
 import Bridal from "@/public/1MainBridalLogo.png";
 import Twitter from "@/public/1MainTwitterLogo.png";
+import Chess from "@/public/1MainChessLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -39,6 +40,10 @@ import TwitterPage from "@/public/PageTwitter.png";
 import TwitterPage2 from "@/public/PageTwitter2.png";
 import TwitterPage3 from "@/public/PageTwitter3.png";
 import TwitterPage4 from "@/public/PageTwitter4.png";
+import ChessPage from "@/public/PageChess.png";
+import ChessPage2 from "@/public/PageChess2.png";
+import ChessPage3 from "@/public/PageChess3.png";
+import ChessPage4 from "@/public/PageChess4.png";
 import { StaticImageData } from "next/image";
 
 export interface ProjectData {
@@ -79,6 +84,18 @@ export const projects: ProjectData[] = [
   // Fullstack Projects
   {
     type: "fullstack",
+    number: 2,
+    name: "The Knight's Den",
+    description:
+      "Multiplayer chess learning platform with game analysis and stat tracking.",
+    technologies:
+      "React, Ruby on Rails, ActionCable, Chess.js, Bootstrap, Heroku",
+    background: Chess,
+    logos: [ChessPage, ChessPage2, ChessPage3, ChessPage4],
+    moreButton: MoreButton,
+  },
+  {
+    type: "fullstack",
     number: 1,
     name: "Twitter Clone",
     description: "Social media platform for sharing thoughts and images.",
@@ -87,6 +104,7 @@ export const projects: ProjectData[] = [
     logos: [TwitterPage, TwitterPage2, TwitterPage3, TwitterPage4],
     moreButton: MoreButton,
   },
+
   // Frontend Projects
   {
     type: "frontend",
