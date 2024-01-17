@@ -91,25 +91,43 @@
   font-size: 24px;
 }
 
+.overview p {
+  margin-bottom: 0.25rem;
+}
+
+.performance p {
+  margin-bottom: 0.25rem;
+}
+
+.performanceImg {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.performanceText {
+  max-width: 74.5%;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
 /* screen sizes */
 @media (max-width: 768px) {
   .container {
     padding: 0.25rem;
+    text-align: left !important;
   }
   .container h2 {
     font-size: 1.75rem;
     width: 100dvw;
-    text-align: center;
     height: 60px;
   }
   .container p {
-    text-align: center;
     font-size: 16px;
     margin-bottom: 0.5rem;
   }
   .techName {
     font-size: 1.25rem !important;
-    text-align: center;
     width: 100dvw;
   }
   .languageCard {
@@ -125,5 +143,12 @@
     max-width: 100dvw;
     justify-content: center;
     align-items: center;
+  }
+  .performanceText {
+    max-width: 100%;
+  }
+  .performanceImg {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

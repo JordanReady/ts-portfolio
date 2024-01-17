@@ -23,6 +23,12 @@ interface ProjectMoreCardProps {
   images: StaticImageData[];
   repoLink: string;
   siteLink: string;
+  performance?: StaticImageData;
+  performanceOld?: StaticImageData;
+  performanceNew?: StaticImageData;
+  performanceText?: string[];
+  performanceOldText?: string[];
+  performanceNewText?: string[];
 }
 
 // Use the interface as the type for the props
@@ -40,6 +46,12 @@ function ProjectMoreCard({
   images,
   repoLink,
   siteLink,
+  performance,
+  performanceText,
+  performanceOld,
+  performanceNew,
+  performanceOldText,
+  performanceNewText,
 }: ProjectMoreCardProps) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedMainImage, setSelectedMainImage] = useState(0);
@@ -196,7 +208,9 @@ function ProjectMoreCard({
         </div>
 
         {/* Second Section */}
-        <div className=" flex flex-col sm:flex-row flex-grow overflow-hidden">
+        <div
+          className={` ${styles.overview} flex flex-col sm:flex-row flex-grow overflow-hidden`}
+        >
           <section
             role="main"
             className="w-full h-full flex-grow  overflow-auto"
@@ -309,6 +323,147 @@ function ProjectMoreCard({
             </div>
           </div>
         </div>
+
+        {/* Performance Section */}
+        {(performanceOld || performanceNew || performance) && (
+          <section
+            role="main"
+            className={`${styles.performance} w-full h-full flex-grow  overflow-auto`}
+          >
+            <Reveal
+              direction="bottom"
+              delayTime={0.25}
+              color="var(--primary-color)"
+            >
+              <h2
+                style={{
+                  color: "var(--primary-color)",
+                }}
+                className="text-6xl p-4"
+              >
+                Performance
+              </h2>
+            </Reveal>
+            {/* Custom Performance Section */}
+            {performance && (
+              <div>
+                {performanceText && (
+                  <div className={styles.performanceText}>
+                    {performanceText.map((paragraph, index) => (
+                      <Reveal
+                        key={index}
+                        direction="right"
+                        delayTime={0.35}
+                        color="grey"
+                      >
+                        <p className="text-xl text-slate-700 dark:text-gray-300 px-4">
+                          {paragraph}
+                        </p>
+                      </Reveal>
+                    ))}
+                  </div>
+                )}
+                <Reveal delayTime={0.35} color="var(--primary-color)">
+                  <Image
+                    src={performance}
+                    alt={`Performance image`}
+                    objectFit="contain"
+                    loading="lazy"
+                    placeholder="blur"
+                    sizes="fill"
+                    className={`${styles.performanceImg} shadow-md`}
+                  />
+                </Reveal>
+              </div>
+            )}
+
+            {/* Old Performance Section */}
+            {performanceOld && (
+              <div>
+                <Reveal delayTime={0.25} color="var(--primary-color)">
+                  <h3
+                    style={{
+                      color: "var(--primary-color)",
+                    }}
+                    className="text-2xl p-4"
+                  >
+                    Old Performance Numbers
+                  </h3>
+                </Reveal>
+                {performanceOldText && (
+                  <div className={styles.performanceText}>
+                    {performanceOldText.map((paragraph, index) => (
+                      <Reveal
+                        key={index}
+                        direction="right"
+                        delayTime={0.35}
+                        color="grey"
+                      >
+                        <p className="text-xl text-slate-700 dark:text-gray-300 px-4">
+                          {paragraph}
+                        </p>
+                      </Reveal>
+                    ))}
+                  </div>
+                )}
+                <Reveal delayTime={0.35} color="var(--primary-color)">
+                  <Image
+                    src={performanceOld}
+                    alt={`Old performance image`}
+                    objectFit="contain"
+                    loading="lazy"
+                    placeholder="blur"
+                    sizes="fill"
+                    className={`${styles.performanceImg} shadow-md`}
+                  />
+                </Reveal>
+              </div>
+            )}
+
+            {/* New Performance Section */}
+            {performanceNew && (
+              <div>
+                <Reveal delayTime={0.25} color="var(--primary-color)">
+                  <h3
+                    style={{
+                      color: "var(--primary-color)",
+                    }}
+                    className="text-2xl p-4"
+                  >
+                    New Performance Numbers
+                  </h3>
+                </Reveal>
+                {performanceNewText && (
+                  <div className={styles.performanceText}>
+                    {performanceNewText.map((paragraph, index) => (
+                      <Reveal
+                        key={index}
+                        direction="right"
+                        delayTime={0.35}
+                        color="grey"
+                      >
+                        <p className="text-xl text-slate-700 dark:text-gray-300 px-4">
+                          {paragraph}
+                        </p>
+                      </Reveal>
+                    ))}
+                  </div>
+                )}
+                <Reveal delayTime={0.35} color="var(--primary-color)">
+                  <Image
+                    src={performanceNew}
+                    alt={`New performance image`}
+                    objectFit="contain"
+                    loading="lazy"
+                    placeholder="blur"
+                    sizes="fill"
+                    className={`${styles.performanceImg} shadow-md`}
+                  />
+                </Reveal>
+              </div>
+            )}
+          </section>
+        )}
       </div>
     </>
   );

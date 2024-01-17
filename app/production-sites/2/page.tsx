@@ -8,6 +8,8 @@ import Photo2 from "@/public/PageZazous2.png";
 import Photo3 from "@/public/PageZazous3.png";
 import Photo4 from "@/public/PageZazous4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
+import PerformanceOld from "@/public/PageZazousPerformanceOld.png";
+import PerformanceNew from "@/public/PageZazousPerformanceNew.png";
 
 function Project() {
   const imageArray = [ZazousImg, ZazousImg2, ZazousImg3, ZazousImg4];
@@ -55,6 +57,25 @@ function Project() {
       images={[Photo, Photo2, Photo3, Photo4]}
       repoLink="https://github.com/JordanReady/Zazous"
       siteLink="https://zazous.vercel.app/"
+      performanceOld={PerformanceOld}
+      performanceNew={PerformanceNew}
+      performanceOldText={[
+        `To assess and enhance the digital performance of websites, Google Lighthouse is a powerful tool widely used by developers. It evaluates websites based on various criteria, including performance, accessibility, best practices, and SEO, providing a comprehensive overview of their strengths and areas for improvement.`,
+        `Before the redesign, Zazous Bridal's website underwent a Lighthouse evaluation with the following scores:`,
+        `Previous Scores:\n\nPerformance: 70\nAccessibility: 89\nBest Practices: 77\nSEO: 92\nOverall: 70`,
+        `These scores indicated room for improvement, particularly in terms of performance, best practices, and SEO. The challenge was not just to meet industry standards but to exceed them, providing Zazous Bridal with a website that not only aligns with their aesthetic but also excels in digital performance.`,
+      ]}
+      performanceNewText={[
+        `The redesign of Zazous Bridal's website was a transformative journey aimed at elevating its digital presence. The focus extended beyond aesthetics to ensure optimal performance, accessibility, best practices, and SEO.`,
+        `After the redesign, the website not only captured the essence of Zazous Bridal's style but also demonstrated a substantial improvement in Google Lighthouse scores:`,
+        `Current Scores:\n\nPerformance: 97\nAccessibility: 96\nBest Practices: 95\nSEO: 100\nOverall: 97`,
+        `Achieving Excellence\nPerformance Boost\nPerformance: +27 points\nDrastic improvement in loading times and overall website speed.`,
+        `Enhanced Accessibility\nAccessibility: +7 points\nA commitment to inclusivity, ensuring a seamless experience for all users.`,
+        `Best Practices Reinvented\nBest Practices: +18 points\nAdherence to industry standards and the implementation of optimal development practices.`,
+        `SEO Excellence\nSEO: +8 points\nStrategic optimization for search engines, maximizing online visibility.`,
+        `Stellar Overall Performance\nOverall: +27 points\nA comprehensive transformation, reflecting excellence across all dimensions.`,
+        `This redesign not only brought Zazous Bridal's vision to life but also demonstrated my commitment to delivering websites that excel in both aesthetics and performance, surpassing expectations and industry standards.`,
+      ]}
     />
   );
 }

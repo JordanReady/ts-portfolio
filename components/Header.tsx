@@ -27,7 +27,7 @@ export default function Header() {
         <div className=" w-full flex items-center justify-center py-3 md:py-5 md:justify-start ">
           <Link href="/" className={styles.h1}>
             <h1 className="text-3xl font-bold text-purple-700  text-center justify-center ">
-              Jordan Ready
+              {"< Jordan Ready />"}
             </h1>
           </Link>
         </div>
