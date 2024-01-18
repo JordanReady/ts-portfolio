@@ -99,6 +99,9 @@
 
 /* Screen Sizes */
 @media (max-width: 768px) {
+  .pageContainer {
+    overflow: hidden;
+  }
   .heroContent {
     height: 100%;
     margin-top: 0.5rem;
@@ -128,7 +131,9 @@
     padding: 0.5rem;
   }
   .heroImg img {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    object-fit: contain !important;
+    width: 60svw;
   }
 }
 

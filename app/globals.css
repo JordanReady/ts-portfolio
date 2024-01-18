@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-2 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4 {
+    animation-delay: 4s;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
