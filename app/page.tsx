@@ -83,11 +83,11 @@ export default function Home() {
         </div>
       </div>
       <div className={`${styles.heroImg}`}>
-        <div className="absolute top-14 -left-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-20 animate-blob"></div>
-        <div className="absolute top-15 -right-0 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-20 animate-blob animation-delay-2"></div>
-        <div className="absolute bottom-5 left-20 w-96 h-96 bg-violet-950 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-20 animate-blob animation-delay-4"></div>
+        <div className="absolute top-14 -left-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob"></div>
+        <div className="absolute top-15 -right-0 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-2"></div>
+        <div className="absolute bottom-5 left-20 w-96 h-96 bg-violet-950 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-4"></div>
 
-        <Reveal duration={1} delayTime={0.5}>
+        <Reveal duration={1} delayTime={0}>
           <Image
             loading="lazy"
             placeholder="blur"

@@ -21,17 +21,17 @@ import {
 const components: { title: string; href: string; description: string[] }[] = [
   {
     title: "Need another developer on your team?",
-    href: "/contact/contract",
+    href: "/services_/contract",
     description: ["Let me know how to be a valuable addition to your team! "],
   },
   {
     title: "Need help creating or updating a website for your buisness?",
-    href: "/contact/designing",
+    href: "/services_/designing",
     description: ["I can help you create the website your buisness deservse!"],
   },
   {
     title: "Need help creating a SASS?",
-    href: "/contact/developing",
+    href: "/services_/developing",
     description: [
       "I can help you create your software as a service buisness ideas!",
     ],
@@ -95,7 +95,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuItem>
           <NavigationMenuItem className="shadow-purple-300 dark:shadow-purple-700 shadow-sm border border-b-1 gap-2">
             <NavigationMenuTrigger className=" dark:text-purple-300">
-              Services
+              <Link href={"/services_"}>Services</Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul
