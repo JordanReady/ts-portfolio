@@ -77,7 +77,14 @@ function Reveal({
   };
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div
+      ref={ref}
+      style={{
+        position: "relative",
+        width,
+        overflow: "hidden",
+      }}
+    >
       <motion.div
         variants={{
           visible: { opacity: 1, ...getTextDirectionVis() },

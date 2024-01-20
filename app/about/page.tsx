@@ -6,9 +6,6 @@ import Banner from "@/public/AboutBanner.png";
 function About() {
   return (
     <div>
-      <div className={styles.banner}>
-        <Image src={Banner} alt="banner" />
-      </div>
       <div
         className={`${styles.container} container dark:bg-slate-950 bg-white`}
       >
