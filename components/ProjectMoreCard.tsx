@@ -113,7 +113,7 @@ function ProjectMoreCard({
               >
                 {technologies.map((tech) => (
                   <>
-                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <div key={tech.name}>
                       <Reveal delayTime={0.35} color="var(--primary-color)">
                         <p
@@ -123,7 +123,7 @@ function ProjectMoreCard({
                         </p>
                       </Reveal>
                       {/* Technology description */}
-                      <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                      <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                       <Reveal direction="top" delayTime={0.75} color="grey">
                         <p className=" text-slate-700 dark:text-gray-300 px-4 text-xl pb-3">
                           {tech.description}

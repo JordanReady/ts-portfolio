@@ -10,7 +10,11 @@ const ContractWorkServiceSheet = () => {
         className={`relative border-s border-gray-200 dark:border-gray-700 ${styles.fadeListIn}`}
       >
         <li className="mb-10 ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-4 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-4 h-4 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3.5 -start-2 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div
+            className={`${styles.circle} absolute w-2 h-2 bg-white rounded-full mt-4 -start-1 border border-white dark:border-gray-900 dark:bg-gray-700`}
+          ></div>
+
           <Reveal direction="right" delayTime={0.2} color="#9333ea">
             <h3
               className={` ${styles.service} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}
@@ -18,7 +22,7 @@ const ContractWorkServiceSheet = () => {
               Contract Work
             </h3>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="mb-4 text-base font-normal ">
               As a freelance software developer, I offer Contract Work services
@@ -29,27 +33,27 @@ const ContractWorkServiceSheet = () => {
           </Reveal>
         </li>
         <li className="mb-10 ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
           <Reveal direction="right" delayTime={0.2} color="#9333ea">
             <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
               Key Details
             </h3>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
               Customized solutions based on your project requirements.
             </p>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.5} color="grey">
             <p className="text-base font-normal ">
               Freelance expertise available for both individual tasks and
               collaborative projects.
             </p>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.6} color="grey">
             <p className="text-base font-normal ">
               Flexible engagement models for seamless collaboration with your
@@ -58,42 +62,42 @@ const ContractWorkServiceSheet = () => {
           </Reveal>
         </li>
         <li className="mb-10 ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
           <Reveal direction="right" delayTime={0.2} color="#9333ea">
             <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
               General Process Overview
             </h3>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
               Initial consultation to understand your project's unique
               requirements and challenges.
             </p>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.5} color="grey">
             <p className="text-base font-normal ">
               Proposal and agreement on the scope of work, timeline, and
               collaboration model.
             </p>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.6} color="grey">
             <p className="text-base font-normal ">
               Development phase with regular updates and feedback loops to
               ensure alignment with your goals.
             </p>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.7} color="grey">
             <p className="text-base font-normal ">
               Quality assurance and testing procedures to deliver a polished and
               reliable product.
             </p>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.8} color="grey">
             <p className="text-base font-normal ">
               Delivery of the final product with ongoing support if required.
@@ -101,14 +105,14 @@ const ContractWorkServiceSheet = () => {
           </Reveal>
         </li>
         <li className="mb-10 ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
           <Reveal direction="right" delayTime={0.2} color="#9333ea">
             <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
               Technologies
             </h3>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
               My current tech stack of choice is Next.js, React, TypeScript, and
@@ -116,7 +120,7 @@ const ContractWorkServiceSheet = () => {
               projects.
             </p>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.5} color="grey">
             <p className="text-base font-normal ">
               I have created projects with many other languages and technologies
@@ -126,14 +130,14 @@ const ContractWorkServiceSheet = () => {
           </Reveal>
         </li>
         <li className="mb-10 ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
           <Reveal direction="right" delayTime={0.2} color="#9333ea">
             <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
               Contact Me
             </h3>
           </Reveal>
-          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
               If you're interested in my Contract Work services, feel free to
@@ -142,6 +146,7 @@ const ContractWorkServiceSheet = () => {
             </p>
           </Reveal>
           <div className="flex flex-row">
+            <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-14 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <Reveal direction="top" delayTime={0.2} color="#9333ea">
               <CustomButton link="/contact" text="Contact" />
             </Reveal>
