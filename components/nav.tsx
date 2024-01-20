@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./nav.module.css";
+import CustomButton from "./CustomButton";
 
 import { cn } from "@/lib/utils";
 import Logo from "@/public/MyLogo.png";
@@ -48,8 +49,8 @@ export function NavigationMenuDemo() {
     <div className={styles.container}>
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2">
-            <NavigationMenuTrigger className=" dark:text-purple-300">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>
               <Link href={"/projects"}>Projects</Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent className={styles.menuContainer}>
@@ -70,7 +71,7 @@ export function NavigationMenuDemo() {
                         />
                       </div>
 
-                      <div className="mb-2 mt-4 text-lg font-medium">
+                      <div className="mb-2 mt-4 text-lg font-medium text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                         Check these out!
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -93,8 +94,8 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem className="shadow-purple-300 dark:shadow-purple-700 shadow-sm border border-b-1 gap-2">
-            <NavigationMenuTrigger className=" dark:text-purple-300">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>
               <Link href={"/services_"}>Services</Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -119,17 +120,17 @@ export function NavigationMenuDemo() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem className="shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2">
+          <NavigationMenuItem className="inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <span className=" dark:text-purple-300"> About</span>
+                <span className=" "> About</span>
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem className=" shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2">
+          <NavigationMenuItem className="inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 ">
             <Link href="/contact" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <span className=" dark:text-purple-300"> Contact</span>
+                <span className=" "> Contact</span>
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -154,7 +155,9 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <div className="text-sm leading-none text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-bold">
+            {title}
+          </div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>

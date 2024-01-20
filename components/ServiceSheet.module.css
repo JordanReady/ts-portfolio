@@ -1,0 +1,13 @@
+.serviceSheet h3 {
+  font-size: 24px;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.service {
+  font-size: 30px !important;
+}
+
+.serviceSheet p {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}

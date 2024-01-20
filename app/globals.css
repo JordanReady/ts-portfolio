@@ -24,7 +24,7 @@
 
     --primary: 271 20% 8%;
     --primary-foreground: 210 40% 98%;
-    --primary-color: hwb(271 20% 8%);
+    --primary-color: rgb(147 51 234);
     --primary-color-muted: hwb(271 32% 46% / 0.1);
 
     --secondary: 210 40% 96.1%;
@@ -58,7 +58,7 @@
 
     --primary: 271 20% 8%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --primary-color: hwb(271 20% 8%);
+    --primary-color: rgb(147 51 234);
     --primary-color-muted: hwb(271 32% 46% / 0.1);
 
     --secondary: 217.2 32.6% 17.5%;

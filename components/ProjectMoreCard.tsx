@@ -8,6 +8,7 @@ import { BarChart3 } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
+import CustomButton from "./CustomButton";
 
 // Define a TypeScript interface for the component props
 interface ProjectMoreCardProps {
@@ -79,12 +80,7 @@ function ProjectMoreCard({
           {/* First column */}
           <div className="col-span-2 md:col-span-1 ">
             <Reveal>
-              <h2
-                style={{
-                  color: "var(--primary-color)",
-                }}
-                className="text-6xl p-4"
-              >
+              <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-5xl p-4">
                 {projectName}
               </h2>
             </Reveal>
@@ -106,12 +102,7 @@ function ProjectMoreCard({
           {/* Second column */}
           <div className="col-span-2 md:col-span-1 mb-5 relative">
             <Reveal delayTime={0.35} color="var(--primary-color)">
-              <h2
-                style={{
-                  color: "var(--primary-color)",
-                }}
-                className="text-6xl p-4"
-              >
+              <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-5xl p-4">
                 Technologies
               </h2>
             </Reveal>
@@ -121,10 +112,7 @@ function ProjectMoreCard({
                 <div key={tech.name}>
                   <Reveal delayTime={0.35} color="var(--primary-color)">
                     <p
-                      className={` ${styles.techName} text-2x px-4`}
-                      style={{
-                        color: "var(--primary-color)",
-                      }}
+                      className={` ${styles.techName} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-2x px-4 font-semibold`}
                     >
                       {tech.name}
                     </p>
@@ -143,14 +131,11 @@ function ProjectMoreCard({
               delayTime={0.5}
               color="var(--primary-color)"
             >
-              <div
-                style={{
-                  color: "var(--primary-color)",
-                }}
-                className={` ${styles.languageBreakdownRow}`}
-              >
-                <h2 className="text-2xl p-4">Language Breakdown</h2>
-                <div className={styles.barLogo}>
+              <div className={` ${styles.languageBreakdownRow} `}>
+                <h2 className="text-2xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
+                  Language Breakdown
+                </h2>
+                <div className={` ${styles.barLogo} text-blue-500`}>
                   <BarChart3 />
                 </div>
               </div>
@@ -213,19 +198,14 @@ function ProjectMoreCard({
         >
           <section
             role="main"
-            className="w-full h-full flex-grow  overflow-auto"
+            className="w-full h-full flex-grow overflow-none"
           >
             <Reveal
               direction="right"
               delayTime={0.25}
               color="var(--primary-color)"
             >
-              <h2
-                style={{
-                  color: "var(--primary-color)",
-                }}
-                className="text-6xl p-4"
-              >
+              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
                 Overview
               </h2>
             </Reveal>
@@ -248,32 +228,14 @@ function ProjectMoreCard({
                 delayTime={0.25}
                 color="var(--primary-color)"
               >
-                <div className=" shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2 m-1">
-                  <Link className="" href={repoLink} target="blank">
-                    <Button className={navigationMenuTriggerStyle()}>
-                      <span className=" dark:text-purple-300 text-gray-700">
-                        {" "}
-                        Github Repo
-                      </span>
-                    </Button>
-                  </Link>
-                </div>
+                <CustomButton link={repoLink} text="Github Repo" />
               </Reveal>
               <Reveal
                 direction="top"
                 delayTime={0.25}
                 color="var(--primary-color)"
               >
-                <div className=" shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2 m-1">
-                  <Link href={siteLink} target="blank">
-                    <Button className={navigationMenuTriggerStyle()}>
-                      <span className=" dark:text-purple-300 text-gray-700">
-                        {" "}
-                        Live Site
-                      </span>
-                    </Button>
-                  </Link>
-                </div>
+                <CustomButton link={siteLink} text="Live Site" />
               </Reveal>
             </div>
           </section>
@@ -335,12 +297,7 @@ function ProjectMoreCard({
               delayTime={0.25}
               color="var(--primary-color)"
             >
-              <h2
-                style={{
-                  color: "var(--primary-color)",
-                }}
-                className="text-6xl p-4"
-              >
+              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
                 Performance
               </h2>
             </Reveal>
@@ -381,12 +338,7 @@ function ProjectMoreCard({
             {performanceOld && (
               <div>
                 <Reveal delayTime={0.25} color="var(--primary-color)">
-                  <h3
-                    style={{
-                      color: "var(--primary-color)",
-                    }}
-                    className="text-2xl p-4"
-                  >
+                  <h3 className="text-2xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                     Old Performance Numbers
                   </h3>
                 </Reveal>
@@ -424,12 +376,7 @@ function ProjectMoreCard({
             {performanceNew && (
               <div>
                 <Reveal delayTime={0.25} color="var(--primary-color)">
-                  <h3
-                    style={{
-                      color: "var(--primary-color)",
-                    }}
-                    className="text-2xl p-4"
-                  >
+                  <h3 className="text-2xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                     New Performance Numbers
                   </h3>
                 </Reveal>

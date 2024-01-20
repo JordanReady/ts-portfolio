@@ -8,6 +8,7 @@
   z-index: 0;
   backdrop-filter: blur(1px);
   z-index: -1;
+  border: 2px solid transparent;
 }
 
 .content {
@@ -46,7 +47,6 @@
 }
 
 .name {
-  color: var(--primary-color);
   font-size: 3rem;
   z-index: -1;
 }
@@ -152,7 +152,6 @@
 }
 
 .projectCard:hover .technologies strong {
-  color: var(--primary-color);
   z-index: -1;
   opacity: 0;
 }
@@ -200,7 +199,7 @@
   animation: spinBorderGlowBackground 5s infinite;
   background-color: #fffefe1f;
   border: 2px solid transparent;
-  border-image: linear-gradient(45deg, purple, blue);
+  border-image: linear-gradient(45deg, rgb(147 51 234), #3b82f6);
   border-image-slice: 1;
   border-radius: 5px;
 }
@@ -238,31 +237,31 @@
     border-image-source: linear-gradient(
       45deg,
       var(--primary-color),
-      rgb(54, 3, 66)
+      rgb(147 51 234)
     );
     background-color: rgba(245, 245, 245, 0.101);
   }
   25% {
-    border-image-source: linear-gradient(135deg, #3498db, #3498db);
+    border-image-source: linear-gradient(135deg, #3b82f6, #3b82f6);
     background-color: var(--primary-color-muted);
   }
   50% {
     border-image-source: linear-gradient(
       225deg,
       var(--primary-color),
-      rgb(54, 3, 66)
+      rgb(147 51 234)
     );
     background-color: rgba(245, 245, 245, 0.048);
   }
   75% {
-    border-image-source: linear-gradient(315deg, #783ce7, rgb(54, 3, 66));
+    border-image-source: linear-gradient(315deg, #3b82f6, #3b82f6);
     background-color: var(--primary-color-muted);
   }
   100% {
     border-image-source: linear-gradient(
       45deg,
       var(--primary-color),
-      rgb(54, 3, 66)
+      rgb(147 51 234)
     );
     background-color: rgba(245, 245, 245, 0.105);
   }

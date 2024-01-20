@@ -50,10 +50,11 @@ function UserButton() {
         ) : (
           // User is not signed in, render the Open button
           <Button
-            className="shadow-purple-300 dark:shadow-purple-700 shadow-sm border border-b-1 gap-2 dark:text-purple-300  p-0"
+            className="group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 p-0"
             variant={"outline"}
+            onClick={() => signIn()}
           >
-            <CircleUserRound strokeWidth={1} />
+            <CircleUserRound className="text-white" strokeWidth={1} />
           </Button>
         )}
       </DropdownMenuTrigger>
@@ -67,7 +68,7 @@ function UserButton() {
           ) : (
             // Render a button that calls signIn if the user is not logged in
             <button
-              className="text-gray-500 dark:text-gray-400"
+              className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold"
               onClick={() => signIn()}
             >
               Login
@@ -94,7 +95,9 @@ function UserButton() {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
-              className={styles.title}
+              className={
+                "text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold hover:cursor-pointer"
+              }
               onClick={() => signOut()}
             >
               Log out

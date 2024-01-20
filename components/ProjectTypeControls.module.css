@@ -10,6 +10,11 @@
   width: 107px;
 }
 
+.active {
+  color: white;
+  background: linear-gradient(to bottom right, #8b5cf6, #3490dc);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -17,7 +22,10 @@
   align-items: center;
 }
 
+.container span {
+  width: 103px;
+  height: 36px;
+}
 .container h3 {
-  color: var(--primary-color);
   font-size: 1.75rem;
 }

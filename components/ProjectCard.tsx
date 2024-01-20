@@ -41,7 +41,11 @@ function ProjectCard({
       >
         <div className={styles.content}>
           <div className={`${styles.innerBox}`}>
-            <h3 className={`${styles.name}`}>{name}</h3>
+            <h3
+              className={`${styles.name} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}
+            >
+              {name}
+            </h3>
             <p
               className={` text-slate-700 dark:text-gray-100 ${styles.description}`}
             >
@@ -49,7 +53,9 @@ function ProjectCard({
             </p>
           </div>
           <div className={`${styles.technologies}`}>
-            <strong>Technologies:</strong>
+            <strong className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
+              Technologies:
+            </strong>
             {techArray.map((tech, index) => (
               <p key={index} className="text-gray-700 dark:text-gray-100">
                 {tech}

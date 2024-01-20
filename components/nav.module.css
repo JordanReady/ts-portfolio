@@ -3,7 +3,11 @@
 }
 
 .container li {
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.container a:has(> span) {
+  border-radius: 8px;
 }
 
 .menuContainer a {
@@ -91,31 +95,31 @@
     border-image-source: linear-gradient(
       45deg,
       var(--primary-color),
-      rgb(54, 3, 66)
+      rgb(147 51 234)
     );
     background-color: rgba(245, 245, 245, 0.101);
   }
   25% {
-    border-image-source: linear-gradient(135deg, #3498db, #3498db);
+    border-image-source: linear-gradient(135deg, #3b82f6, #3b82f6);
     background-color: var(--primary-color-muted);
   }
   50% {
     border-image-source: linear-gradient(
       225deg,
       var(--primary-color),
-      rgb(54, 3, 66)
+      rgb(147 51 234)
     );
     background-color: rgba(245, 245, 245, 0.048);
   }
   75% {
-    border-image-source: linear-gradient(315deg, #783ce7, rgb(54, 3, 66));
+    border-image-source: linear-gradient(315deg, #3b82f6, #3b82f6);
     background-color: var(--primary-color-muted);
   }
   100% {
     border-image-source: linear-gradient(
       45deg,
       var(--primary-color),
-      rgb(54, 3, 66)
+      rgb(147 51 234)
     );
     background-color: rgba(245, 245, 245, 0.105);
   }

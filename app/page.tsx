@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import HeroTyped from "@/components/HeroTyped";
 import Reveal from "@/components/Reveal";
+import CustomButton from "@/components/CustomButton";
 
 export default function Home() {
   return (
@@ -17,7 +18,11 @@ export default function Home() {
           <h3 className={``}>Hello there! My name is</h3>
         </Reveal>
         <Reveal delayTime={0.2} direction="right">
-          <h1 className={` text-purple-700 `}>Jordan Ready</h1>
+          <h1
+            className={` text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 `}
+          >
+            Jordan Ready
+          </h1>
         </Reveal>
         <Reveal direction="bottom" delayTime={0.4} color="gray">
           <h3 className={` ${styles.typedContainer}`}>
@@ -43,41 +48,23 @@ export default function Home() {
         <div className={styles.heroIcons}>
           <div className={styles.button}>
             <Reveal delayTime={0.8}>
-              <Button
-                id="github"
-                className="shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2"
-                variant={"outline"}
-              >
-                <Link href="https://github.com/JordanReady" target="blank">
-                  Github
-                </Link>
-              </Button>
+              <CustomButton
+                link="https://github.com/JordanReady"
+                text="Github"
+              />
             </Reveal>
           </div>
           <div className={styles.button}>
-            <Reveal delayTime={1}>
-              <Button
-                id="linkedin"
-                className="shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2"
-                variant={"outline"}
-              >
-                <Link href="https://github.com/JordanReady" target="blank">
-                  LinkedIn
-                </Link>
-              </Button>
+            <Reveal delayTime={0.8}>
+              <CustomButton
+                link="https://github.com/JordanReady"
+                text="LinkedIn"
+              />
             </Reveal>
           </div>
           <div className={styles.button}>
-            <Reveal delayTime={1.2}>
-              <Button
-                id="website"
-                className="shadow-purple-400 dark:shadow-purple-700 shadow-sm border gap-2"
-                variant={"outline"}
-              >
-                <Link href="/contact" target="blank">
-                  Need a Website?
-                </Link>
-              </Button>
+            <Reveal delayTime={0.8}>
+              <CustomButton link="/contact" text="Need a Website?" />
             </Reveal>
           </div>
         </div>
