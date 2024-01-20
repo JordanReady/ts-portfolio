@@ -80,7 +80,7 @@ function ProjectMoreCard({
           {/* First column */}
           <div className="col-span-2 md:col-span-1 ">
             <Reveal>
-              <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-5xl p-4">
+              <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-5xl p-4 font-semibold">
                 {projectName}
               </h2>
             </Reveal>
@@ -102,7 +102,7 @@ function ProjectMoreCard({
           {/* Second column */}
           <div className="col-span-2 md:col-span-1 mb-5 relative">
             <Reveal delayTime={0.35} color="var(--primary-color)">
-              <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-5xl p-4">
+              <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-5xl p-4 font-semibold">
                 Technologies
               </h2>
             </Reveal>
@@ -213,7 +213,7 @@ function ProjectMoreCard({
               delayTime={0.25}
               color="var(--primary-color)"
             >
-              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
+              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                 Overview
               </h2>
             </Reveal>
@@ -305,7 +305,7 @@ function ProjectMoreCard({
               delayTime={0.25}
               color="var(--primary-color)"
             >
-              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
+              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                 Performance
               </h2>
             </Reveal>

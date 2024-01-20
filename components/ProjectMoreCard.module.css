@@ -65,8 +65,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: -1rem !important;
-  margin-bottom: -0.5rem !important;
+  margin-top: 1.5rem;
   margin-left: 1rem;
 }
 
@@ -139,7 +138,7 @@
     max-width: 100dvw;
     justify-content: center;
     align-items: center;
-    margin-top: 0rem;
+    margin-top: 1rem;
     margin-bottom: 0rem;
     margin-left: 0;
   }
