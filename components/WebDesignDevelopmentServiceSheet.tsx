@@ -1,76 +1,153 @@
 import React from "react";
 import styles from "./ServiceSheet.module.css";
+import CustomButton from "./CustomButton";
+import Reveal from "./Reveal";
 
 const WebDesignDevelopmentServiceSheet = () => {
   return (
     <div className={styles.serviceSheet}>
-      <h2 className={styles.serviceTitle}>Website Design and Development</h2>
-      <p className={styles.description}>
-        Elevate your online presence with my Website Design and Development
-        services. As a freelance software developer, I combine technical
-        expertise with a keen eye for design to create visually appealing and
-        functionally robust websites tailored to your business needs.
-      </p>
-      <div className={styles.keyDetails}>
-        <h3>Key Details:</h3>
-        <ul>
-          <li>
-            Custom website design and development to align with your brand and
-            business goals.
-          </li>
-          <li>
-            Responsive and user-friendly interfaces ensuring an optimal user
-            experience across devices.
-          </li>
-          <li>
-            Integration of modern technologies and frameworks for enhanced
-            performance and functionality.
-          </li>
-        </ul>
-      </div>
-      <div className={styles.processOverview}>
-        <h3>Process Overview:</h3>
-        <ol>
-          <li>
-            Initial consultation to understand your brand, target audience, and
-            specific design preferences.
-          </li>
-          <li>
-            Creation of wireframes and design mockups for your approval before
-            the development phase.
-          </li>
-          <li>
-            Agile development approach with regular updates and feedback loops
-            for iterative improvements.
-          </li>
-          <li>
-            Thorough testing procedures to ensure the website functions
-            seamlessly across different browsers and devices.
-          </li>
-          <li>
-            Deployment and ongoing support to address any post-launch
-            adjustments or enhancements.
-          </li>
-        </ol>
-      </div>
-      <div className={styles.technologiesUsed}>
-        <h3>Technologies Used:</h3>
-        <p>
-          Utilizing cutting-edge technologies such as Next.js, React,
-          TypeScript, and Firebase to deliver modern, performant, and secure
-          websites.
-        </p>
-      </div>
-      {/* Add more sections as needed (Portfolio Showcase, Client Testimonials, Pricing, etc.) */}
-      <div className={styles.contactInformation}>
-        <h3>Contact Me:</h3>
-        <p>
-          If you're ready to enhance your online presence through bespoke
-          website design and development, let's discuss your project
-          requirements. Reach out for a personalized consultation.
-        </p>
-        {/* Add your contact details or a CTA button here */}
-      </div>
+      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+        <li className="mb-10 ms-4">
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-4 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="right" delayTime={0.2} color="#9333ea">
+            <h3
+              className={` ${styles.service} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}
+            >
+              Web Design & Development
+            </h3>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.4} color="grey">
+            <p className="mb-4 text-base font-normal ">
+              Your personalized web solution starts here. I offer tailored
+              services for web design and development to bring your ideas to
+              life. From concept to execution, I ensure a seamless and
+              user-friendly experience for your audience.
+            </p>
+          </Reveal>
+        </li>
+        <li className="mb-10 ms-4">
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="right" delayTime={0.2} color="#9333ea">
+            <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
+              Key Details
+            </h3>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.4} color="grey">
+            <p className="text-base font-normal ">
+              Customized solutions based on your project requirements.
+            </p>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.5} color="grey">
+            <p className="text-base font-normal ">
+              Freelance expertise available for both individual tasks and
+              collaborative projects.
+            </p>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.6} color="grey">
+            <p className="text-base font-normal ">
+              Flexible engagement models for seamless collaboration with your
+              existing team.
+            </p>
+          </Reveal>
+        </li>
+        <li className="mb-10 ms-4">
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="right" delayTime={0.2} color="#9333ea">
+            <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
+              General Process Overview
+            </h3>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.4} color="grey">
+            <p className="text-base font-normal ">
+              Initial consultation to understand your project's unique
+              requirements and challenges.
+            </p>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.5} color="grey">
+            <p className="text-base font-normal ">
+              Proposal and agreement on the scope of work, timeline, and
+              collaboration model.
+            </p>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.6} color="grey">
+            <p className="text-base font-normal ">
+              Development phase with regular updates and feedback loops to
+              ensure alignment with your goals.
+            </p>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.7} color="grey">
+            <p className="text-base font-normal ">
+              Quality assurance and testing procedures to deliver a polished and
+              reliable product.
+            </p>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.8} color="grey">
+            <p className="text-base font-normal ">
+              Delivery of the final product with ongoing support if required.
+            </p>
+          </Reveal>
+        </li>
+        <li className="mb-10 ms-4">
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="right" delayTime={0.2} color="#9333ea">
+            <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
+              Technologies
+            </h3>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.4} color="grey">
+            <p className="text-base font-normal ">
+              My current tech stack of choice is Next.js, React, TypeScript, and
+              Firebase, ensuring modern and efficient solutions for your
+              projects.
+            </p>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.5} color="grey">
+            <p className="text-base font-normal ">
+              I have created projects with many other languages and technologies
+              and I am always up for learning new tech to meet your teams
+              requirements!
+            </p>
+          </Reveal>
+        </li>
+        <li className="mb-10 ms-4">
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="right" delayTime={0.2} color="#9333ea">
+            <h3 className=" text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 ">
+              Contact Me
+            </h3>
+          </Reveal>
+          <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.4} color="grey">
+            <p className="text-base font-normal ">
+              If you're interested in my Contract Work services, feel free to
+              reach out. Let's discuss your project needs and how I can
+              contribute to its success.
+            </p>
+          </Reveal>
+          <div className="flex flex-row">
+            <Reveal direction="top" delayTime={0.4} color="#9333ea">
+              <CustomButton link="/contact" text="Contact" />
+            </Reveal>
+            <Reveal direction="top" delayTime={0.5} color="#9333ea">
+              <CustomButton
+                link="https://www.linkedin.com/in/jordan-ready-a97021268"
+                text="LinkedIn"
+              />
+            </Reveal>
+          </div>
+        </li>
+      </ol>
     </div>
   );
 };

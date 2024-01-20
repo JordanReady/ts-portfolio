@@ -2,8 +2,6 @@
 import Image from "next/image";
 import styles from "./HomePage.module.css"; // Assuming you have a CSS module file
 import HeroImage from "@/public/MyLogo.png";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import HeroTyped from "@/components/HeroTyped";
 import Reveal from "@/components/Reveal";
 import CustomButton from "@/components/CustomButton";
