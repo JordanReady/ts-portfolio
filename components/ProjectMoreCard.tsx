@@ -108,23 +108,31 @@ function ProjectMoreCard({
             </Reveal>
 
             <div className={styles.techRow}>
-              {technologies.map((tech) => (
-                <div key={tech.name}>
-                  <Reveal delayTime={0.35} color="var(--primary-color)">
-                    <p
-                      className={` ${styles.techName} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-2x px-4 font-semibold`}
-                    >
-                      {tech.name}
-                    </p>
-                  </Reveal>
-                  {/* Technology description */}
-                  <Reveal direction="top" delayTime={0.75} color="grey">
-                    <p className=" text-slate-700 dark:text-gray-300 px-4 text-xl pb-3">
-                      {tech.description}
-                    </p>
-                  </Reveal>
-                </div>
-              ))}
+              <ol
+                className={`relative border-s border-gray-200 dark:border-gray-700 ${styles.fadeListIn}`}
+              >
+                {technologies.map((tech) => (
+                  <>
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <div key={tech.name}>
+                      <Reveal delayTime={0.35} color="var(--primary-color)">
+                        <p
+                          className={` ${styles.techName} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-2x px-4 font-semibold`}
+                        >
+                          {tech.name}
+                        </p>
+                      </Reveal>
+                      {/* Technology description */}
+                      <div className="absolute w-3 h-1 bg-gray-200 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                      <Reveal direction="top" delayTime={0.75} color="grey">
+                        <p className=" text-slate-700 dark:text-gray-300 px-4 text-xl pb-3">
+                          {tech.description}
+                        </p>
+                      </Reveal>
+                    </div>
+                  </>
+                ))}
+              </ol>
             </div>
             <Reveal
               direction="top"

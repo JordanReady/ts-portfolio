@@ -6,7 +6,9 @@ import Reveal from "./Reveal";
 const PersonalProjectDevelopmentServiceSheet = () => {
   return (
     <div className={styles.serviceSheet}>
-      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+      <ol
+        className={`relative border-s border-gray-200 dark:border-gray-700 ${styles.fadeListIn}`}
+      >
         <li className="mb-10 ms-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-4 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="right" delayTime={0.2} color="#9333ea">

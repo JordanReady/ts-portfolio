@@ -11,3 +11,16 @@
   margin-bottom: 0.5rem;
   font-size: 20px;
 }
+
+.fadeListIn {
+  opacity: 0;
+  animation: fadeListIn 1s ease-in-out forwards;
+}
+@keyframes fadeListIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
