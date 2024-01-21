@@ -41,18 +41,32 @@
 }
 .innerBox {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0.5rem;
   left: 1rem;
   z-index: -1;
+}
+
+.border {
+  z-index: -10;
+}
+
+.borderBg {
+  z-index: -10;
+  position: inherit;
 }
 
 .name {
   font-size: 3rem;
   z-index: -1;
+  height: fit-content;
+  padding: 0.75rem;
+  line-height: 1.75rem;
 }
 
 .description {
   z-index: -1;
+  height: fit-content;
+  padding: 0.75rem;
 }
 
 .technologies {
@@ -272,7 +286,14 @@
   .projectCard {
     background-position: top !important;
     background-size: 120dvw !important;
-    min-height: 360px;
+    min-height: 380px;
+    height: fit-content;
+  }
+  .link {
+    max-width: 400px;
+  }
+  .border {
+    max-width: 500px;
   }
 
   .technologies {
@@ -295,6 +316,7 @@
   }
   .name {
     font-size: 2rem;
+    line-height: 1.75rem;
   }
   .pages {
     /* width: 100%;

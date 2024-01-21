@@ -34,52 +34,55 @@ function ProjectCard({
   const techArray = technologies.split(",");
 
   return (
-    <Link href={`/${type}/${number}`}>
+    <Link className={`${styles.link}`} href={`/${type}/${number}`}>
       <div
-        className={`${styles.projectCard} shadow-purple-300 dark:shadow-purple-700  shadow-sm border border-b-1 gap-2`}
-        style={backgroundStyle}
+        className={` ${styles.border} relative p-0.5 mb-2  overflow-hidden text-sm font-medium bg-gradient-to-br from-purple-600 to-blue-500 `}
       >
-        <div className={styles.content}>
-          <div className={`${styles.innerBox}`}>
-            <h3
-              className={`${styles.name} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}
-            >
-              {name}
-            </h3>
-            <p
-              className={` text-slate-700 dark:text-gray-100 ${styles.description}`}
-            >
-              {description}
-            </p>
-          </div>
-          <div className={`${styles.technologies}`}>
-            <strong className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
-              Technologies:
-            </strong>
-            {techArray.map((tech, index) => (
-              <p key={index} className="text-gray-700 dark:text-gray-100">
-                {tech}
-              </p>
-            ))}
-          </div>
-          <div className={styles.pages}>
-            {logos.map((logo, index) => (
-              <Image
-                key={index}
-                className={`${styles.img}`}
-                src={logo}
-                alt={`Logo ${index + 1}`}
-                loading="lazy"
-                placeholder="blur"
-                sizes="fill"
-              />
-            ))}
-          </div>
-          {/* <Image
+        <div className={` ${styles.borderBg} bg-white dark:bg-slate-950`}>
+          <div className={`${styles.projectCard}  `} style={backgroundStyle}>
+            <div className={styles.content}>
+              <div className={`${styles.innerBox}`}>
+                <h3
+                  className={`${styles.name} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}
+                >
+                  {name}
+                </h3>
+                <p
+                  className={` text-slate-700 dark:text-gray-100 ${styles.description}`}
+                >
+                  {description}
+                </p>
+              </div>
+              <div className={`${styles.technologies}`}>
+                <strong className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
+                  Technologies:
+                </strong>
+                {techArray.map((tech, index) => (
+                  <p key={index} className="text-gray-700 dark:text-gray-100">
+                    {tech}
+                  </p>
+                ))}
+              </div>
+              <div className={styles.pages}>
+                {logos.map((logo, index) => (
+                  <Image
+                    key={index}
+                    className={`${styles.img}`}
+                    src={logo}
+                    alt={`Logo ${index + 1}`}
+                    loading="lazy"
+                    placeholder="blur"
+                    sizes="fill"
+                  />
+                ))}
+              </div>
+              {/* <Image
             className={`${styles.btn}`}
             src={moreButton}
             alt="More Button"
           ></Image> */}
+            </div>
+          </div>
         </div>
       </div>
     </Link>

@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/auth";
 import SessionProvider from "@/components/SessionProvider";
+import TopPageButton from "@/components/TopPageButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default async function RootLayout({
           >
             <Header />
             {children}
+            <TopPageButton />
           </ThemeProvider>
         </SessionProvider>
       </body>
