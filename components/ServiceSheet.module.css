@@ -16,6 +16,10 @@
   margin-top: 1.1rem;
 }
 
+.serviceSheet button {
+  margin-top: 2.5rem;
+}
+
 .fadeListIn {
   opacity: 0;
   animation: fadeListIn 1s ease-in-out forwards;

@@ -42,7 +42,9 @@ function ProjectTypeControls({
             >
               <span
                 className={`relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md dark:text-white text-black active:text-white hover:text-white group-hover:bg-opacity-0 ${
-                  localSelectedType === "all" ? `${styles.active}` : ""
+                  localSelectedType === "all"
+                    ? "active dark:bg-slate-700 opacity-80 bg-slate-100"
+                    : ""
                 }`}
               >
                 All
@@ -83,7 +85,9 @@ function ProjectTypeControls({
             >
               <span
                 className={`relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md dark:text-white text-black active:text-white hover:text-white group-hover:bg-opacity-0 ${
-                  localSelectedType === "fullstack" ? `${styles.active}` : ""
+                  localSelectedType === "fullstack"
+                    ? "active dark:bg-slate-700 opacity-80 bg-slate-100"
+                    : ""
                 }`}
               >
                 Fullstack
@@ -102,7 +106,9 @@ function ProjectTypeControls({
             >
               <span
                 className={`relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md dark:text-white text-black active:text-white hover:text-white group-hover:bg-opacity-0 ${
-                  localSelectedType === "frontend" ? `${styles.active}` : ""
+                  localSelectedType === "frontend"
+                    ? "active dark:bg-slate-700 opacity-80 bg-slate-100"
+                    : ""
                 }`}
               >
                 Frontend

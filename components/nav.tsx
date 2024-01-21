@@ -81,15 +81,15 @@ export function NavigationMenuDemo() {
                     </NavigationMenuLink>
                   </Link>
                 </li>
-                <ListItem href="/frontend" title="Front End">
-                  Here are some layout designs and front end projects.
+                <ListItem href="/production-sites" title="Freelance">
+                  Here are some profesional sites hosted in production right
+                  now!
                 </ListItem>
                 <ListItem href="/fullstack" title="Full Stack">
                   Here are applications that use databases and apis.
                 </ListItem>
-                <ListItem href="/production-sites" title="Production Sites">
-                  Here are some profesional sites hosted in production right
-                  now!
+                <ListItem href="/frontend" title="Front End">
+                  Here are some layout designs and front end projects.
                 </ListItem>
               </ul>
             </NavigationMenuContent>

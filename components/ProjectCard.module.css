@@ -215,7 +215,11 @@
   border: 2px solid transparent;
   border-image: linear-gradient(45deg, rgb(147 51 234), #3b82f6);
   border-image-slice: 1;
-  border-radius: 5px;
+}
+
+.projectCard:hover .border,
+.projectCard:hover .borderBg {
+  border: none;
 }
 
 .projectCard:hover .technologies,
