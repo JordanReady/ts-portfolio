@@ -24,13 +24,13 @@ export default function Home() {
         </Reveal>
         <Reveal direction="bottom" delayTime={0.4} color="gray">
           <h3 className={` ${styles.typedContainer}`}>
-            <div>
-              And I'm a<span className={styles.spacer}></span>
-              <span>
-                {" "}
-                <HeroTyped />
-              </span>
-            </div>
+            {" "}
+            <span className={styles.imText}>And I'm a</span>
+            <span className={styles.spacer}></span>
+            <span>
+              {" "}
+              <HeroTyped />
+            </span>
           </h3>
         </Reveal>
         <Reveal direction="left" delayTime={0.6} color="gray">

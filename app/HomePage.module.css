@@ -128,6 +128,9 @@
     object-fit: contain !important;
     width: 60svw;
   }
+  .imText {
+    justify-self: center;
+  }
 }
 
 /* Animations */

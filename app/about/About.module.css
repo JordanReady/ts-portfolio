@@ -1,1 +1,141 @@
+/* ContactPage.module.css */
 
+.contactPage {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto !important;
+  gap: 20px;
+}
+
+.imageContainer {
+  grid-row: 1 / 2;
+}
+
+.textContainer {
+  grid-row: 2 / 2;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.likeText {
+  width: 130%;
+}
+
+.logo {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.logoImg {
+  border-radius: 50%;
+  overflow: visible;
+}
+
+/* Style for individual images in the grid */
+.smallImg {
+  max-height: 300px;
+  max-width: 240px;
+  object-fit: cover !important;
+}
+
+.mainImg {
+  max-height: 450px;
+  max-width: 360px;
+  width: 100%;
+  justify-self: center;
+  object-fit: cover !important;
+}
+.mainPhotoCard {
+  background-color: whitesmoke;
+  padding: 0.5rem 0.5rem 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.192);
+  max-width: max-content;
+  transition: transform 0.5s ease-in-out;
+}
+.mainPhotoCard:hover {
+  transform: scale(1.05);
+}
+
+.photoCard {
+  opacity: 0;
+  background-color: whitesmoke;
+  padding: 0.5rem 0.5rem 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.192);
+  max-width: max-content;
+  transition: transform 0.5s ease-in-out;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.photoCard:hover {
+  transform: translateX(-30px) rotate(0deg) scale(1.3);
+  z-index: 1;
+}
+
+/* Animation for fading in on page load */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the initial state of .photoCard */
+.photoCard.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Trigger the animation based on a class added to the element */
+.photoCard.fade-in:hover {
+  animation: none; /* Disable the fade-in animation on hover */
+}
+
+.card1 {
+  transform: rotate(-5deg);
+  max-height: 360px;
+}
+.card2 {
+  transform: rotate(5deg);
+  max-height: 360px;
+}
+
+/* screen sizes */
+@media (max-width: 1280px) {
+  .likeText {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainImg {
+    width: 85svw;
+    padding-bottom: 1.25rem;
+  }
+  .smallImg {
+    max-width: max-content;
+    max-height: 170px;
+  }
+  .photoCard {
+    padding: 0.25rem 0.25rem 1rem;
+  }
+  .mainPhotoCard {
+    max-height: 480px;
+  }
+  .logo {
+    width: 220px;
+  }
+}
