@@ -16,7 +16,7 @@ function Contact() {
           className={`relative p-0.5 mb-2  overflow-hidden text-sm font-medium rounded-lg ${styles.contactContainer} bg-gradient-to-br from-purple-600 to-blue-500 `}
         >
           <div
-            className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.contactCard} bg-white dark:bg-slate-950 rounded-md group-hover:bg-opacity-0`}
+            className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.contactCard} bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0`}
           >
             <Reveal direction="top" delayTime={0} color="#9333ea">
               <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-4xl mb-2 font-semibold">
@@ -41,7 +41,7 @@ function Contact() {
             </Reveal>
             <div className={styles.contactInfo}>
               <Reveal direction="top" delayTime={0.2} color="#9333ea">
-                <p className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-xl mb-2 font-semibold">
+                <p className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-3xl mb-2 font-semibold">
                   Personal Info
                 </p>
               </Reveal>
@@ -74,7 +74,7 @@ function Contact() {
           className={`relative p-0.5 mb-2  overflow-hidden text-sm font-medium rounded-lg ${styles.formContainer} bg-gradient-to-br from-purple-600 to-blue-500 `}
         >
           <form
-            className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.form} bg-white dark:bg-slate-950 rounded-md group-hover:bg-opacity-0`}
+            className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.form} bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0`}
           >
             <div className="mb-4">
               <Reveal direction="top" delayTime={0} color="#9333ea">

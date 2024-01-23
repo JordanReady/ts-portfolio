@@ -1,0 +1,24 @@
+.formContainer {
+  width: 550px;
+  animation: fadeListIn 1s ease-in-out forwards;
+}
+
+.form {
+  min-width: 100%;
+  margin: 0;
+}
+
+.input {
+  width: 100%;
+  max-width: 518px !important;
+}
+
+/* screen sizes */
+@media (max-width: 768px) {
+  .formContainer {
+    width: 100% !important;
+  }
+  .form {
+    width: auto;
+  }
+}

@@ -1,0 +1,41 @@
+.logo {
+  width: fit-content;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.logoImg {
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.nameTitleGroup {
+  padding-left: 1rem;
+}
+
+/* screen sizes */
+@media (max-width: 768px) {
+  .nameTitleGroup h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .logo {
+    width: 80px;
+  }
+}

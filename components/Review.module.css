@@ -1,0 +1,48 @@
+.logo {
+  width: fit-content;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.logoImg {
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nameTitleGroup {
+  padding-left: 1rem;
+}
+
+/* screen sizes */
+@media (max-width: 768px) {
+  .nameTitleGroup h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    width: 80px;
+    align-items: center;
+    margin: 0;
+  }
+  .stars svg {
+    height: 20px;
+    width: 20px;
+  }
+}
