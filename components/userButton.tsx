@@ -59,40 +59,30 @@ function UserButton() {
         )}
       </DropdownMenuTrigger>
       <DropdownMenuContent className={styles.contentContainer}>
-        <DropdownMenuItem>
-          {session ? (
-            // Render a link to "/profile" if the user is logged in
-            <Link href="/profile" className="text-gray-500 dark:text-gray-400">
-              Profile
-            </Link>
-          ) : (
-            // Render a button that calls signIn if the user is not logged in
-            <button
-              className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold"
-              onClick={() => signIn()}
-            >
-              Login
-            </button>
-          )}
-        </DropdownMenuItem>
+        {session ? (
+          // Render a link to "/profile" if the user is logged in
+          <Link href="/profile" className="text-gray-500 dark:text-gray-400">
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+          </Link>
+        ) : (
+          // Render a button that calls signIn if the user is not logged in
+          <button
+            className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold"
+            onClick={() => signIn()}
+          >
+            Login
+          </button>
+        )}
+
         {userName && (
           <>
-            <DropdownMenuItem>
-              <Link
-                className=" text-gray-500 dark:text-gray-400"
-                href={"/review"}
-              >
-                Leave Review
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link
-                className="text-gray-500 dark:text-gray-400"
-                href={"/support"}
-              >
-                Support Me
-              </Link>
-            </DropdownMenuItem>
+            <Link
+              className=" text-gray-500 dark:text-gray-400"
+              href={"/review"}
+            >
+              <DropdownMenuItem>Leave Review</DropdownMenuItem>
+            </Link>
+
             <DropdownMenuSeparator />
             <DropdownMenuItem
               className={

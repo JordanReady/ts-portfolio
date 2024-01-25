@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./EditProfileForm.module.css";
 import Reveal from "./Reveal";
 import CustomButton from "./CustomButton";
+import { db } from "@/firebase";
+import { useSession } from "next-auth/react";
 
 function EditProfileForm() {
+  const [name, setName] = useState("");
+  const [profession, setProfession] = useState("");
+  const [bio, setBio] = useState("");
+  const { data: session } = useSession();
+
+  //   const handleUpdate = () => {
+  //     try {
+  //       // Get the user's Firestore document ID from the session
+  //       const userId = session?.user?.name;
+  //       console.log(session);
+  //       if (userId) {
+  //         // Update the user's information in Firestore
+  //         db.collection("users").doc(userId).update({
+  //           name,
+  //           profession,
+  //           bio,
+  //         });
+  //       }
+
+  //       // Log success or navigate to another page if needed
+  //       console.log("Profile updated successfully!");
+  //     } catch (error) {
+  //       // Handle errors, e.g., display an error message
+  //       console.error("Error updating profile:", error);
+  //     }
+  //   };
   return (
     <div className=" flex ">
       <div
@@ -16,9 +44,6 @@ function EditProfileForm() {
             <Reveal direction="top" delayTime={0} color="#9333ea">
               <label className="block text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-xl mb-2 font-semibold">
                 Name{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-xl font-semibold">
-                  *
-                </span>
               </label>
             </Reveal>
             <Reveal width="100%" direction="top" delayTime={0.05} color="grey">
@@ -26,7 +51,7 @@ function EditProfileForm() {
                 placeholder="Jane Doe"
                 type="text"
                 className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
-                required
+                onChange={(e) => setName(e.target.value)}
               />
             </Reveal>
           </div>
@@ -35,9 +60,6 @@ function EditProfileForm() {
             <Reveal direction="top" delayTime={0.1} color="#9333ea">
               <label className="block text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-xl mb-2 font-semibold">
                 Profession / Business{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-xl font-semibold">
-                  *
-                </span>
               </label>
             </Reveal>
             <Reveal width="100%" direction="top" delayTime={0.15} color="grey">
@@ -45,7 +67,7 @@ function EditProfileForm() {
                 placeholder="Astronaut Cowboy"
                 type="text"
                 className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
-                required
+                onChange={(e) => setProfession(e.target.value)}
               />
             </Reveal>
           </div>
@@ -61,6 +83,7 @@ function EditProfileForm() {
                 className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
                 rows={4}
                 placeholder="Tell us a little something about yourself or business!"
+                onChange={(e) => setBio(e.target.value)}
               ></textarea>
             </Reveal>
           </div>

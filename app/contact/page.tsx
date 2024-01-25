@@ -32,7 +32,7 @@ function Contact() {
                   alt="Logo"
                   width={130}
                   height={130}
-                  className={`${styles.logoImg}  bg-white dark:bg-slate-950 `}
+                  className={`${styles.logoImg}  bg-white dark:bg-slate-900 `}
                   loading="lazy"
                   placeholder="blur"
                   sizes="fill"

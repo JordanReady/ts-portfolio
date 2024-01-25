@@ -3,16 +3,18 @@ import React from "react";
 import styles from "./About.module.css";
 import Image from "next/image";
 import Img1 from "@/public/MeHat.jpg";
-import HeroImg from "@/public/LogoRound.png";
+import HeroImg from "@/public/MyLogo.png";
 import Img2 from "@/public/TopView.jpg";
 import Img3 from "@/public/Rock.jpg";
 import Img4 from "@/public/Climbing.jpg";
 import Reveal from "@/components/Reveal";
 import TechList from "@/components/TechList";
+import Review from "@/components/Review";
+import CustomButton from "@/components/CustomButton";
 
 function About() {
   return (
-    <div className={`${styles.container} container dark:bg-slate-950 bg-white`}>
+    <div className={`${styles.container} container `}>
       <div className="grid grid-cols-6 md:grid-cols-6 md:grid-rows-1 gap-4 mt-10">
         {/* First row */}
         <div className="col-span-6 md:col-span-3 md:row-span-2 flex justify-center mb-6">
@@ -27,7 +29,7 @@ function About() {
                 src={HeroImg}
                 alt="Logo Image"
                 width={320}
-                className={`${styles.logoImg}  bg-white dark:bg-slate-950 `}
+                className={`${styles.logoImg}  bg-white dark:bg-slate-900 `}
               />
             </div>
           </Reveal>
@@ -156,6 +158,47 @@ md:col-span-3 md:row-span-2 mb-6`}
               a foundation of robust, modern tools.
             </p>
           </Reveal>
+        </div>
+        {/* fourth col */}
+        <div
+          className={`col-span-6 
+lg:col-span-3 lg:row-span-2 mb-6`}
+        >
+          <Reveal delayTime={0} direction="right">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-3xl">
+              What do people say?
+            </h2>
+          </Reveal>
+          <Reveal delayTime={0.1} direction="top" color="grey">
+            <p className="mb-2">
+              As a Fullstack developer, I've had the pleasure of receiving
+              positive feedback from clients and collaborators. They've
+              appreciated my attention to detail, problem-solving skills, and
+              commitment to delivering quality solutions. Clients often express
+              satisfaction with the results, while collaborators find my
+              professionalism and effective communication valuable in our
+              projects. It's heartening to know that my work has made a positive
+              impact, and I'm always eager to continue contributing to
+              successful web development endeavors.
+            </p>
+            <CustomButton text="View More" link="/reviews" />
+          </Reveal>
+        </div>
+        <div
+          className="col-span-6 
+lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
+        >
+          <div className="col-span-6">
+            <Reveal delayTime={0} direction="right">
+              <Review />
+            </Reveal>
+          </div>
+
+          <div className="col-span-6 flex justify-end">
+            <Reveal delayTime={0.2} direction="left">
+              <Review />
+            </Reveal>
+          </div>
         </div>
       </div>
     </div>
