@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { getSession, useSession } from "next-auth/react";
 import styles from "./Profile.module.css";
 import EditProfileForm from "@/components/EditProfileForm";
 import ProfileCard from "@/components/ProfileCard";
@@ -10,27 +8,8 @@ import Reveal from "@/components/Reveal";
 import LeaveReviewForm from "@/components/LeaveReviewForm";
 
 function Profile() {
-  const [userName, setUserName] = useState<string | null>(null);
-  const [userImg, setUserImg] = useState<string | null>(null);
-  const { data: session } = useSession();
+  const [triggerFetch, setTriggerFetch] = useState(false);
 
-  useEffect(() => {
-    const fetchSession = async () => {
-      const session = await getSession();
-      console.log(session);
-
-      // Check if the user is logged in
-      if (session && session.user) {
-        // Assuming you have a field for user's name in the session user object
-        setUserName(session.user.name || null);
-        setUserImg(session.user.image || null);
-        // create in firebase
-        // get users proffession and bio
-      }
-    };
-
-    fetchSession();
-  }, []);
   return (
     <div className="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Left column - Profile Card */}
@@ -42,13 +21,10 @@ function Profile() {
         </Reveal>
 
         <Reveal direction="right" delayTime={0}>
-          {userName !== null && userImg !== null && (
-            <ProfileCard name={userName} img={userImg} />
-          )}
-          {userName !== null && userImg === null && (
-            <ProfileCard name={userName} />
-          )}
-          {userName === null && userImg === null && <ProfileCard />}
+          <ProfileCard
+            triggerFetch={triggerFetch}
+            setTriggerFetch={setTriggerFetch}
+          />
         </Reveal>
       </div>
 
@@ -60,7 +36,10 @@ function Profile() {
           </h2>
         </Reveal>
         <Reveal width="100%" direction="left" delayTime={0}>
-          <EditProfileForm />
+          <EditProfileForm
+            triggerFetch={triggerFetch}
+            setTriggerFetch={setTriggerFetch}
+          />
         </Reveal>
       </div>
 

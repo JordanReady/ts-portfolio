@@ -1,37 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./EditProfileForm.module.css";
 import Reveal from "./Reveal";
 import CustomButton from "./CustomButton";
-import { db } from "@/firebase";
 import { useSession } from "next-auth/react";
+import { updateProfile } from "@/utils/firebaseUtils";
+import { db } from "@/firebase";
 
-function EditProfileForm() {
-  const [name, setName] = useState("");
+interface ProfileCardProps {
+  triggerFetch: boolean;
+  setTriggerFetch: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const EditProfileForm = ({
+  setTriggerFetch,
+  triggerFetch,
+}: ProfileCardProps) => {
+  const [userName, setUserName] = useState("");
   const [profession, setProfession] = useState("");
   const [bio, setBio] = useState("");
   const { data: session } = useSession();
 
-  //   const handleUpdate = () => {
-  //     try {
-  //       // Get the user's Firestore document ID from the session
-  //       const userId = session?.user?.name;
-  //       console.log(session);
-  //       if (userId) {
-  //         // Update the user's information in Firestore
-  //         db.collection("users").doc(userId).update({
-  //           name,
-  //           profession,
-  //           bio,
-  //         });
-  //       }
+  const handleUpdate = async () => {
+    try {
+      if (session && session.user) {
+        const { id, name } = session.user;
 
-  //       // Log success or navigate to another page if needed
-  //       console.log("Profile updated successfully!");
-  //     } catch (error) {
-  //       // Handle errors, e.g., display an error message
-  //       console.error("Error updating profile:", error);
-  //     }
-  //   };
+        // Call the updateProfile function with the Firestore instance to update or create the user's profile
+        await updateProfile(db, id, {
+          name: userName,
+          bio,
+          profession,
+        });
+      }
+
+      console.log("Profile updated successfully!");
+      setTriggerFetch(!triggerFetch); // Trigger a re-render of the ProfileCard component
+    } catch (error) {
+      console.error("Error updating profile:", error);
+    }
+  };
+
   return (
     <div className=" flex ">
       <div
@@ -39,6 +47,10 @@ function EditProfileForm() {
       >
         <form
           className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.form} bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0`}
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleUpdate();
+          }}
         >
           <div className="mb-4">
             <Reveal direction="top" delayTime={0} color="#9333ea">
@@ -51,7 +63,7 @@ function EditProfileForm() {
                 placeholder="Jane Doe"
                 type="text"
                 className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setUserName(e.target.value)}
               />
             </Reveal>
           </div>
@@ -94,6 +106,6 @@ function EditProfileForm() {
       </div>
     </div>
   );
-}
+};
 
 export default EditProfileForm;

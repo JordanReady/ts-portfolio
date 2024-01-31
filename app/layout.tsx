@@ -7,6 +7,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/auth";
 import SessionProvider from "@/components/SessionProvider";
 import TopPageButton from "@/components/TopPageButton";
+import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,36 +23,23 @@ export default async function RootLayout({
 }) {
   const session = await getServerSession(authOptions);
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <SessionProvider session={session}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {/* <div
-              className=" dark:opacity-5  opacity-10"
-              style={{
-                backgroundImage: 'url("/background.jpg")',
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundBlendMode: "multiply",
-                height: "100svh",
-                position: "fixed",
-                top: 0,
-                left: 0,
-                right: 0,
-                zIndex: -999,
-              }}
-            ></div> */}
-            <Header />
-            {children}
-            <TopPageButton />
-          </ThemeProvider>
-        </SessionProvider>
-      </body>
-    </html>
+    <SessionProvider session={session}>
+      <html lang="en">
+        <body className={inter.className}>
+          <FirebaseAuthProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Header />
+              {children}
+              <TopPageButton />
+            </ThemeProvider>
+          </FirebaseAuthProvider>
+        </body>
+      </html>
+    </SessionProvider>
   );
 }
