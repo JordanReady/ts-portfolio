@@ -5,12 +5,14 @@ interface CustomButtonProps {
   text: string;
   link?: string;
   external?: boolean;
+  onClick?: () => void;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
   text,
   link,
   external,
+  onClick,
 }) => {
   const buttonProps = external
     ? {
@@ -30,6 +32,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     </Link>
   ) : (
     <button
+      onClick={onClick}
       {...buttonProps}
       className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
     >

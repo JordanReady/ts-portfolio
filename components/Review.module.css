@@ -10,7 +10,8 @@
 
 .logoImg {
   border-radius: 50%;
-  overflow: visible;
+  max-width: 155px;
+  max-height: 155px;
 }
 
 .card {
@@ -35,11 +36,22 @@
     font-size: 20px;
     margin-bottom: 0;
   }
-
+  .nameTitleGroup p {
+    font-size: 14px;
+    margin-bottom: 0.125rem;
+    margin-top: -0.25rem;
+  }
   .logo {
-    width: 80px;
+    width: 60px;
+    height: 60px;
     align-items: center;
     margin: 0;
+  }
+
+  .logoImg {
+    border-radius: 50%;
+    max-width: 56px;
+    max-height: 56px;
   }
   .stars svg {
     height: 20px;

@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import Image from "next/image";
-import Img1 from "@/public/MeHat.jpg";
+import Img1 from "@/public/LogoRound.png";
 import HeroImg from "@/public/MyLogo.png";
 import Img2 from "@/public/TopView.jpg";
 import Img3 from "@/public/Rock.jpg";
@@ -190,13 +190,27 @@ lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
         >
           <div className="col-span-6">
             <Reveal delayTime={0} direction="right">
-              <Review />
+              <Review
+                name="Jordan Ready"
+                profession="Software Developer"
+                date="01/15/2024"
+                review="I'm a fullstack web developer on a mission to create web apps that are not just visually appealing, but also super user-friendly."
+                img={Img1}
+                rating={5}
+              />
             </Reveal>
           </div>
 
           <div className="col-span-6 flex justify-end">
             <Reveal delayTime={0.2} direction="left">
-              <Review />
+              <Review
+                name="Jordan Ready"
+                profession="Software Developer"
+                date="01/15/2024"
+                review="I'm a fullstack web developer on a mission to create web apps that are not just visually appealing, but also super user-friendly."
+                img={Img1}
+                rating={5}
+              />
             </Reveal>
           </div>
         </div>

@@ -23,7 +23,7 @@ const EditProfileForm = ({
   const handleUpdate = async () => {
     try {
       if (session && session.user) {
-        const { id, name } = session.user;
+        const { id } = session.user;
 
         // Call the updateProfile function with the Firestore instance to update or create the user's profile
         await updateProfile(db, id, {
@@ -35,9 +35,17 @@ const EditProfileForm = ({
 
       console.log("Profile updated successfully!");
       setTriggerFetch(!triggerFetch); // Trigger a re-render of the ProfileCard component
+      resetForm();
+      alert("Profile updated successfully!");
     } catch (error) {
       console.error("Error updating profile:", error);
     }
+  };
+
+  const resetForm = () => {
+    setUserName("");
+    setProfession("");
+    setBio("");
   };
 
   return (
@@ -50,6 +58,7 @@ const EditProfileForm = ({
           onSubmit={(e) => {
             e.preventDefault();
             handleUpdate();
+            resetForm();
           }}
         >
           <div className="mb-4">

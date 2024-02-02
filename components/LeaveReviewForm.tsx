@@ -2,19 +2,52 @@ import React, { useState } from "react";
 import styles from "./EditProfileForm.module.css";
 import Reveal from "./Reveal";
 import CustomButton from "./CustomButton";
-import { Star } from "lucide-react"; // Assuming you have a Star component from Lucid library
+import { Star } from "lucide-react";
+import { addReview } from "@/utils/firebaseUtils";
+import { useSession } from "next-auth/react";
+import { db } from "@/firebase";
 
 interface StarsData {
   value: number;
   color: string;
 }
 
-function EditProfileForm() {
-  const [rating, setRating] = useState<number>(0); // State to hold the rating
+interface FormProps {
+  triggerFetch: boolean;
+  setTriggerFetch: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function LeaveReviewForm({ triggerFetch, setTriggerFetch }: FormProps) {
+  const [rating, setRating] = useState<number>(0);
+  const [reviewText, setReviewText] = useState<string>("");
+  const { data: session } = useSession();
 
   // Function to handle star click and update the rating
   const handleStarClick = (index: number) => {
     setRating(index);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      console.log("Rating:", rating);
+      console.log("Review Text:", reviewText);
+
+      // Check if user is logged in
+      if (session && session.user) {
+        const userId = session.user.id;
+        console.log("User is logged in:", session.user);
+        console.log("User ID:", userId);
+
+        // Call the addReview function with Firestore instance, rating, review text, and user ID
+        await addReview(db, rating, reviewText, userId);
+
+        console.log("Review submitted successfully!");
+      } else {
+        console.error("User not logged in");
+      }
+    } catch (error) {
+      console.error("Error submitting review:", error);
+    }
   };
 
   const starsData: StarsData[] = [
@@ -32,9 +65,12 @@ function EditProfileForm() {
       >
         <form
           className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.form} bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0`}
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+            setTriggerFetch(!triggerFetch);
+          }}
         >
-          {/* ... Existing form inputs ... */}
-
           {/* Rating Section */}
           <div className="mb-4">
             <Reveal direction="top" delayTime={0.2} color="#9333ea">
@@ -68,6 +104,8 @@ function EditProfileForm() {
                 className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
                 rows={4}
                 placeholder="Leave your review here..."
+                value={reviewText}
+                onChange={(e) => setReviewText(e.target.value)}
               ></textarea>
             </Reveal>
           </div>
@@ -81,4 +119,4 @@ function EditProfileForm() {
   );
 }
 
-export default EditProfileForm;
+export default LeaveReviewForm;

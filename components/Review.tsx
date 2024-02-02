@@ -1,11 +1,40 @@
 import React from "react";
 import styles from "./Review.module.css";
-import Image from "next/image";
-import Img from "@/public/LogoRound.png";
-import { Star } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
+import { CircleUserRound, Star } from "lucide-react";
 import Reveal from "./Reveal";
 
-function Review() {
+interface ReviewProps {
+  name: string;
+  profession: string;
+  rating: number;
+  review: string;
+  img: string | StaticImageData | null;
+  date: string;
+}
+
+const formatDate = (dateString: string): string => {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  };
+
+  const formattedDate = new Date(dateString).toLocaleDateString(
+    undefined,
+    options
+  );
+
+  return formattedDate;
+};
+
+function Review({ name, profession, rating, review, img, date }: ReviewProps) {
+  // Define star colors here
+  const starColors = ["#9333ea", "#7540ee", "#615cfb", "#4d74fa", "#3b82f6"];
+
+  // Display only the specified number of stars based on the rating
+  const displayedStars = starColors.slice(0, rating);
+
   return (
     <div
       className={`${styles.card} bg-white dark:bg-gray-800 p-0.5 relative  mb-2  overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
@@ -16,51 +45,58 @@ function Review() {
             className={`${styles.logo} relative p-0.5 mb-2  overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
           >
             <Reveal direction="left" delayTime={0.4}>
-              <Image
-                loading="lazy"
-                placeholder="blur"
-                sizes="fill"
-                src={Img}
-                alt="Logo Image"
-                width={125}
-                height={125}
-                className={`${styles.logoImg}  bg-white dark:bg-slate-900 `}
-              />
+              {/* You can customize the Image component based on your props */}
+              {img && (
+                <Image
+                  loading="lazy"
+                  sizes="fill"
+                  src={img}
+                  alt="Profile Image"
+                  width={155}
+                  height={155}
+                  className={`${styles.logoImg} bg-white dark:bg-slate-900 border-b-1 gap-2 rounded-full`}
+                />
+              )}
+              {!img && (
+                <CircleUserRound
+                  size={155}
+                  strokeWidth={0.5}
+                  className={`${styles.logoImg} bg-white dark:bg-slate-900 p-2`}
+                />
+              )}
             </Reveal>
           </div>
           <div className={styles.nameTitleGroup}>
             <Reveal direction="right" delayTime={0.5}>
               <h2 className="text-3xl font-semibold mb-1 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
-                Jordan Ready
+                {name}
               </h2>
             </Reveal>
             <Reveal color="grey" direction="right" delayTime={0.6}>
-              <p className=" mb-2">Web Developer</p>
+              <p className=" mb-2">{profession}</p>
             </Reveal>
             <div className={`${styles.stars} mb-2 flex`}>
-              <Reveal color="#9333ea" direction="top" delayTime={0.625}>
-                <Star color="#9333ea" />
-              </Reveal>
-              <Reveal color="#7540ee" direction="top" delayTime={0.65}>
-                <Star color="#7540ee" />
-              </Reveal>
-              <Reveal color="#615cfb" direction="top" delayTime={0.675}>
-                <Star color="#615cfb" />
-              </Reveal>
-              <Reveal color="#4d74fa" direction="top" delayTime={0.7}>
-                <Star color="#4d74fa" />
-              </Reveal>
-              <Reveal color="#3b82f6" direction="top" delayTime={0.725}>
-                <Star color="#3b82f6" />
-              </Reveal>
+              {/* Map through the displayedStars array to dynamically generate stars with different colors */}
+              {displayedStars.map((color, index) => (
+                <Reveal
+                  key={index}
+                  color={color}
+                  direction="top"
+                  delayTime={0.625 + index * 0.025}
+                >
+                  <Star color={color} />
+                </Reveal>
+              ))}
             </div>
+            <Reveal color="grey" direction="top" delayTime={0.7}>
+              <p className=" text-sm text-gray-500 dark:text-gray-400">
+                {formatDate(date)}
+              </p>
+            </Reveal>
           </div>
         </div>
         <Reveal color="grey" direction="top" delayTime={0.7}>
-          <p className="mt-3">
-            I'm a fullstack web developer on a mission to create web apps that
-            are not just vissually appealing, but also super user-friendly.
-          </p>
+          <p className="mt-3">{review}</p>
         </Reveal>
       </div>
     </div>
