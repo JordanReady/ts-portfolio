@@ -24,9 +24,11 @@ const PersonalProjectDevelopmentServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="mb-4 text-base font-normal ">
-              Turn your ideas into reality with my expertise in developing
-              personal projects and Software as a Service (SaaS) solutions. I
-              bring a hands-on approach to ensure the success of your project.
+              Explore the possibilities of bringing your ideas to life with my
+              diverse range of services tailored for personal projects and
+              Software as a Service (SaaS). Whether it's a homework assignment
+              that needs a helping hand or a visionary idea for a full-stack
+              SaaS business, I'm here to guide you through every step.
             </p>
           </Reveal>
         </li>
@@ -40,22 +42,25 @@ const PersonalProjectDevelopmentServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
-              Customized development solutions tailored to your specific project
-              requirements.
+              From conceptualization to execution, I offer assistance for a wide
+              range of projects. Whether you need help refining an existing idea
+              or building an entire project from scratch, I've got you covered.
             </p>
           </Reveal>
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.5} color="grey">
             <p className="text-base font-normal ">
-              Collaborative approach with regular updates and feedback sessions
-              throughout the development process.
+              My expertise extends across the spectrum, from simple tasks to
+              complex, full-stack SaaS development. Whatever your project
+              demands, I am ready to adapt and provide the support you need.
             </p>
           </Reveal>
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.6} color="grey">
             <p className="text-base font-normal ">
-              Integration of cutting-edge technologies and best practices for
-              optimal performance and scalability.
+              Flexible engagement models ensure that you get precisely the level
+              of assistance required, whether it's occasional guidance or
+              comprehensive project development.
             </p>
           </Reveal>
         </li>
@@ -76,15 +81,18 @@ const PersonalProjectDevelopmentServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.5} color="grey">
             <p className="text-base font-normal ">
-              Development of a comprehensive project plan outlining milestones,
-              timelines, and deliverables.
+              Depending on your needs, I can assist with refining your existing
+              project or take the lead in building it entirely. The process is
+              adaptable to your preferences and the complexity of the project.
             </p>
           </Reveal>
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.6} color="grey">
             <p className="text-base font-normal ">
-              Agile development methodology with iterative testing and
-              continuous improvements based on your feedback.
+              Flexible engagement models ensure that you have the freedom to
+              choose the level of involvement that suits your project. I can
+              provide occasional guidance or take charge of the entire
+              development process.
             </p>
           </Reveal>
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -117,6 +125,14 @@ const PersonalProjectDevelopmentServiceSheet = () => {
               scalable, and innovative solutions.
             </p>
           </Reveal>
+          <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <Reveal direction="top" delayTime={0.4} color="grey">
+            <p className="text-base font-normal ">
+              Whether your project requires a simple solution or a complex
+              full-stack architecture, I can adapt to the technological demands
+              of your vision.
+            </p>
+          </Reveal>
         </li>
         <li className="mb-10 ms-4">
           <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -129,9 +145,9 @@ const PersonalProjectDevelopmentServiceSheet = () => {
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
               If you have a personal project or SaaS idea that you're passionate
-              about, let's discuss how we can bring it to life. Reach out for a
-              personalized consultation and turn your vision into a successful
-              reality.
+              about, let's discuss how we can bring it to life. Reach out either
+              through this sites contact form or LinkedIn for a personalized
+              consultation and turn your vision into a successful reality.
             </p>
           </Reveal>
           <div className="flex flex-row">

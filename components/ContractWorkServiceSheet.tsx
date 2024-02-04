@@ -26,9 +26,10 @@ const ContractWorkServiceSheet = () => {
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="mb-4 text-base font-normal ">
               As a freelance software developer, I offer Contract Work services
-              to meet your specific development needs. Whether you need
-              individual expertise or assistance for your development team, I'm
-              here to help you achieve your project goals efficiently.
+              tailored to meet your specific development needs. Whether you
+              require individual expertise or support for your development team,
+              I'm dedicated to assisting you in achieving your project goals
+              efficiently.
             </p>
           </Reveal>
         </li>
@@ -43,7 +44,8 @@ const ContractWorkServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
-              Customized solutions based on your project requirements.
+              Customized solutions crafted with precision to align seamlessly
+              with your project requirements.
             </p>
           </Reveal>
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -56,8 +58,9 @@ const ContractWorkServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.6} color="grey">
             <p className="text-base font-normal ">
-              Flexible engagement models for seamless collaboration with your
-              existing team.
+              Flexible engagement models designed to foster seamless
+              collaboration with your existing team, ensuring adaptability to
+              your workflow.
             </p>
           </Reveal>
         </li>
@@ -100,7 +103,8 @@ const ContractWorkServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.8} color="grey">
             <p className="text-base font-normal ">
-              Delivery of the final product with ongoing support if required.
+              Providing ongoing support, post-delivery, to ensure sustained
+              success.
             </p>
           </Reveal>
         </li>
@@ -123,7 +127,7 @@ const ContractWorkServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.5} color="grey">
             <p className="text-base font-normal ">
-              I have created projects with many other languages and technologies
+              I have created projects with many other languages and tech stacks
               and I am always up for learning new tech to meet your teams
               requirements!
             </p>
@@ -141,8 +145,9 @@ const ContractWorkServiceSheet = () => {
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
               If you're interested in my Contract Work services, feel free to
-              reach out. Let's discuss your project needs and how I can
-              contribute to its success.
+              reach out through the contact form on this site or LinkedIn. Let's
+              discuss your project needs and how I can contribute to its
+              success.
             </p>
           </Reveal>
           <div className="flex flex-row">
