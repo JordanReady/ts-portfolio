@@ -64,14 +64,13 @@ export function NavigationMenuDemo() {
                           alt="Logo"
                           width={130}
                           height={130}
-                          className="rounded-full"
                           loading="lazy"
                           placeholder="blur"
                           sizes="fill"
                         />
                       </div>
 
-                      <div className="mb-2 mt-4 text-lg font-medium text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
+                      <div className="mb-2 mt-4 text-lg  text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                         Check these out!
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">

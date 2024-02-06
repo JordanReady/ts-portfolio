@@ -5,6 +5,7 @@ import HeroImage from "@/public/MyLogo.png";
 import HeroTyped from "@/components/HeroTyped";
 import Reveal from "@/components/Reveal";
 import CustomButton from "@/components/CustomButton";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
           <div className={styles.button}>
             <Reveal delayTime={0.8}>
               <CustomButton
-                link="https://github.com/JordanReady"
+                link="https://www.linkedin.com/in/jordan-ready-a97021268"
                 text="LinkedIn"
               />
             </Reveal>
@@ -82,6 +83,7 @@ export default function Home() {
           />
         </Reveal>
       </div>
+      <BackgroundBeams className={styles.beams} />
     </div>
   );
 }

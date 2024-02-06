@@ -1,9 +1,12 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./About.module.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Img1 from "@/public/LogoRound.png";
 import HeroImg from "@/public/MyLogo.png";
+import HeroHiking from "@/public/hero-hiking.png";
+import HeroClimbing from "@/public/hero-climbing.png";
+import HeroGaming from "@/public/hero-gaming.png";
 import Img2 from "@/public/TopView.jpg";
 import Img3 from "@/public/Rock.jpg";
 import Img4 from "@/public/Climbing.jpg";
@@ -11,8 +14,19 @@ import Reveal from "@/components/Reveal";
 import TechList from "@/components/TechList";
 import Review from "@/components/Review";
 import CustomButton from "@/components/CustomButton";
+import image from "next/image";
 
 function About() {
+  const [selectedMainImage, setSelectedMainImage] = useState(0);
+  const heroImages = [HeroHiking, HeroClimbing, HeroGaming];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSelectedMainImage((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, [heroImages]);
   return (
     <div className={`${styles.container} container `}>
       <div className="grid grid-cols-6 md:grid-cols-6 md:grid-rows-1 gap-4 mt-10">
@@ -24,11 +38,11 @@ function About() {
             >
               <Image
                 loading="lazy"
-                placeholder="blur"
                 sizes="fill"
-                src={HeroImg}
-                alt="Logo Image"
+                src={heroImages[selectedMainImage]}
+                alt={`Photo ${selectedMainImage + 1}`}
                 width={320}
+                height={320}
                 className={`${styles.logoImg}  bg-white dark:bg-slate-900 `}
               />
             </div>

@@ -81,6 +81,12 @@
   font-size: 1.1rem;
 }
 
+.technologies strong {
+  font-size: 20px !important;
+  padding-bottom: 0.25rem;
+  font-weight: 800;
+}
+
 /* Individual technology item style */
 .projectCard:hover .technologies p {
   opacity: 0;

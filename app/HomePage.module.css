@@ -97,6 +97,11 @@
   animation-delay: 1.4s;
 }
 
+/* Beams */
+.beams {
+  z-index: -999;
+}
+
 /* Screen Sizes */
 @media (max-width: 768px) {
   .pageContainer {
