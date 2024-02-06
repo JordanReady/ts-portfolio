@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./About.module.css";
 import Image, { StaticImageData } from "next/image";
 import Img1 from "@/public/LogoRound.png";
-import HeroImg from "@/public/MyLogo.png";
 import HeroHiking from "@/public/hero-hiking.png";
 import HeroClimbing from "@/public/hero-climbing.png";
 import HeroGaming from "@/public/hero-gaming.png";
@@ -14,7 +13,6 @@ import Reveal from "@/components/Reveal";
 import TechList from "@/components/TechList";
 import Review from "@/components/Review";
 import CustomButton from "@/components/CustomButton";
-import image from "next/image";
 
 function About() {
   const [selectedMainImage, setSelectedMainImage] = useState(0);

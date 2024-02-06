@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import CustomButton from "@/components/CustomButton";
 import Image from "next/image";
@@ -6,6 +7,21 @@ import Logo from "@/public/LogoRound.png";
 import Reveal from "@/components/Reveal";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <div
       className={` ${styles.container} container grid grid-cols-1 md:grid-cols-2 gap-8 p-8 `}
@@ -78,6 +94,9 @@ function Contact() {
           >
             <form
               className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.form} bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0`}
+              action="https://public.herotofu.com/v1/501d6f30-e082-11ed-9b25-13156513d0a3"
+              method="post"
+              accept-charset="UTF-8"
             >
               <div className="mb-4">
                 <Reveal direction="top" delayTime={0.2} color="#9333ea">
@@ -98,6 +117,8 @@ function Contact() {
                     placeholder="Jane Doe"
                     type="text"
                     className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
+                    name="name"
+                    onChange={handleChange}
                     required
                   />
                 </Reveal>
@@ -122,6 +143,8 @@ function Contact() {
                     placeholder="janedoe@email.com"
                     type="email"
                     className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
+                    name="email"
+                    onChange={handleChange}
                     required
                   />
                 </Reveal>
@@ -143,6 +166,8 @@ function Contact() {
                     placeholder="123-456-7890"
                     type="tel"
                     className={` ${styles.input} dark:bg-slate-800 border rounded-md p-2`}
+                    name="phone"
+                    onChange={handleChange}
                   />
                 </Reveal>
               </div>
@@ -167,6 +192,8 @@ function Contact() {
                     rows={4}
                     required
                     placeholder="What's on your mind?"
+                    name="message"
+                    onChange={handleChange}
                   ></textarea>
                 </Reveal>
               </div>
