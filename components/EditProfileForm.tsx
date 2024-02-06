@@ -33,7 +33,6 @@ const EditProfileForm = ({
         });
       }
 
-      console.log("Profile updated successfully!");
       setTriggerFetch(!triggerFetch); // Trigger a re-render of the ProfileCard component
       resetForm();
       alert("Profile updated successfully!");

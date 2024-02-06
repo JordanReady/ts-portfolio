@@ -40,7 +40,6 @@ function Profile() {
     const fetchUserData = async () => {
       // Assuming you have a way to get the user ID
       const userId = session?.user.id;
-      console.log("User ID:", userId);
 
       // Call the getUserData function to get user data
       const userData = await getUserData(db, userId);
@@ -59,9 +58,6 @@ function Profile() {
 
           // Set the state with the extracted reviews
           setUserReviews(extractedReviews);
-
-          // Log after setting the state
-          console.log("User Reviews state:", extractedReviews);
         }
       }
     };

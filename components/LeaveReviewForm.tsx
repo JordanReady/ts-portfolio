@@ -29,19 +29,12 @@ function LeaveReviewForm({ triggerFetch, setTriggerFetch }: FormProps) {
 
   const handleSubmit = async () => {
     try {
-      console.log("Rating:", rating);
-      console.log("Review Text:", reviewText);
-
       // Check if user is logged in
       if (session && session.user) {
         const userId = session.user.id;
-        console.log("User is logged in:", session.user);
-        console.log("User ID:", userId);
 
         // Call the addReview function with Firestore instance, rating, review text, and user ID
         await addReview(db, rating, reviewText, userId);
-
-        console.log("Review submitted successfully!");
       } else {
         console.error("User not logged in");
       }
