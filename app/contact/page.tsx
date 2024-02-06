@@ -7,6 +7,7 @@ import Logo from "@/public/LogoRound.png";
 import Reveal from "@/components/Reveal";
 
 function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +21,10 @@ function Contact() {
       ...prevData,
       [name]: value,
     }));
+  };
+
+  const handleSubmit = () => {
+    setIsSubmitted(true);
   };
 
   return (
@@ -97,6 +102,7 @@ function Contact() {
               action="https://public.herotofu.com/v1/501d6f30-e082-11ed-9b25-13156513d0a3"
               method="post"
               accept-charset="UTF-8"
+              onSubmit={handleSubmit}
             >
               <div className="mb-4">
                 <Reveal direction="top" delayTime={0.2} color="#9333ea">
@@ -198,7 +204,9 @@ function Contact() {
                 </Reveal>
               </div>
               <Reveal direction="top" delayTime={0.6} color="#9333ea">
-                <CustomButton text="Send Message" />
+                <CustomButton
+                  text={isSubmitted ? "Sending..." : "Send Message"}
+                />
               </Reveal>
             </form>
           </div>

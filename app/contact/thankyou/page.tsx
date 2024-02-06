@@ -85,18 +85,26 @@ function ThankYou() {
                   Thank You!
                 </h2>
               </Reveal>
-              <Image
-                src={Thanks}
-                alt="Logo"
-                width={130}
-                height={130}
-                className={`${styles.heart}  bg-white dark:bg-slate-900 `}
-                loading="lazy"
-                placeholder="blur"
-                sizes="fill"
-              />
-              <p>Your message has been sent.</p>
-              <p>I will get back to you as soon as possible!</p>
+              <Reveal direction="top" delayTime={0.3} color="#9333ea">
+                <div>
+                  <Image
+                    src={Thanks}
+                    alt="Logo"
+                    width={130}
+                    height={130}
+                    className={`${styles.heart}  bg-white dark:bg-slate-900 `}
+                    loading="lazy"
+                    placeholder="blur"
+                    sizes="fill"
+                  />
+                </div>
+              </Reveal>
+              <Reveal direction="top" delayTime={0.4} color="grey">
+                <p>Your message has been sent.</p>
+              </Reveal>
+              <Reveal direction="top" delayTime={0.5} color="grey">
+                <p>I will get back to you as soon as possible!</p>
+              </Reveal>
             </div>
           </div>
         </Reveal>
