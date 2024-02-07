@@ -6,13 +6,14 @@ import Img1 from "@/public/LogoRound.png";
 import HeroHiking from "@/public/hero-hiking.png";
 import HeroClimbing from "@/public/hero-climbing.png";
 import HeroGaming from "@/public/hero-gaming.png";
-import Img2 from "@/public/TopView.jpg";
-import Img3 from "@/public/Rock.jpg";
+import Img2 from "@/public/Snowboarding.png";
+import Img3 from "@/public/Wakeboard.jpg";
 import Img4 from "@/public/Climbing.jpg";
 import Reveal from "@/components/Reveal";
 import TechList from "@/components/TechList";
 import Review from "@/components/Review";
 import CustomButton from "@/components/CustomButton";
+import { MapPin } from "lucide-react";
 
 function About() {
   const [selectedMainImage, setSelectedMainImage] = useState(0);
@@ -31,19 +32,14 @@ function About() {
         {/* First row */}
         <div className="col-span-6 md:col-span-3 md:row-span-2 flex justify-center mb-6">
           <Reveal duration={1} delayTime={0}>
-            <div
-              className={`${styles.logo} relative p-1 mb-2  overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
-            >
-              <Image
-                loading="lazy"
-                sizes="fill"
-                src={heroImages[selectedMainImage]}
-                alt={`Photo ${selectedMainImage + 1}`}
-                width={320}
-                height={320}
-                className={`${styles.logoImg}  bg-white dark:bg-slate-900 `}
-              />
-            </div>
+            <Image
+              loading="lazy"
+              sizes="fill"
+              src={heroImages[selectedMainImage]}
+              alt={`Photo ${selectedMainImage + 1}`}
+              width={320}
+              height={320}
+            />
           </Reveal>
         </div>
         <div
@@ -111,6 +107,11 @@ ${styles.photoCard} ${styles.card1}`}
               alt="Logo Image"
               className={styles.smallImg}
             />
+            <p className={styles.location}>
+              {" "}
+              <MapPin className={styles.pin} size={16} strokeWidth={2} />{" "}
+              Chestnut Mountain, IL
+            </p>
           </div>
           <div
             className={`
@@ -124,6 +125,11 @@ ${styles.photoCard} ${styles.card2}`}
               alt="Logo Image"
               className={styles.smallImg}
             />
+            <p className={styles.location}>
+              {" "}
+              <MapPin className={styles.pin} size={16} strokeWidth={2} /> Castle
+              Rock, WI
+            </p>
           </div>
           <div
             className={`
@@ -137,6 +143,11 @@ ${styles.photoCard} ${styles.card1}`}
               alt="Logo Image"
               className={styles.smallImg}
             />
+            <p className={styles.location}>
+              {" "}
+              <MapPin className={styles.pin} size={16} strokeWidth={2} /> Table
+              Rock Lake, MO
+            </p>
           </div>
         </div>
         {/* third col */}

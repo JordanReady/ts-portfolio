@@ -9,9 +9,10 @@ export default function App() {
     const typed = new Typed(el.current, {
       strings: [
         "Full-Stack Developer",
+        "Keyboard Warrior",
         "Software Engineer",
         "Coding Enthusiast",
-        "Thrill Seeker",
+        "Problem Solver",
       ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 1000,
