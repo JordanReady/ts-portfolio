@@ -83,7 +83,7 @@ export default function Home() {
           />
         </Reveal>
       </div>
-      <BackgroundBeams className={styles.beams} />
+      {/* <BackgroundBeams className={styles.beams} /> */}
     </div>
   );
 }

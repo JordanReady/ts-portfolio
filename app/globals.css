@@ -98,8 +98,6 @@
   width: 0;
   height: 0;
 }
-
-/* Optional: for Firefox */
 body {
   scrollbar-width: none;
 }
@@ -116,6 +114,11 @@ h3 {
 
 p {
   font-size: 20px;
+}
+
+.beams {
+  z-index: -999;
+  position: fixed;
 }
 
 /* screen sizes */
