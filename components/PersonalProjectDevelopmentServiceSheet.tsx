@@ -18,7 +18,7 @@ const PersonalProjectDevelopmentServiceSheet = () => {
             <h3
               className={` ${styles.service} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}
             >
-              Personal Projects & SaaS
+              Personal Projects & SAAS
             </h3>
           </Reveal>
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -26,9 +26,9 @@ const PersonalProjectDevelopmentServiceSheet = () => {
             <p className="mb-4 text-base font-normal ">
               Explore the possibilities of bringing your ideas to life with my
               diverse range of services tailored for personal projects and
-              Software as a Service (SaaS). Whether it's a homework assignment
+              Software as a Service (SAAS). Whether it's a homework assignment
               that needs a helping hand or a visionary idea for a full-stack
-              SaaS business, I'm here to guide you through every step.
+              SAAS business, I'm here to guide you through every step.
             </p>
           </Reveal>
         </li>
@@ -51,7 +51,7 @@ const PersonalProjectDevelopmentServiceSheet = () => {
           <Reveal direction="top" delayTime={0.5} color="grey">
             <p className="text-base font-normal ">
               My expertise extends across the spectrum, from simple tasks to
-              complex, full-stack SaaS development. Whatever your project
+              complex, full-stack SAAS development. Whatever your project
               demands, I am ready to adapt and provide the support you need.
             </p>
           </Reveal>
@@ -75,7 +75,7 @@ const PersonalProjectDevelopmentServiceSheet = () => {
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
               Initial consultation to understand the scope, goals, and technical
-              requirements of your personal project or SaaS idea.
+              requirements of your personal project or SAAS idea.
             </p>
           </Reveal>
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -144,7 +144,7 @@ const PersonalProjectDevelopmentServiceSheet = () => {
           <div className="absolute w-3 h-1 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-2.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <Reveal direction="top" delayTime={0.4} color="grey">
             <p className="text-base font-normal ">
-              If you have a personal project or SaaS idea that you're passionate
+              If you have a personal project or SAAS idea that you're passionate
               about, let's discuss how we can bring it to life. Reach out either
               through this sites contact form or LinkedIn for a personalized
               consultation and turn your vision into a successful reality.
