@@ -5,7 +5,6 @@ import HeroImage from "@/public/MyLogo.png";
 import HeroTyped from "@/components/HeroTyped";
 import Reveal from "@/components/Reveal";
 import CustomButton from "@/components/CustomButton";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Home() {
   return (
@@ -25,11 +24,9 @@ export default function Home() {
         </Reveal>
         <Reveal direction="bottom" delayTime={0.4} color="gray">
           <h3 className={` ${styles.typedContainer}`}>
-            {" "}
             <span className={styles.imText}>And I'm a</span>
             <span className={styles.spacer}></span>
             <span>
-              {" "}
               <HeroTyped />
             </span>
           </h3>
@@ -83,7 +80,6 @@ export default function Home() {
           />
         </Reveal>
       </div>
-      {/* <BackgroundBeams className={styles.beams} /> */}
     </div>
   );
 }

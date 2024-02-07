@@ -8,7 +8,6 @@ import { authOptions } from "@/auth";
 import SessionProvider from "@/components/SessionProvider";
 import TopPageButton from "@/components/TopPageButton";
 import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +35,6 @@ export default async function RootLayout({
             >
               <Header />
               {children}
-              <BackgroundBeams className="beams" />
               <TopPageButton />
             </ThemeProvider>
           </FirebaseAuthProvider>
