@@ -30,7 +30,12 @@ function About() {
     <div className={`${styles.container} container `}>
       <div className="grid grid-cols-6 md:grid-cols-6 md:grid-rows-1 gap-4 mt-10">
         {/* First row */}
-        <div className="col-span-6 md:col-span-3 md:row-span-2 flex justify-center mb-6">
+        <div className="col-span-6 md:col-span-3 md:row-span-2 flex justify-center mb-6 relative">
+          <span className={styles.blobs}>
+            <div className="absolute top-8 left-40 w-36 h-36  bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob"></div>
+            <div className="absolute top-15 right-32 w-36 h-36  bg-indigo-600 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-2"></div>
+            <div className="absolute bottom-0 left-56 w-36 h-36  bg-violet-950 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-4"></div>
+          </span>
           <Reveal duration={1} delayTime={0}>
             <Image
               loading="lazy"
@@ -39,6 +44,7 @@ function About() {
               alt={`Photo ${selectedMainImage + 1}`}
               width={320}
               height={320}
+              className={styles.aiImgs}
             />
           </Reveal>
         </div>
@@ -214,11 +220,11 @@ lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
           <div className="col-span-6">
             <Reveal delayTime={0} direction="right">
               <Review
-                name="Jordan Ready"
-                profession="Software Developer"
-                date="01/15/2024"
-                review="I'm a fullstack web developer on a mission to create web apps that are not just visually appealing, but also super user-friendly."
-                img={Img1}
+                name="Zach Vivian"
+                profession="Cybersecurity Student"
+                date="02/08/2024"
+                review="Jordan provided quick response times for fantastic help with my full-stack development project. I was struggling to get my project started and Jordan knew exactly what frameworks I had to use and how to connect them together. He is also really knowledgeable with React, and has already made some super cool projects!"
+                img="https://lh3.googleusercontent.com/a/ACg8ocJNsfB7RsfYk9oPrJWO8v5vw19C5M7gOLjT57wduEu9BKQ=s96-c"
                 rating={5}
               />
             </Reveal>

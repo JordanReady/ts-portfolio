@@ -35,7 +35,7 @@ const EditProfileForm = ({
 
       setTriggerFetch(!triggerFetch); // Trigger a re-render of the ProfileCard component
       resetForm();
-      alert("Profile updated successfully!");
+      // alert("Profile updated successfully!");
     } catch (error) {
       console.error("Error updating profile:", error);
     }

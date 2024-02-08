@@ -78,6 +78,12 @@ function UserButton() {
           <>
             <Link
               className=" text-gray-500 dark:text-gray-400"
+              href={"/profile"}
+            >
+              <DropdownMenuItem>Leave Review</DropdownMenuItem>
+            </Link>
+            <Link
+              className=" text-gray-500 dark:text-gray-400"
               href={"/reviews"}
             >
               <DropdownMenuItem>See Reviews</DropdownMenuItem>

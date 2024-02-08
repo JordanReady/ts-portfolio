@@ -14,6 +14,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Jordan Ready",
   description: "Developed by Jordan Ready at jordanready.com",
+  icons: {
+    icon: ["/favicon.ico?v=4"],
+    apple: ["/apple-touch-icon.png?v=4"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default async function RootLayout({
@@ -25,6 +31,9 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
+        <head>
+          <link rel="icon" href="/favicon.ico" />
+        </head>
         <body className={inter.className}>
           <FirebaseAuthProvider>
             <ThemeProvider

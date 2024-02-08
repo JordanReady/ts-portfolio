@@ -80,6 +80,7 @@ function LeaveReviewForm({ triggerFetch, setTriggerFetch }: FormProps) {
                   key={value}
                   color={value <= rating ? color : "rgb(148 163 184)"}
                   onClick={() => handleStarClick(value)}
+                  fill={value <= rating ? color : "rgb(148 163 184)"}
                 />
               ))}
             </div>

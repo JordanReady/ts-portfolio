@@ -66,18 +66,22 @@ export default function Home() {
         </div>
       </div>
       <div className={`${styles.heroImg}`}>
-        <div className="absolute top-14 -left-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob"></div>
-        <div className="absolute top-15 -right-0 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-2"></div>
-        <div className="absolute bottom-5 left-20 w-96 h-96 bg-violet-950 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-4"></div>
+        <span className={styles.blobs}>
+          <div className="absolute top-14 -left-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob"></div>
+          <div className="absolute top-15 -right-0 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-2"></div>
+          <div className="absolute bottom-5 left-20 w-96 h-96 bg-violet-950 rounded-full mix-blend-multiply filter blur-2xl dark:opacity-10 opacity-40 animate-blob animation-delay-4"></div>
+        </span>
 
         <Reveal duration={1} delayTime={0}>
-          <Image
-            loading="lazy"
-            placeholder="blur"
-            sizes="fill"
-            src={HeroImage}
-            alt="Logo Image"
-          />
+          <>
+            <Image
+              loading="lazy"
+              placeholder="blur"
+              sizes="fill"
+              src={HeroImage}
+              alt="Logo Image"
+            />
+          </>
         </Reveal>
       </div>
     </div>

@@ -84,7 +84,7 @@ function Review({ name, profession, rating, review, img, date }: ReviewProps) {
                   direction="top"
                   delayTime={0.625 + index * 0.025}
                 >
-                  <Star color={color} />
+                  <Star color={color} fill={color} />
                 </Reveal>
               ))}
             </div>

@@ -126,6 +126,24 @@
   max-height: 360px;
 }
 
+.aiImgs {
+  animation: floatImg 5s infinite;
+  overflow: visible !important;
+  margin-top: 1rem;
+}
+
+@keyframes floatImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* screen sizes */
 @media (max-width: 1280px) {
   .likeText {
@@ -161,5 +179,8 @@
   }
   .logo {
     width: 220px;
+  }
+  .blobs {
+    display: none;
   }
 }
