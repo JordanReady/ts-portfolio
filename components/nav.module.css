@@ -66,7 +66,8 @@
 
 .logoContainer {
   border-radius: 15px;
-  padding: 1rem;
+  padding: 0.5rem;
+  padding-top: 1rem;
   width: 99%;
   max-width: 330px;
   display: flex;

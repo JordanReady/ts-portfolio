@@ -3,7 +3,6 @@
   max-height: 500px;
   min-height: 440px;
   text-align: center !important;
-  animation: fadeListIn 1s ease-in-out forwards;
 }
 @keyframes fadeListIn {
   0% {
