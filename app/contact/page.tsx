@@ -5,7 +5,6 @@ import CustomButton from "@/components/CustomButton";
 import Image from "next/image";
 import Logo from "@/public/LogoRound.png";
 import Reveal from "@/components/Reveal";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -89,7 +88,6 @@ function Contact() {
               </div>
             </div>
           </div>
-          <BackgroundBeams className="beams" />
         </Reveal>
       </div>
 
