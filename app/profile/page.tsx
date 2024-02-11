@@ -24,6 +24,7 @@ interface ReviewData {
   review: string;
   profession: string;
   date: string;
+  reviewId: string;
 }
 
 // Your ProfilePage component
@@ -119,6 +120,10 @@ function Profile() {
                 review={review.review}
                 date={review.date}
                 img={userImg}
+                reviewId={review.reviewId}
+                allowDelete={true}
+                triggerFetch={triggerFetch}
+                setTriggerFetch={setTriggerFetch}
               />
             </Reveal>
           ))}

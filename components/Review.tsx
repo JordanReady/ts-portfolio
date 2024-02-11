@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./Review.module.css";
 import Image, { StaticImageData } from "next/image";
 import { CircleUserRound, Star } from "lucide-react";
 import Reveal from "./Reveal";
+import { deleteReview } from "@/utils/firebaseUtils";
+import { db } from "@/firebase";
 
 interface ReviewProps {
   name: string;
@@ -11,6 +14,10 @@ interface ReviewProps {
   review: string;
   img: string | StaticImageData | null;
   date: string;
+  allowDelete?: boolean;
+  reviewId: string;
+  triggerFetch?: boolean;
+  setTriggerFetch?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const formatDate = (dateString: string): string => {
@@ -28,17 +35,52 @@ const formatDate = (dateString: string): string => {
   return formattedDate;
 };
 
-function Review({ name, profession, rating, review, img, date }: ReviewProps) {
+function Review({
+  name,
+  profession,
+  rating,
+  review,
+  img,
+  date,
+  allowDelete,
+  reviewId,
+  triggerFetch,
+  setTriggerFetch,
+}: ReviewProps) {
+  const [isDeleteClicked, setIsDeleteClicked] = useState(false);
   // Define star colors here
   const starColors = ["#9333ea", "#7540ee", "#615cfb", "#4d74fa", "#3b82f6"];
 
   // Display only the specified number of stars based on the rating
   const displayedStars = starColors.slice(0, rating);
 
+  const handleDeleteClick = async () => {
+    try {
+      // Call deleteReview function with the reviewId prop
+      await deleteReview(db, reviewId);
+      setIsDeleteClicked(true);
+      // Update the triggerFetch state to trigger a fetch after deleting the review
+      if (setTriggerFetch) {
+        setTriggerFetch(!triggerFetch);
+      }
+    } catch (error) {
+      console.error("Error deleting review:", error);
+      // Handle error if needed
+    }
+  };
+
   return (
     <div
       className={`${styles.card} bg-white dark:bg-gray-800 p-0.5 relative  mb-2  overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
     >
+      {allowDelete && !isDeleteClicked && (
+        <button
+          className="absolute top-2 right-2 p-2 rounded-full bg-red-500 text-white hover:bg-red-600"
+          onClick={handleDeleteClick}
+        >
+          Delete
+        </button>
+      )}
       <div className="bg-white p-6 rounded-md dark:bg-slate-900">
         <div className={styles.topRow}>
           <div
@@ -96,7 +138,7 @@ function Review({ name, profession, rating, review, img, date }: ReviewProps) {
           </div>
         </div>
         <Reveal color="grey" direction="top" delayTime={0.7}>
-          <p className="mt-3">{review}</p>
+          <p className="mt-3 pb-1">{review}</p>
         </Reveal>
       </div>
     </div>

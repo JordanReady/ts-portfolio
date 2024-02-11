@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Review from "@/components/Review";
 import { getReviews, ReviewData } from "@/utils/firebaseUtils";
 import { db } from "@/firebase";
+import Reveal from "@/components/Reveal";
 
 function ReviewsPage() {
   const [reviews, setReviews] = useState<ReviewData[]>([]);
@@ -25,15 +26,18 @@ function ReviewsPage() {
     <div className="container">
       <div className="grid grid-cols-1 mt-4 lg:grid-cols-2 xl:grid-cols-2 gap-4">
         {reviews.map((review, index) => (
-          <Review
-            key={index}
-            img={review.image}
-            name={review.name}
-            profession={review.profession}
-            rating={review.rating}
-            review={review.review}
-            date={review.date}
-          />
+          <Reveal direction="top" delayTime={0.2} color="#9333ea">
+            <Review
+              key={index}
+              img={review.image}
+              name={review.name}
+              profession={review.profession}
+              rating={review.rating}
+              review={review.review}
+              date={review.date}
+              reviewId={review.reviewId}
+            />
+          </Reveal>
         ))}
       </div>
     </div>

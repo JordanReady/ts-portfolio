@@ -9,6 +9,7 @@ import {
   getDocs,
   query,
   where,
+  deleteDoc,
 } from "firebase/firestore";
 import { db } from "@/firebase";
 
@@ -103,6 +104,7 @@ export const addReview = async (
       review: reviewText,
       image: currentUser.image || null,
       date: new Date().toISOString(), // Add the date property
+      reviewId: Math.random().toString(36).substring(2, 8),
     };
 
     // Add the review to the "reviews" collection
@@ -110,6 +112,7 @@ export const addReview = async (
     await setDoc(doc(reviewsRef), reviewData);
 
     console.log("Review added successfully!");
+    console.log(reviewsRef); // Log the review data for debugging purposes
   } catch (error) {
     console.error("Error adding review:", error);
     throw error;
@@ -123,6 +126,7 @@ export interface ReviewData {
   profession: string;
   image: string | null; // Add the image property
   date: string;
+  reviewId: string;
 }
 
 export const getUserReviews = async (
@@ -149,6 +153,7 @@ export const getUserReviews = async (
         review: data.review,
         image: data.image || null, // Add the image property
         date: data.date ? data.date.toLocaleString() : "Unknown Date",
+        reviewId: data.reviewId, // Add the reviewId property
       };
     });
 
@@ -175,12 +180,39 @@ export const getReviews = async (db: Firestore): Promise<ReviewData[]> => {
         date: data.date
           ? data.date.toLocaleString()
           : data.date || "Unknown Date",
+        reviewId: data.reviewId, // Add the reviewId property
       };
     });
 
     return reviews;
   } catch (error) {
     console.error("Error getting reviews:", error);
+    throw error;
+  }
+};
+
+export const deleteReview = async (
+  db: Firestore,
+  reviewId: string
+): Promise<void> => {
+  try {
+    // Create a query to find the document with the matching reviewId
+    const reviewsQuery = query(
+      collection(db, "reviews"),
+      where("reviewId", "==", reviewId)
+    );
+
+    // Get the documents that match the query
+    const reviewsSnapshot = await getDocs(reviewsQuery);
+
+    // Iterate through the matching documents and delete each one
+    reviewsSnapshot.forEach(async (doc) => {
+      await deleteDoc(doc.ref);
+    });
+
+    console.log("Review deleted successfully!");
+  } catch (error) {
+    console.error("Error deleting review:", error);
     throw error;
   }
 };

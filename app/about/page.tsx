@@ -226,6 +226,7 @@ lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
                 review="Jordan provided quick response times for fantastic help with my full-stack development project. I was struggling to get my project started and Jordan knew exactly what frameworks I had to use and how to connect them together. He is also really knowledgeable with React, and has already made some super cool projects!"
                 img="https://lh3.googleusercontent.com/a/ACg8ocJNsfB7RsfYk9oPrJWO8v5vw19C5M7gOLjT57wduEu9BKQ=s96-c"
                 rating={5}
+                reviewId="null"
               />
             </Reveal>
           </div>
@@ -239,6 +240,7 @@ lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
                 review="I'm a fullstack web developer on a mission to create web apps that are not just visually appealing, but also super user-friendly."
                 img={Img1}
                 rating={5}
+                reviewId="null"
               />
             </Reveal>
           </div>
