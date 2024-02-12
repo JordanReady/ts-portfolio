@@ -16,7 +16,7 @@ function ProfileCard({ name, profession, img, bio }: ProfileCardProps) {
     <div
       className={`${styles.card} bg-white dark:bg-gray-800 p-0.5 relative mb-2 overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
     >
-      <div className="bg-white p-4 sm:p-6 rounded-md dark:bg-slate-900">
+      <div className="bg-white p-2 md:p-4 sm:p-6 rounded-md dark:bg-slate-900">
         <div className={styles.topRow}>
           <div
             className={`${styles.logo} relative p-0.5 mb-2 overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}

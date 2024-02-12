@@ -121,8 +121,8 @@ function Profile() {
             <>
               <Reveal direction="top" color="grey" delayTime={0.5}>
                 <p>
-                  It seems you have not yet created any reviews yet. If you
-                  would like to leave a review, you can do so by filling out the
+                  It seems you have not created any reviews yet. If you would
+                  like to leave a review, you can do so by filling out the
                   forms. The information you have on your profile will be
                   displayed with your review like the example below!{" "}
                 </p>

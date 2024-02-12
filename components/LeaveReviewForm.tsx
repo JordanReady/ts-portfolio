@@ -57,7 +57,7 @@ function LeaveReviewForm({ triggerFetch, setTriggerFetch }: FormProps) {
         className={`relative p-0.5 mb-2  overflow-hidden text-sm font-medium rounded-lg ${styles.formContainer} bg-gradient-to-br from-purple-600 to-blue-500 `}
       >
         <form
-          className={`max-w-md mx-auto relative px-5 py-2.5 ${styles.form} bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0`}
+          className={`max-w-md mx-auto relative px-2 md:px-4 py-2.5 ${styles.form} bg-white dark:bg-slate-900 rounded-md group-hover:bg-opacity-0`}
           onSubmit={(e) => {
             e.preventDefault();
             handleSubmit();
