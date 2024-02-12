@@ -25,6 +25,10 @@ export default function Home() {
         <Reveal direction="bottom" delayTime={0.4} color="gray">
           <h3 className={` ${styles.typedContainer}`}>
             <span className={styles.imText}>And I'm a </span>
+          </h3>
+        </Reveal>
+        <Reveal direction="bottom" delayTime={0.5} color="gray">
+          <h3 className={` ${styles.typedContainer}`}>
             <span className={styles.spacer}></span>
             <span>
               <HeroTyped />

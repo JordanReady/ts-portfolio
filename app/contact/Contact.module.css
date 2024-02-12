@@ -67,6 +67,9 @@
   .contactContainer {
     width: 100%;
   }
+  .formContainer {
+    width: 81dvw;
+  }
   .contactInfo {
     position: inline-block;
   }

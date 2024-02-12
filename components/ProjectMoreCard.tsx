@@ -93,7 +93,6 @@ function ProjectMoreCard({
                   width={1000}
                   loading="lazy"
                   placeholder="blur"
-                  sizes="fill"
                 />
               </div>
             </Reveal>
@@ -112,9 +111,9 @@ function ProjectMoreCard({
                 className={`relative border-s border-gray-200 dark:border-gray-700 ${styles.fadeListIn}`}
               >
                 {technologies.map((tech) => (
-                  <>
+                  <div key={tech.name}>
                     <div className="absolute w-3 h-3 bg-gradient-to-br from-purple-600 to-blue-500 rounded-full mt-3 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <div key={tech.name}>
+                    <div>
                       <Reveal delayTime={0.35} color="var(--primary-color)">
                         <p
                           className={` ${styles.techName} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 text-2x px-4 font-semibold`}
@@ -130,7 +129,7 @@ function ProjectMoreCard({
                         </p>
                       </Reveal>
                     </div>
-                  </>
+                  </div>
                 ))}
               </ol>
             </div>
@@ -261,12 +260,10 @@ function ProjectMoreCard({
                       <Image
                         src={img}
                         alt={`Photo ${index + 1}`}
-                        objectFit="contain"
                         className="pb-2 "
                         onClick={() => handleClick(index)}
                         loading="lazy"
                         placeholder="blur"
-                        sizes="fill"
                       />
                     </Reveal>
                   </div>
@@ -281,10 +278,8 @@ function ProjectMoreCard({
                       <Image
                         src={images[selectedImage]}
                         alt={`Photo ${selectedImage + 1}`}
-                        objectFit="contain"
                         loading="lazy"
                         placeholder="blur"
-                        sizes="fill"
                       />
                     </Reveal>
                   </div>
@@ -332,10 +327,8 @@ function ProjectMoreCard({
                   <Image
                     src={performance}
                     alt={`Performance image`}
-                    objectFit="contain"
                     loading="lazy"
                     placeholder="blur"
-                    sizes="fill"
                     className={`${styles.performanceImg} shadow-md`}
                   />
                 </Reveal>
@@ -370,10 +363,8 @@ function ProjectMoreCard({
                   <Image
                     src={performanceOld}
                     alt={`Old performance image`}
-                    objectFit="contain"
                     loading="lazy"
                     placeholder="blur"
-                    sizes="fill"
                     className={`${styles.performanceImg} shadow-md`}
                   />
                 </Reveal>
@@ -408,10 +399,8 @@ function ProjectMoreCard({
                   <Image
                     src={performanceNew}
                     alt={`New performance image`}
-                    objectFit="contain"
                     loading="lazy"
                     placeholder="blur"
-                    sizes="fill"
                     className={`${styles.performanceImg} shadow-md`}
                   />
                 </Reveal>
