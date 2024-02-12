@@ -14,6 +14,14 @@ import TechList from "@/components/TechList";
 import Review from "@/components/Review";
 import CustomButton from "@/components/CustomButton";
 import { MapPin } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 function About() {
   const [selectedMainImage, setSelectedMainImage] = useState(0);
@@ -218,30 +226,39 @@ lg:col-span-3 lg:row-span-2 mb-6`}
 lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
         >
           <div className="col-span-6">
-            <Reveal delayTime={0} direction="right">
-              <Review
-                name="Zach Vivian"
-                profession="Cybersecurity Student"
-                date="02/08/2024"
-                review="Jordan provided quick response times for fantastic help with my full-stack development project. I was struggling to get my project started and Jordan knew exactly what frameworks I had to use and how to connect them together. He is also really knowledgeable with React, and has already made some super cool projects!"
-                img="https://lh3.googleusercontent.com/a/ACg8ocJNsfB7RsfYk9oPrJWO8v5vw19C5M7gOLjT57wduEu9BKQ=s96-c"
-                rating={5}
-                reviewId="null"
-              />
-            </Reveal>
-          </div>
-
-          <div className="col-span-6 flex justify-end">
-            <Reveal delayTime={0.2} direction="left">
-              <Review
-                name="Jordan Ready"
-                profession="Software Developer"
-                date="01/15/2024"
-                review="I'm a fullstack web developer on a mission to create web apps that are not just visually appealing, but also super user-friendly."
-                img={Img1}
-                rating={5}
-                reviewId="null"
-              />
+            <Reveal width="100%" delayTime={0} direction="right">
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 8000,
+                  }),
+                ]}
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <Review
+                      name="Zach Vivian"
+                      profession="Cybersecurity Student"
+                      date="02/08/2024"
+                      review="Jordan provided quick response times for fantastic help with my full-stack development project. I was struggling to get my project started and Jordan knew exactly what frameworks I had to use and how to connect them together. He is also really knowledgeable with React, and has already made some super cool projects!"
+                      img="https://lh3.googleusercontent.com/a/ACg8ocJNsfB7RsfYk9oPrJWO8v5vw19C5M7gOLjT57wduEu9BKQ=s96-c"
+                      rating={5}
+                      reviewId="null"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Review
+                      name="Jordan Ready"
+                      profession="Software Developer"
+                      date="01/15/2024"
+                      review="I'm a fullstack web developer on a mission to create web apps that are not just visually appealing, but also super user-friendly."
+                      img={Img1}
+                      rating={5}
+                      reviewId="null"
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+              </Carousel>
             </Reveal>
           </div>
         </div>

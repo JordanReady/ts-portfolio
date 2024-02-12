@@ -36,6 +36,12 @@ function Profile() {
   const [triggerFetch, setTriggerFetch] = useState(true);
   const { data: session } = useSession();
   const [userReviews, setUserReviews] = useState<ReviewData[]>([]);
+  const currentDate = new Date();
+  const formattedDate = currentDate.toLocaleDateString("en-US", {
+    month: "2-digit",
+    day: "2-digit",
+    year: "numeric",
+  });
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -111,22 +117,50 @@ function Profile() {
         </Reveal>
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 gap-8">
-          {userReviews.map((review, index) => (
-            <Reveal key={index} direction="top" color="grey" delayTime={0.5}>
-              <Review
-                name={review.name}
-                profession={review.profession}
-                rating={review.rating}
-                review={review.review}
-                date={review.date}
-                img={userImg}
-                reviewId={review.reviewId}
-                allowDelete={true}
-                triggerFetch={triggerFetch}
-                setTriggerFetch={setTriggerFetch}
-              />
-            </Reveal>
-          ))}
+          {userReviews.length === 0 ? (
+            <>
+              <Reveal direction="top" color="grey" delayTime={0.5}>
+                <p>
+                  It seems you have not yet created any reviews yet. If you
+                  would like to leave a review, you can do so by filling out the
+                  forms. The information you have on your profile will be
+                  displayed with your review like the example below!{" "}
+                </p>
+              </Reveal>
+              <Reveal direction="top" color="grey" delayTime={0.5}>
+                <Review
+                  name={userName}
+                  profession={userProfession}
+                  rating={5}
+                  review="Here is where your awesome review will be displayed! 🚀 "
+                  date={formattedDate}
+                  img={userImg}
+                  reviewId={"schooobie"}
+                  allowDelete={false}
+                  triggerFetch={triggerFetch}
+                  setTriggerFetch={setTriggerFetch}
+                />
+              </Reveal>
+            </>
+          ) : (
+            // Render userReviews when available
+            userReviews.map((review, index) => (
+              <Reveal key={index} direction="top" color="grey" delayTime={0.8}>
+                <Review
+                  name={review.name}
+                  profession={review.profession}
+                  rating={review.rating}
+                  review={review.review}
+                  date={review.date}
+                  img={userImg}
+                  reviewId={review.reviewId}
+                  allowDelete={true}
+                  triggerFetch={triggerFetch}
+                  setTriggerFetch={setTriggerFetch}
+                />
+              </Reveal>
+            ))
+          )}
         </div>
       </div>
       {/* Left Column - Reviews Section */}

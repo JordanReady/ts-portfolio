@@ -8,8 +8,8 @@ import { deleteReview } from "@/utils/firebaseUtils";
 import { db } from "@/firebase";
 
 interface ReviewProps {
-  name: string;
-  profession: string;
+  name: string | null;
+  profession: string | null;
   rating: number;
   review: string;
   img: string | StaticImageData | null;
