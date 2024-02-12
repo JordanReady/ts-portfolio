@@ -13,7 +13,7 @@ import Reveal from "@/components/Reveal";
 import TechList from "@/components/TechList";
 import Review from "@/components/Review";
 import CustomButton from "@/components/CustomButton";
-import { MapPin } from "lucide-react";
+import { ArrowBigRightDash, MapPin } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -226,6 +226,12 @@ lg:col-span-3 lg:row-span-2 mb-6`}
 lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
         >
           <div className="col-span-6">
+            <Reveal direction="right" color="grey">
+              <div className={styles.swipe}>
+                <p>Swipe for more</p>
+                <ArrowBigRightDash />
+              </div>
+            </Reveal>
             <Reveal width="100%" delayTime={0} direction="right">
               <Carousel
                 plugins={[

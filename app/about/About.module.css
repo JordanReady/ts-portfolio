@@ -148,6 +148,10 @@
   }
 }
 
+.swipe {
+  display: none;
+}
+
 /* screen sizes */
 @media (max-width: 1280px) {
   .likeText {
@@ -166,6 +170,7 @@
   }
   .photoCard {
     padding: 0.25rem 0.25rem 1rem;
+    padding-bottom: 0;
   }
   .location {
     color: black;
@@ -189,5 +194,10 @@
   }
   .carousel {
     max-width: 60%;
+  }
+  .swipe {
+    display: flex;
+    opacity: 0.2;
+    margin-bottom: 1rem;
   }
 }
