@@ -83,10 +83,10 @@ function Review({
       )}
       <div className="bg-white p-2 md:p-5 rounded-md dark:bg-slate-900">
         <div className={styles.topRow}>
-          <div
-            className={`${styles.logo} relative p-0.5 mb-2  overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
-          >
-            <Reveal direction="left" delayTime={0.4}>
+          <Reveal direction="left" delayTime={0.4}>
+            <div
+              className={`${styles.logo} relative p-0.5 mb-2  overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
+            >
               {/* You can customize the Image component based on your props */}
               {img && (
                 <Image
@@ -106,8 +106,8 @@ function Review({
                   className={`${styles.logoImg} bg-white dark:bg-slate-900 p-2`}
                 />
               )}
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
           <div className={styles.nameTitleGroup}>
             <Reveal direction="right" delayTime={0.5}>
               <h2 className="text-3xl font-semibold mb-1 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
