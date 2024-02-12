@@ -26,17 +26,19 @@ function ReviewsPage() {
     <div className="container">
       <div className="grid grid-cols-1 mt-4 lg:grid-cols-2 xl:grid-cols-2 gap-4">
         {reviews.map((review, index) => (
-          <Reveal key={index} direction="top" delayTime={0.2} color="#9333ea">
-            <Review
-              img={review.image}
-              name={review.name}
-              profession={review.profession}
-              rating={review.rating}
-              review={review.review}
-              date={review.date}
-              reviewId={review.reviewId}
-            />
-          </Reveal>
+          <div key={index}>
+            <Reveal direction="top" delayTime={0.2} color="#9333ea">
+              <Review
+                img={review.image}
+                name={review.name}
+                profession={review.profession}
+                rating={review.rating}
+                review={review.review}
+                date={review.date}
+                reviewId={review.reviewId}
+              />
+            </Reveal>
+          </div>
         ))}
       </div>
     </div>
