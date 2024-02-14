@@ -18,7 +18,7 @@ interface FormProps {
 }
 
 function LeaveReviewForm({ triggerFetch, setTriggerFetch }: FormProps) {
-  const [rating, setRating] = useState<number>(0);
+  const [rating, setRating] = useState<number>(5);
   const [reviewText, setReviewText] = useState<string>("");
   const { data: session } = useSession();
 

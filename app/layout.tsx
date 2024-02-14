@@ -8,6 +8,7 @@ import { authOptions } from "@/auth";
 import SessionProvider from "@/components/SessionProvider";
 import TopPageButton from "@/components/TopPageButton";
 import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default async function RootLayout({
           />
         </head>
         <body className={inter.className}>
+          <GoogleTagManager gtmId="GTM-NPSLR98B" />
           <FirebaseAuthProvider>
             <ThemeProvider
               attribute="class"
