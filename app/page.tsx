@@ -5,6 +5,7 @@ import HeroImage from "@/public/MyLogo.png";
 import HeroTyped from "@/components/HeroTyped";
 import Reveal from "@/components/Reveal";
 import CustomButton from "@/components/CustomButton";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function Home() {
   return (
@@ -64,7 +65,19 @@ export default function Home() {
           </div>
           <div className={styles.button}>
             <Reveal delayTime={0.8}>
-              <CustomButton link="/contact" text="Need a Website?" />
+              <CustomButton
+                onClick={() =>
+                  sendGTMEvent({
+                    event: "click",
+                    category: "contact",
+                    action: "contact",
+                    label: "contact",
+                    value: "contact",
+                  })
+                }
+                link="/contact"
+                text="Need a Website?"
+              />
             </Reveal>
           </div>
         </div>
