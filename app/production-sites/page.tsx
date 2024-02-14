@@ -1,13 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "@/app/projects/Projects.module.css";
 import ProjectCard from "@/components/ProjectCard";
 import Reveal from "@/components/Reveal";
 import { projects } from "@/components/projectData";
 import ProjectTypeControls from "@/components/ProjectTypeControls";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function ProductionSites() {
   const [selectedType, setSelectedType] = useState<string>("production-sites");
+
+  useEffect(() => {
+    sendGTMEvent({
+      event: "pageView",
+      value: "Project Page(freelance)",
+    });
+  }, []);
 
   const filteredProjects =
     selectedType === "all"

@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Contact.module.css";
 import CustomButton from "@/components/CustomButton";
 import Image from "next/image";
 import Logo from "@/public/LogoRound.png";
 import Reveal from "@/components/Reveal";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -26,6 +27,13 @@ function Contact() {
   const handleSubmit = () => {
     setIsSubmitted(true);
   };
+
+  useEffect(() => {
+    sendGTMEvent({
+      event: "pageView",
+      value: "Contact Page",
+    });
+  }, []);
 
   return (
     <div

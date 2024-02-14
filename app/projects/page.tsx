@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Projects.module.css";
 import ProjectCard from "@/components/ProjectCard";
 import Reveal from "@/components/Reveal";
 import ProjectTypeControls from "@/components/ProjectTypeControls";
 import { projects } from "@/components/projectData";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function Projects() {
   const [selectedType, setSelectedType] = useState<string>("all");
@@ -13,6 +14,13 @@ function Projects() {
     selectedType === "all"
       ? projects
       : projects.filter((project) => project.type === selectedType);
+
+  useEffect(() => {
+    sendGTMEvent({
+      event: "pageView",
+      value: "Project Page",
+    });
+  }, []);
 
   return (
     <div className="container">

@@ -22,10 +22,18 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function About() {
   const [selectedMainImage, setSelectedMainImage] = useState(0);
   const heroImages = [HeroHiking, HeroClimbing, HeroGaming];
+
+  useEffect(() => {
+    sendGTMEvent({
+      event: "pageView",
+      value: "About Page",
+    });
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
