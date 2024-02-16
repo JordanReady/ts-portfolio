@@ -79,13 +79,13 @@ function Contact() {
                   <p className=" mb-2">Software Developer</p>
                 </Reveal>
                 <Reveal direction="top" delayTime={0.5} color="grey">
-                  <p className=" mb-2">Location: Dubuque, IA</p>
+                  <p className=" mb-2">Dubuque, IA</p>
                 </Reveal>
                 <Reveal direction="top" delayTime={0.55} color="grey">
-                  <p className=" mb-2">Phone: 563-593-3110</p>
+                  <p className=" mb-2">563-593-3110</p>
                 </Reveal>
                 <Reveal direction="top" delayTime={0.6} color="grey">
-                  <p className=" mb-4">Email: jready112@gmail.com</p>
+                  <p className=" mb-4">jready112@gmail.com</p>
                 </Reveal>
                 <Reveal direction="top" delayTime={0.7} color="#9333ea">
                   <CustomButton

@@ -1,0 +1,46 @@
+@keyframes growShrink {
+  0%,
+  100% {
+    height: 1.5rem;
+  }
+  50% {
+    height: 3rem;
+  }
+}
+
+.loaderContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+}
+
+.loaderBar {
+  width: 4px;
+  background-color: #020817;
+  animation: growShrink 1s infinite ease-in-out; /* Adjust the duration as needed */
+}
+
+/* Define individual styles for each loader bar */
+.loaderBar1 {
+  animation-delay: 0.3s;
+}
+.loaderBar2 {
+  animation-delay: 0.4s;
+}
+.loaderBar3 {
+  animation-delay: 0.5s;
+}
+.loaderBar4 {
+  animation-delay: 0.6s;
+}
+.loaderBar5 {
+  animation-delay: 0.7s;
+}
+.loaderBar6 {
+  animation-delay: 0.8s;
+}
+.loaderBar7 {
+  animation-delay: 0.9s;
+}

@@ -1,37 +1,33 @@
-"use client";
-import React from "react";
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { signIn } from "next-auth/react";
-import { getServerSession } from "next-auth";
+import React, { useEffect } from "react";
+import { signIn, useSession } from "next-auth/react";
+import { SparklesCore } from "@/components/ui/sparkles";
+import BarLoader from "@/components/ui/BarLoader";
 
 function LoginForm() {
-  //state for session
-  const [session, setSession] = useState(null);
-
-  //fetch session
-  const fetchSession = async () => {
-    const session = await getServerSession();
-    if (session) {
-      console.log("Session:", session);
-    }
-  };
+  // Fetch the session and check if the user is logged in
+  const { data: session } = useSession();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const session = await getServerSession();
-      console.log("Server session:", session);
-    };
+    // If the user is logged in, redirect to /profile
+    if (session) {
+      window.location.href = "/profile";
+    } else {
+      handleGoogleSignIn();
+    }
+  }, [session]);
 
-    fetchData();
-  }, []);
+  // Function to handle Google sign-in
+  const handleGoogleSignIn = () => {
+    signIn("google");
+  };
 
   return (
-    <div className={"grid gap-6"}>
-      <Button variant={"outline"} onClick={() => signIn("google")}>
-        Google
-      </Button>
-      <Button variant={"outline"} onClick={() => fetchSession}></Button>
+    <div className="h-[40rem] relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <h1 className=" text-3xl text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500">
+        Redirecting you now!
+      </h1>
+
+      <BarLoader />
     </div>
   );
 }

@@ -8,19 +8,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { getSession, useSession } from "next-auth/react";
 import { signIn, signOut } from "next-auth/react";
 import styles from "./userButton.module.css";
 import UserAvatar from "@/components/UserAvatar";
 import { CircleUserRound } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { useRouter } from "next/router";
 
 function UserButton() {
   const [userName, setUserName] = useState<string | null>(null);
@@ -66,12 +60,12 @@ function UserButton() {
           </Link>
         ) : (
           // Render a button that calls signIn if the user is not logged in
-          <button
+          <Link
             className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold"
-            onClick={() => signIn()}
+            href={"/login"}
           >
             Login
-          </button>
+          </Link>
         )}
 
         {userName && (

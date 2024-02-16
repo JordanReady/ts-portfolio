@@ -74,7 +74,10 @@ function Profile() {
   }, [triggerFetch]);
 
   return (
-    <div className="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div
+      id="profilePage"
+      className="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8"
+    >
       {/* Left column - Profile Card */}
       <div className="md:col-span-1">
         <Reveal direction="top" delayTime={0}>
