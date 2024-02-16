@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <nav
-      className={`${styles.header} bg-white shadow-sm dark:shadow-blue-600 shadow-indigo-500 dark:bg-slate-950 w-full border-b md:border-0`}
+      className={`${styles.header} bg-slate-50 shadow-sm dark:shadow-blue-600 shadow-indigo-500 dark:bg-slate-950 w-full border-b md:border-0`}
     >
       <div className="flex flex-col sm:flex-row items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className=" w-full flex items-center justify-center py-3 md:py-5 md:justify-start ">

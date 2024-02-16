@@ -40,7 +40,7 @@ export default async function RootLayout({
             rel="stylesheet"
           />
         </head>
-        <body className={inter.className}>
+        <body className={`${inter.className} bg-slate-50 dark:bg-slate-950`}>
           <GoogleTagManager gtmId="GTM-NPSLR98B" />
           <FirebaseAuthProvider>
             <ThemeProvider

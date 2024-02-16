@@ -26,8 +26,8 @@ function ServiceTypeControls({
   return (
     <div className={styles.container}>
       <Reveal delayTime={0}>
-        <h3 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold mt-5">
-          Service Type
+        <h3 className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold mt-5 mb-2">
+          {"< Service Type />"}
         </h3>
       </Reveal>
       <div className={styles.buttonRow}>
