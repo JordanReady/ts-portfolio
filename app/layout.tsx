@@ -44,6 +44,10 @@ export default async function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Strike&display=swap"
             rel="stylesheet"
           />
+          <meta
+            property="og:image"
+            content="https://opengraph.b-cdn.net/production/documents/9dda9387-58dc-4293-8375-2aec12bad28e.png?token=L_st_jutAgGTrQiwJqnvLK95U9LFfE1cUV6LRzxVhlk&height=630&width=1200&expires=33244205242"
+          ></meta>
         </head>
         <body className={`${inter.className} bg-slate-50 dark:bg-slate-950`}>
           <GoogleTagManager gtmId="GTM-NPSLR98B" />
