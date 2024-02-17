@@ -9,6 +9,7 @@ import SessionProvider from "@/components/SessionProvider";
 import TopPageButton from "@/components/TopPageButton";
 import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Jordan Ready | Web Development Services for Seamless Solutions",
+    type: "website",
     url: "/favicon.ico?v-4",
   },
   manifest: "/site.webmanifest",
@@ -56,6 +58,7 @@ export default async function RootLayout({
             >
               <Header />
               {children}
+              <SpeedInsights />
               <TopPageButton />
             </ThemeProvider>
           </FirebaseAuthProvider>
