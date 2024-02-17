@@ -21,6 +21,10 @@ export const metadata: Metadata = {
     apple: ["/apple-touch-icon.png?v=4"],
     shortcut: ["/apple-touch-icon.png"],
   },
+  openGraph: {
+    title: "Jordan Ready | Web Development Services for Seamless Solutions",
+    url: "/favicon.ico?v-4",
+  },
   manifest: "/site.webmanifest",
 };
 
