@@ -89,7 +89,9 @@ function ProjectMoreCard({
               <div className={`${styles.img}`}>
                 <Image
                   src={image[selectedMainImage]}
-                  alt={`Photo ${selectedMainImage + 1}`}
+                  alt={`Web development desktop and mobile view mockup ${
+                    selectedMainImage + 1
+                  }`}
                   width={1000}
                   loading="lazy"
                   placeholder="blur"
@@ -259,7 +261,7 @@ function ProjectMoreCard({
                     >
                       <Image
                         src={img}
-                        alt={`Photo ${index + 1}`}
+                        alt={`Website page ${index + 1}`}
                         className="pb-2 "
                         onClick={() => handleClick(index)}
                         loading="lazy"
@@ -277,7 +279,7 @@ function ProjectMoreCard({
                     >
                       <Image
                         src={images[selectedImage]}
-                        alt={`Photo ${selectedImage + 1}`}
+                        alt={`Website page ${selectedImage + 1}`}
                         loading="lazy"
                         placeholder="blur"
                       />
@@ -326,7 +328,7 @@ function ProjectMoreCard({
                 <Reveal delayTime={0.35} color="var(--primary-color)">
                   <Image
                     src={performance}
-                    alt={`Performance image`}
+                    alt={`Performance metrics image`}
                     loading="lazy"
                     placeholder="blur"
                     className={`${styles.performanceImg} shadow-md`}
@@ -362,7 +364,7 @@ function ProjectMoreCard({
                 <Reveal delayTime={0.35} color="var(--primary-color)">
                   <Image
                     src={performanceOld}
-                    alt={`Old performance image`}
+                    alt={`Old performance metrics image`}
                     loading="lazy"
                     placeholder="blur"
                     className={`${styles.performanceImg} shadow-md`}
@@ -398,7 +400,7 @@ function ProjectMoreCard({
                 <Reveal delayTime={0.35} color="var(--primary-color)">
                   <Image
                     src={performanceNew}
-                    alt={`New performance image`}
+                    alt={`New performance metrics image`}
                     loading="lazy"
                     placeholder="blur"
                     className={`${styles.performanceImg} shadow-md`}

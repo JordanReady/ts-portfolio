@@ -27,7 +27,7 @@ function ProfileCard({ name, profession, img, bio }: ProfileCardProps) {
                   loading="lazy"
                   sizes="fill"
                   src={img}
-                  alt="Profile Image"
+                  alt="Web development project desktop and mobile mockup design"
                   width={155}
                   height={155}
                   className={`${styles.logoImg} bg-white dark:bg-slate-900 border-b-1 gap-2 rounded-full`}
@@ -54,7 +54,7 @@ function ProfileCard({ name, profession, img, bio }: ProfileCardProps) {
           </div>
         </div>
         <Reveal color="grey" direction="top" delayTime={0.4}>
-          <p className="mt-3">
+          <p className="mt-3 pb-2">
             {bio ||
               "Update your bio with a bit of information about yourself or business!"}
           </p>

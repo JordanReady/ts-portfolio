@@ -57,7 +57,7 @@ function About() {
               loading="lazy"
               sizes="fill"
               src={heroImages[selectedMainImage]}
-              alt={`Photo ${selectedMainImage + 1}`}
+              alt={`AI created character image ${selectedMainImage + 1}`}
               width={320}
               height={320}
               className={styles.aiImgs}
@@ -126,7 +126,7 @@ ${styles.photoCard} ${styles.card1}`}
               placeholder="blur"
               sizes="fill"
               src={Img2}
-              alt="Logo Image"
+              alt="Image of Jordan Ready on a snowboard mid air performing a cork 540 trick"
               className={styles.smallImg}
             />
             <p className={styles.location}>
@@ -144,7 +144,7 @@ ${styles.photoCard} ${styles.card2}`}
               placeholder="blur"
               sizes="fill"
               src={Img4}
-              alt="Logo Image"
+              alt="Image of Jordan Ready outside scaling a rock face with rock climbing saftey equipment"
               className={styles.smallImg}
             />
             <p className={styles.location}>
@@ -162,7 +162,7 @@ ${styles.photoCard} ${styles.card1}`}
               placeholder="blur"
               sizes="fill"
               src={Img3}
-              alt="Logo Image"
+              alt="Image of Jordan Ready Wakeboarding on a lake"
               className={styles.smallImg}
             />
             <p className={styles.location}>

@@ -59,7 +59,7 @@ function Contact() {
                 >
                   <Image
                     src={Logo}
-                    alt="Logo"
+                    alt="Jordan Ready AI created logo"
                     width={130}
                     height={130}
                     className={`${styles.logoImg}  bg-white dark:bg-slate-900 `}

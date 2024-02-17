@@ -36,22 +36,22 @@ function UserButton() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        {session ? (
-          // User is signed in, render ProfileCard
-
+      {session ? (
+        <DropdownMenuTrigger>
           <UserAvatar />
-        ) : (
-          // User is not signed in, render the Open button
+        </DropdownMenuTrigger>
+      ) : (
+        // User is not signed in, render the Open button
+        <Link href={"/login"}>
           <Button
             className="group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 p-0"
-            variant={"outline"}
-            onClick={() => signIn()}
+            variant="outline"
           >
             <CircleUserRound className="text-white" strokeWidth={1} />
           </Button>
-        )}
-      </DropdownMenuTrigger>
+        </Link>
+      )}
+
       <DropdownMenuContent className={styles.contentContainer}>
         {session ? (
           // Render a link to "/profile" if the user is logged in

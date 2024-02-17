@@ -30,6 +30,10 @@ export default function Home() {
         <Reveal direction="bottom" delayTime={0.5} color="gray">
           <h3 className={` ${styles.typedContainer}`}>
             <span className={styles.spacer}></span>
+            <span className="sr-only">
+              Web Developer, Software Engineer, Full-stack Web Developer,
+              Website Creator
+            </span>
             <span>
               <HeroTyped />
             </span>
@@ -37,11 +41,11 @@ export default function Home() {
         </Reveal>
         <Reveal direction="left" delayTime={0.6} color="gray">
           <p>
-            My expertise lies in both front-end and back-end technologies, which
-            allows me to tackle projects with a comprehensive perspective. I
-            believe in leveraging the latest tools and frameworks to create
-            efficient, scalable, and user-friendly applications. Welcome to my
-            website, and thank you for taking the time to learn more about me.
+            I seamlessly blend front-end and back-end technologies to deliver
+            holistic solutions for diverse projects. My commitment to excellence
+            drives me to harness the power of cutting-edge tools and frameworks,
+            ensuring the creation of efficient, scalable, and user-friendly
+            applications. Let's turn your ideas into exceptional web solutions!
           </p>
         </Reveal>
 
@@ -83,7 +87,7 @@ export default function Home() {
               placeholder="blur"
               sizes="fill"
               src={HeroImage}
-              alt="Logo Image"
+              alt="Jordan Ready AI created animated logo"
             />
           </>
         </Reveal>

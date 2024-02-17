@@ -34,7 +34,10 @@ const TopPageButton = () => {
           onClick={scrollToTop}
           className="w-16 md:w-24 fixed bottom-1 right-1 bg-transparent text-white"
         >
-          <Image src={SpaceShip} alt="Top of page button" />
+          <Image
+            src={SpaceShip}
+            alt="Top of page button that looks like a rocket ship!"
+          />
           <span className="sr-only">Top of page</span>
         </button>
       </Reveal>

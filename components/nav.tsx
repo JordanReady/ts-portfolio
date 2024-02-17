@@ -61,7 +61,7 @@ export function NavigationMenuDemo() {
                       <div>
                         <Image
                           src={Logo}
-                          alt="Logo"
+                          alt="Jordan Ready AI Created logo"
                           width={130}
                           height={130}
                           loading="lazy"

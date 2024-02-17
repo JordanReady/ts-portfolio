@@ -13,8 +13,9 @@ import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jordan Ready",
-  description: "Developed by Jordan Ready at jordanready.com",
+  title: "Jordan Ready | Web Development Services for Seamless Solutions",
+  description:
+    "Web Development Services for a Powerful Online Presence | Developed by Jordan Ready at jordanready.com",
   icons: {
     icon: ["/favicon.ico?v=4"],
     apple: ["/apple-touch-icon.png?v=4"],
