@@ -14,18 +14,16 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jordan Ready | Web Development Services for Seamless Solutions",
+  title: {
+    default: "Jordan Ready | Web Development Services for Seamless Solutions",
+    template: "%s | Jordan Ready",
+  },
   description:
     "Web Development Services for a Powerful Online Presence | Developed by Jordan Ready at jordanready.com",
   icons: {
     icon: ["/favicon.ico?v=4"],
     apple: ["/apple-touch-icon.png?v=4"],
     shortcut: ["/apple-touch-icon.png"],
-  },
-  openGraph: {
-    title: "Jordan Ready | Web Development Services for Seamless Solutions",
-    type: "website",
-    url: "/favicon.ico?v-4",
   },
   manifest: "/site.webmanifest",
 };

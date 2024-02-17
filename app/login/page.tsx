@@ -34,7 +34,7 @@ function Page() {
           Hang tight!
         </h1>
       </Reveal>
-      <Reveal direction="right" delayTime={0.2} color="grey">
+      <Reveal direction="right" color="grey">
         <Loader />
       </Reveal>
     </div>
