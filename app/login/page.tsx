@@ -3,6 +3,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import Reveal from "@/components/Reveal";
 import Loader from "@/components/Loader";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function Page() {
   // Fetch the session and check if the user is logged in
@@ -11,6 +12,10 @@ function Page() {
   useEffect(() => {
     // If the user is logged in, redirect to /profile
     if (session) {
+      sendGTMEvent({
+        event: "Login",
+        value: "User Login",
+      });
       window.location.href = "/profile";
     } else {
       handleGoogleSignIn();
