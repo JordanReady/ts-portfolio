@@ -15,18 +15,6 @@ export const metadata: Metadata = {
   title: "Junior Web Masters",
   description:
     "Explore in-depth details of Junior Web Masters by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
-  openGraph: {
-    title: "Junior Web Masters",
-    description:
-      "Explore in-depth details of Junior Web Masters by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
-    images: [
-      {
-        url: "https://opengraph.b-cdn.net/production/documents/9eca3e03-64a4-48be-8f18-b8e0ba50c2f9.png?token=4xI6sdpK1pAjtJmeGkhDtbzhqmbZnL506_ONIEmqw9A&height=630&width=1200&expires=33244287433",
-      },
-    ],
-    siteName: "Jordan Ready",
-    type: "website",
-  },
 };
 
 function Project() {
