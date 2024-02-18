@@ -8,6 +8,13 @@ import Photo2 from "@/public/PageTwitter2.png";
 import Photo3 from "@/public/PageTwitter3.png";
 import Photo4 from "@/public/PageTwitter4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Twitter Clone",
+  description:
+    "Explore in-depth details of Twitter Clone by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [TwitterImg, TwitterImg2, TwitterImg3, TwitterImg4];

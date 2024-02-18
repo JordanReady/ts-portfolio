@@ -9,6 +9,13 @@ import Photo3 from "@/public/PageJWM3.png";
 import Photo4 from "@/public/PageJWM4.png";
 import Perfomance from "@/public/PageJWMPerformance.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Junior Web Masters",
+  description:
+    "Explore in-depth details of Junior Web Masters by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [JWMImg, JWMImg2, JWMImg3, JWMImg4];

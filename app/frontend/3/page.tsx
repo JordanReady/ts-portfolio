@@ -8,6 +8,13 @@ import Photo from "@/public/PageBooking1.png";
 import Photo2 from "@/public/PageBooking2.png";
 import Photo3 from "@/public/PageBooking3.png";
 import Photo4 from "@/public/PageBooking4.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AirBnb Booking Clone",
+  description:
+    "Explore in-depth details of AirBnb Booking Clone by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [BookingImg, BookingImg2, BookingImg3, BookingImg4];

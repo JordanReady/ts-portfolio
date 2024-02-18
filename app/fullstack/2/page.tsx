@@ -8,6 +8,13 @@ import Photo2 from "@/public/PageChess2.png";
 import Photo3 from "@/public/PageChess3.png";
 import Photo4 from "@/public/PageChess4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Knight's Den",
+  description:
+    "Explore in-depth details of The Knight's Den by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [ChessImg, ChessImg2, ChessImg3, ChessImg4];

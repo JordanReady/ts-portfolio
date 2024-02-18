@@ -8,6 +8,13 @@ import Photo2 from "@/public/PageNews2.png";
 import Photo3 from "@/public/PageNews3.png";
 import Photo4 from "@/public/PageNews4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AirBnb News Clone",
+  description:
+    "Explore in-depth details of AirBnb News Clone by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [NewsImg, NewsImg2, NewsImg3, NewsImg4];

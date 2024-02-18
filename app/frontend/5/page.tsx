@@ -8,6 +8,13 @@ import Photo2 from "@/public/PageBridal2.png";
 import Photo3 from "@/public/PageBridal3.png";
 import Photo4 from "@/public/PageBridal4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Local Business Rebrand",
+  description:
+    "Explore in-depth details of Local Business Rebrand by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [BridalImg, BridalImg2, BridalImg3, BridalImg4];

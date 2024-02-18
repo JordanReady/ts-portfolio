@@ -8,6 +8,13 @@ import Photo from "@/public/PageYoutube1.png";
 import Photo2 from "@/public/PageYoutube2.png";
 import Photo3 from "@/public/PageYoutube3.png";
 import Photo4 from "@/public/PageYoutube4.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Youtube Clone",
+  description:
+    "Explore in-depth details of Youtube Clone by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [YoutubeImg, YoutubeImg2, YoutubeImg3, YoutubeImg4];

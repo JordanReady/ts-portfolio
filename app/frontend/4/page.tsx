@@ -8,6 +8,13 @@ import Photo from "@/public/PagePortfolio.png";
 import Photo2 from "@/public/PagePortfolio2.png";
 import Photo3 from "@/public/PagePortfolio3.png";
 import Photo4 from "@/public/PagePortfolio4.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolio Website",
+  description:
+    "Explore in-depth details of Portfolio Website by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [

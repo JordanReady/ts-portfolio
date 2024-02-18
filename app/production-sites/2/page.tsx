@@ -10,6 +10,13 @@ import Photo4 from "@/public/PageZazous4.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
 import PerformanceOld from "@/public/PageZazousPerformanceOld.png";
 import PerformanceNew from "@/public/PageZazousPerformanceNew.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Zazou's Bridal Boutique",
+  description:
+    "Explore in-depth details of Zazou's Bridal Boutique by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+};
 
 function Project() {
   const imageArray = [ZazousImg, ZazousImg2, ZazousImg3, ZazousImg4];

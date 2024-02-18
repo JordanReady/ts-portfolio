@@ -1,33 +1,15 @@
-"use client";
-import React, { useState } from "react";
-import ServiceTypeControls from "@/components/ServiceTypeControls";
-import ContractWorkServiceSheet from "@/components/ContractWorkServiceSheet";
-import WebDesignDevelopmentServiceSheet from "@/components/WebDesignDevelopmentServiceSheet";
-import PersonalProjectDevelopmentServiceSheet from "@/components/PersonalProjectDevelopmentServiceSheet";
+import React from "react";
+import Services from "./Services";
+import { Metadata } from "next";
 
-function Services() {
-  const [selectedType, setSelectedType] = useState<string>("all");
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Explore the comprehensive range of services offered by Jordan Ready, a skilled software developer based in Dubuque, Iowa. From front-end to back-end web development, Jordan provides tailored solutions for individual tasks and collaborative projects. Discover how these services can enhance your projects and bring efficiency to your development workflow.",
+};
 
-  return (
-    <div className="container">
-      <ServiceTypeControls
-        selectedType={selectedType}
-        onTypeChange={setSelectedType}
-      />
-      <div className="grid grid-cols-1 mb-4">
-        {selectedType === "all" && (
-          <>
-            <ContractWorkServiceSheet />
-            <WebDesignDevelopmentServiceSheet />
-            <PersonalProjectDevelopmentServiceSheet />
-          </>
-        )}
-        {selectedType === "contract" && <ContractWorkServiceSheet />}
-        {selectedType === "design" && <WebDesignDevelopmentServiceSheet />}
-        {selectedType === "sass" && <PersonalProjectDevelopmentServiceSheet />}
-      </div>
-    </div>
-  );
+function page() {
+  return <Services />;
 }
 
-export default Services;
+export default page;

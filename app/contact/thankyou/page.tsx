@@ -5,6 +5,13 @@ import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import Logo from "@/public/LogoRound.png";
 import Thanks from "@/public/ThankyouHeart.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thank You",
+  description:
+    "Thank you for reaching out! Your message has been received. Jordan Ready, a skilled software developer based in Dubuque, Iowa, will get back to you shortly.",
+};
 
 function ThankYou() {
   return (
