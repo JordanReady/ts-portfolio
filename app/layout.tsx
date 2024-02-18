@@ -46,7 +46,7 @@ export default async function RootLayout({
           />
           <meta
             property="og:image"
-            content="https://opengraph.b-cdn.net/production/documents/9dda9387-58dc-4293-8375-2aec12bad28e.png?token=L_st_jutAgGTrQiwJqnvLK95U9LFfE1cUV6LRzxVhlk&height=630&width=1200&expires=33244205242"
+            content="https://opengraph.b-cdn.net/production/documents/7ecd9fbe-7f8c-413b-b879-e613d0cfc3b3.png?token=4d5s-3DsUHAWh5qTg7nlNfUMwdWU9OV9RVJEDQfzniE&height=630&width=1200&expires=33244287256"
           ></meta>
         </head>
         <body className={`${inter.className} bg-slate-50 dark:bg-slate-950`}>
