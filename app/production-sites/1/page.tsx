@@ -10,11 +10,20 @@ import Photo4 from "@/public/PageJWM4.png";
 import Perfomance from "@/public/PageJWMPerformance.png";
 import ProjectMoreCard from "@/components/ProjectMoreCard";
 import { Metadata } from "next";
+import OG from "@/public/1MainJWM-opengraph-image.png";
 
 export const metadata: Metadata = {
   title: "Junior Web Masters",
   description:
     "Explore in-depth details of Junior Web Masters by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+  openGraph: {
+    title: "Junior Web Masters",
+    description:
+      "Explore in-depth details of Junior Web Masters by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+    images: [OG.src],
+    siteName: "Jordan Ready",
+    type: "website",
+  },
 };
 
 function Project() {

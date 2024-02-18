@@ -43,7 +43,7 @@ function ProjectCard({
             <div className={styles.content}>
               <div className={`${styles.innerBox}`}>
                 <h3
-                  className={`${styles.name} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500`}
+                  className={`${styles.name} text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 pb-0`}
                 >
                   {name}
                 </h3>
