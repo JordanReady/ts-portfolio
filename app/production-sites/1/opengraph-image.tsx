@@ -9,8 +9,6 @@ export const size = {
   width: 1200,
   height: 630,
 };
-export const image =
-  "https://opengraph.b-cdn.net/production/documents/9eca3e03-64a4-48be-8f18-b8e0ba50c2f9.png?token=_Bt9wybFzlwZaAUIb-qDAjbT67CC1Clqcjjo8Gbzauw&height=630&width=1200&expires=33244287790";
 
 export const contentType = "image/png";
 
