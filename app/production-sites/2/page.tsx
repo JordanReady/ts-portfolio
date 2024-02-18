@@ -11,7 +11,7 @@ import ProjectMoreCard from "@/components/ProjectMoreCard";
 import PerformanceOld from "@/public/PageZazousPerformanceOld.png";
 import PerformanceNew from "@/public/PageZazousPerformanceNew.png";
 import { Metadata } from "next";
-import OG from "@/public/1MainZazous-opengraph-image.png-opengraph-image.png";
+import OG from "@/public/1MainZazous-opengraph-image.png";
 
 export const metadata: Metadata = {
   title: "Zazou's Bridal Boutique",
