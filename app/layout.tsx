@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
+  metadataBase: new URL("https://www.jordanready.com/"),
 };
 
 export default async function RootLayout({

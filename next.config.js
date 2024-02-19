@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: ["lh3.googleusercontent.com"],
+    loader: "default",
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
