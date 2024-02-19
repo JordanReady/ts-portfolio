@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "Youtube Clone",
   description:
     "Explore in-depth details of Youtube Clone by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+  openGraph: {
+    title: "Youtube Clone",
+    description:
+      "Explore in-depth details of Youtube Clone by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+    siteName: "Jordan Ready",
+    type: "website",
+  },
 };
 
 function Project() {

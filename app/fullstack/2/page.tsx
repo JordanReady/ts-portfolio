@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "The Knight's Den",
   description:
     "Explore in-depth details of The Knight's Den by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+  openGraph: {
+    title: "The Knight's Den",
+    description:
+      "Explore in-depth details of The Knight's Den by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+    siteName: "Jordan Ready",
+    type: "website",
+  },
 };
 
 function Project() {

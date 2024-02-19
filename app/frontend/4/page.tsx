@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "Portfolio Website",
   description:
     "Explore in-depth details of Portfolio Website by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+  openGraph: {
+    title: "Portfolio Website",
+    description:
+      "Explore in-depth details of Portfolio Website by Jordan Ready. Learn about the technologies used, project scope, performance considerations, and gain a comprehensive overview. Discover the intricacies of this project, its impact, and the innovative solutions implemented.",
+    siteName: "Jordan Ready",
+    type: "website",
+  },
 };
 
 function Project() {
