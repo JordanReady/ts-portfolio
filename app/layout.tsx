@@ -25,6 +25,19 @@ export const metadata: Metadata = {
     apple: ["/apple-touch-icon.png?v=4"],
     shortcut: ["/apple-touch-icon.png"],
   },
+  openGraph: {
+    title: "Jordan Ready | Web Development Services for Seamless Solutions",
+    description:
+      "Web Development Services for a Powerful Online Presence | Developed by Jordan Ready at jordanready.com",
+    images: [
+      {
+        url: "https://opengraph.b-cdn.net/production/documents/7ecd9fbe-7f8c-413b-b879-e613d0cfc3b3.png?token=4d5s-3DsUHAWh5qTg7nlNfUMwdWU9OV9RVJEDQfzniE&height=630&width=1200&expires=33244287256",
+        width: 1200,
+        height: 630,
+        alt: "Jordan Ready | Web Development Services for Seamless Solutions",
+      },
+    ],
+  },
   manifest: "/site.webmanifest",
 };
 
@@ -44,10 +57,6 @@ export default async function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Strike&display=swap"
             rel="stylesheet"
           />
-          <meta
-            property="og:image"
-            content="https://opengraph.b-cdn.net/production/documents/7ecd9fbe-7f8c-413b-b879-e613d0cfc3b3.png?token=4d5s-3DsUHAWh5qTg7nlNfUMwdWU9OV9RVJEDQfzniE&height=630&width=1200&expires=33244287256"
-          ></meta>
         </head>
         <body className={`${inter.className} bg-slate-50 dark:bg-slate-950`}>
           <GoogleTagManager gtmId="GTM-NPSLR98B" />
