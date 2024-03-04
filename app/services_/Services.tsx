@@ -4,28 +4,14 @@ import ServiceTypeControls from "@/components/ServiceTypeControls";
 import ContractWorkServiceSheet from "@/components/ContractWorkServiceSheet";
 import WebDesignDevelopmentServiceSheet from "@/components/WebDesignDevelopmentServiceSheet";
 import PersonalProjectDevelopmentServiceSheet from "@/components/PersonalProjectDevelopmentServiceSheet";
+import WebsitePackageOverview from "@/components/WebsitePackageOverview";
 
 function Services() {
   const [selectedType, setSelectedType] = useState<string>("all");
 
   return (
     <div className="container">
-      <ServiceTypeControls
-        selectedType={selectedType}
-        onTypeChange={setSelectedType}
-      />
-      <div className="grid grid-cols-1 mb-4">
-        {selectedType === "all" && (
-          <>
-            <ContractWorkServiceSheet />
-            <WebDesignDevelopmentServiceSheet />
-            <PersonalProjectDevelopmentServiceSheet />
-          </>
-        )}
-        {selectedType === "contract" && <ContractWorkServiceSheet />}
-        {selectedType === "design" && <WebDesignDevelopmentServiceSheet />}
-        {selectedType === "sass" && <PersonalProjectDevelopmentServiceSheet />}
-      </div>
+      <WebsitePackageOverview />
     </div>
   );
 }

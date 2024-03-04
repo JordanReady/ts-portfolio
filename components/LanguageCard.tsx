@@ -29,14 +29,14 @@ function LanguageCard({
   return (
     <div className={styles.container}>
       <div
-        className={`${styles.card} bg-white shadow-sm dark:shadow-purple-700 shadow-purple-400 dark:bg-gray-900 w-full border-b md:border-0`}
+        className={`${styles.card}  bg-slate-100 shadow-sm dark:shadow-grey-200 shadow-grey-800 dark:bg-gray-900 w-full border-b md:border-0 p-1`}
       >
         <Image src={img} alt="Logo Image" />
         <h1>{language}</h1>
         <Progress
           color={color}
           value={progress}
-          className="dark:bg-white00  bg-purple-200 text-white"
+          className="dark:bg-white00 bg-slate-200 text-white"
         />
       </div>
     </div>

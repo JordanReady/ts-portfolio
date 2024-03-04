@@ -9,6 +9,7 @@ interface Props {
   color?: string;
   direction?: "top" | "bottom" | "left" | "right";
   duration?: number;
+  style?: string;
 }
 
 function Reveal({
@@ -18,6 +19,7 @@ function Reveal({
   color,
   direction,
   duration = 0.5,
+  style,
 }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -96,6 +98,7 @@ function Reveal({
           duration: duration,
           delay: delayTime !== undefined ? 0.2 + delayTime : 0,
         }}
+        className={style}
       >
         {children}
       </motion.div>

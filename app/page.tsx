@@ -31,8 +31,8 @@ export default function Home() {
           <h3 className={` ${styles.typedContainer}`}>
             <span className={styles.spacer}></span>
             <span className="sr-only">
-              Web Developer, Software Engineer, Full-stack Web Developer,
-              Website Creator
+              Jordan Ready, Web Developer, Software Engineer, Full-stack Web
+              Developer, Website Creator
             </span>
             <span>
               <HeroTyped />
