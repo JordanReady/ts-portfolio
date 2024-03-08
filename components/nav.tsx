@@ -19,28 +19,20 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const components: { title: string; href: string; description: string[] }[] = [
+const components = [
   {
-    title: "Need another developer on your team?",
-    href: "/services_/contract",
-    description: ["Let me know how to be a valuable addition to your team! "],
+    title: "Web Development",
+    href: "/services_",
+    description: ["Check out the web service packages I provide!"],
+    target: "",
   },
   {
-    title: "Need help creating or updating a website for your buisness?",
-    href: "/services_/designing",
-    description: ["I can help you create the website your buisness deservse!"],
-  },
-  {
-    title: "Need help creating a SASS?",
-    href: "/services_/developing",
+    title: "JRui",
+    href: "https://jrui.vercel.app/",
     description: [
-      "I can help you create your software as a service buisness ideas!",
+      "The best way to get your full-stack applications developed and deployed!",
     ],
-  },
-  {
-    title: "Jordan Ready",
-    href: "/contact",
-    description: ["Software Developer", " | ", "Get in touch"],
+    target: "_blank",
   },
 ];
 
@@ -94,13 +86,32 @@ export function NavigationMenuDemo() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem className="inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-            <Link href="/services_" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <span className=" "> Services</span>
-              </NavigationMenuLink>
-            </Link>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>
+              <Link href={"/services_"}>Services</Link>
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul
+                className={`grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ${styles.listContainer}`}
+              >
+                {components.map((component, index) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                    className={`${styles.listItem} `}
+                    target={component.target}
+                  >
+                    {component.description.length > 1 && <br />}
+                    <span className="text-sm text-muted-foreground">
+                      {component.description}
+                    </span>
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
+
           <NavigationMenuItem className="inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
