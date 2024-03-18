@@ -214,7 +214,7 @@ function ProjectMoreCard({
               delayTime={0.25}
               color="var(--primary-color)"
             >
-              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
+              <h2 className="text-4xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                 Overview
               </h2>
             </Reveal>
@@ -302,7 +302,7 @@ function ProjectMoreCard({
               delayTime={0.25}
               color="var(--primary-color)"
             >
-              <h2 className="text-6xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
+              <h2 className="text-4xl p-4 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-500 font-semibold">
                 Performance
               </h2>
             </Reveal>
