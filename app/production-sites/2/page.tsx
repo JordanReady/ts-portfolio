@@ -57,6 +57,10 @@ function Project() {
           description:
             "A comprehensive platform for bridal stores to enhance their online presence and customer experience.",
         },
+        {
+          name: "Google Analytics",
+          description: "Tracking user interactions with realtime updates",
+        },
       ]}
       image={imageArray}
       javascript={75}

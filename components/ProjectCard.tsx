@@ -76,11 +76,6 @@ function ProjectCard({
                   />
                 ))}
               </div>
-              {/* <Image
-            className={`${styles.btn}`}
-            src={moreButton}
-            alt="More Button"
-          ></Image> */}
             </div>
           </div>
         </div>

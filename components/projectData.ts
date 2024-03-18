@@ -9,6 +9,7 @@ import Bridal from "@/public/1MainBridalLogo.png";
 import Twitter from "@/public/1MainTwitterLogo.png";
 import Chess from "@/public/1MainChessLogo.png";
 import Airbnb from "@/public/1MainAirbnbLogo.png";
+import Jrui from "@/public/1MainJruiLogo.png";
 import BookingPage from "@/public/PageBooking1.png";
 import BookingPage2 from "@/public/PageBooking2.png";
 import BookingPage3 from "@/public/PageBooking3.png";
@@ -49,6 +50,10 @@ import AirbnbPage from "@/public/PageAirbnb.png";
 import AirbnbPage2 from "@/public/PageAirbnb2.png";
 import AirbnbPage3 from "@/public/PageAirbnb3.png";
 import AirbnbPage4 from "@/public/PageAirbnb4.png";
+import JruiPage from "@/public/PageJrui.png";
+import JruiPage2 from "@/public/PageJrui2.png";
+import JruiPage3 from "@/public/PageJrui3.png";
+import JruiPage4 from "@/public/PageJrui4.png";
 
 import { StaticImageData } from "next/image";
 
@@ -67,13 +72,13 @@ export const projects: ProjectData[] = [
   // Production Projects
   {
     type: "production-sites",
-    number: 1,
-    name: "Junior Web Masters",
-    description:
-      "Web development learning and mentoring platform tailored for young minds.",
-    technologies: "Next.js, React, TypeScript, Firebase, NextAuth, Stripe,",
-    background: JWM,
-    logos: [JWMPage, JWMPage2, JWMPage3, JWMPage4],
+    number: 3,
+    name: "JRui Resource",
+    description: "The complete Full-Stack Developer Resource",
+    technologies:
+      "Next.js, React, TypeScript, TailwindCSS, Firebase, NextAuth, Google Analytics",
+    background: Jrui,
+    logos: [JruiPage, JruiPage2, JruiPage3, JruiPage4],
     moreButton: MoreButton,
   },
   {
@@ -82,9 +87,21 @@ export const projects: ProjectData[] = [
     name: "Zazou's Bridal Boutique",
     description:
       "Zazou's Bridal Boutique & Tuxedos updated and optimized site.",
-    technologies: "Next.js, React, TailwindCSS, CSS Modules, Bridal Live",
+    technologies:
+      "Next.js, React, TailwindCSS, CSS Modules, Bridal Live, Google Analytics",
     background: Zazous,
     logos: [ZazousPage, ZazousPage2, ZazousPage3, ZazousPage4],
+    moreButton: MoreButton,
+  },
+  {
+    type: "production-sites",
+    number: 1,
+    name: "Junior Web Masters",
+    description:
+      "Web development learning and mentoring platform tailored for young minds.",
+    technologies: "Next.js, React, TypeScript, Firebase, NextAuth, Stripe,",
+    background: JWM,
+    logos: [JWMPage, JWMPage2, JWMPage3, JWMPage4],
     moreButton: MoreButton,
   },
   // Fullstack Projects

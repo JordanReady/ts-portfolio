@@ -91,6 +91,7 @@
 .projectCard:hover .technologies p {
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
+  text-shadow: 0.5px 0.5px white;
 }
 
 .projectCard:hover .technologies strong {
@@ -131,7 +132,7 @@
   animation-delay: 1.4s;
 }
 .projectCard:hover .technologies p:nth-child(8) {
-  animation-delay: 1.5;
+  animation-delay: 1.5s;
 }
 .projectCard:hover .technologies p:nth-child(9) {
   animation-delay: 1.6s;
@@ -141,6 +142,9 @@
 }
 .projectCard:hover .technologies p:nth-child(11) {
   animation-delay: 1.75s;
+}
+.projectCard:hover .technologies p:nth-child(12) {
+  animation-delay: 1.8s;
 }
 
 .projectCard:hover .pages img:nth-child(1) {
