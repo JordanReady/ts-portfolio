@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import styles from "./HomePage.module.css"; // Assuming you have a CSS module file
 import HeroImage from "@/public/MyLogo.png";

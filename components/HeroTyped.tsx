@@ -1,3 +1,4 @@
+"use client";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 
