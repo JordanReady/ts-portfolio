@@ -89,8 +89,8 @@ function Project() {
         `I plan on continuing to expand this library to become the go-to resource for developers looking to streamline their full-stack development process!`,
       ]}
       images={[Photo, Photo2, Photo3, Photo4]}
-      repoLink="https://github.com/JordanReady/Zazous"
-      siteLink="https://zazous.vercel.app/"
+      repoLink="https://github.com/JordanReady/jrui"
+      siteLink="https://jrui.vercel.app/"
       performance={Performance}
       performanceText={[
         `I take immense pride in crafting high-performance websites that not only meet industry standards but exceed them. My efforts are validated through Google Lighthouse, a tool that evaluates web pages in terms of performance, accessibility, best practices, and SEO.`,

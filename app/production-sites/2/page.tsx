@@ -75,7 +75,7 @@ function Project() {
       ]}
       images={[Photo, Photo2, Photo3, Photo4]}
       repoLink="https://github.com/JordanReady/Zazous"
-      siteLink="https://zazous.vercel.app/"
+      siteLink="https://www.zazousbridalandtuxedos.com/"
       performanceOld={PerformanceOld}
       performanceNew={PerformanceNew}
       performanceOldText={[
