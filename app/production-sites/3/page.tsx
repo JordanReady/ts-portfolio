@@ -60,6 +60,11 @@ function Project() {
           description: "Authentication library for Next.js applications.",
         },
         {
+          name: "Custom CLI",
+          description:
+            "CLI to allow users to use simple commands to easily import sections and components into their projects",
+        },
+        {
           name: "Google Analytics",
           description: "Tracking user interactions with realtime updates",
         },
@@ -70,22 +75,18 @@ function Project() {
       css={5}
       typeScript={95}
       overviewParagraphs={[
-        `JRui is a comprehensive platform designed to assist web developers in creating full-stack web applications with ease. It provides a collection of comprehensive guides, walkthroughs, and templates to streamline the development process from start to finish. Whether you're a beginner or an experienced developer, this resource hub offers everything you need to build robust and scalable web applications.`,
+        `JRui is a comprehensive platform designed to assist web developers in creating full-stack web applications with ease. It provides a collection of comprehensive guides, walkthroughs, templates, and a custom built CLI to streamline the development process from start to finish. Whether you're a beginner or an experienced developer, this resource hub offers everything you need to build robust and scalable web applications.`,
         `Here are the current key features of JRui.`,
         ` Template Selection: Choose from a variety of pre-designed templates for full-stack web applications. These templates come with starter layouts and configurations to jumpstart your development process.`,
+        `Effortless Importing: With the custom CLI, importing sections and components into your projects is as simple as running a few commands. This eliminates the need for manual copying and pasting, saving you time and effort.`,
         `
-
         Customization Options: Easily customize your selected template by adding features, sections, and components directly from the site. This intuitive interface allows you to tailor your application to meet your specific requirements.`,
         `
-        
         Ticketing System: A built-in ticketing system enables users to request new components, report problems, or submit bugs related to existing components on the site. This ensures continuous improvement and user feedback integration. `,
         `
-        
         Admin Dashboard: As the project creator, you have access to an admin dashboard to manage user tickets, track feedback, and monitor site performance. This allows for efficient management of user interactions and site maintenance.`,
         `
-        
         Continuous Updates: The resource hub is regularly updated with new components, features, sections, and templates to meet the evolving needs of developers. This ensures that developers have access to the latest tools and resources for their projects. `,
-
         `I plan on continuing to expand this library to become the go-to resource for developers looking to streamline their full-stack development process!`,
       ]}
       images={[Photo, Photo2, Photo3, Photo4]}

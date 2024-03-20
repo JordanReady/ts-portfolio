@@ -76,7 +76,7 @@ export const projects: ProjectData[] = [
     name: "JRui Resource",
     description: "The complete Full-Stack Developer Resource",
     technologies:
-      "Next.js, React, TypeScript, TailwindCSS, Firebase, NextAuth, Google Analytics",
+      "Next.js, React, TypeScript, TailwindCSS, Google Analytics, Firebase, NextAuth, Custom CLI",
     background: Jrui,
     logos: [JruiPage, JruiPage2, JruiPage3, JruiPage4],
     moreButton: MoreButton,
@@ -88,7 +88,7 @@ export const projects: ProjectData[] = [
     description:
       "Zazou's Bridal Boutique & Tuxedos updated and optimized site.",
     technologies:
-      "Next.js, React, TailwindCSS, CSS Modules, Bridal Live, Google Analytics",
+      "Next.js, React, TailwindCSS, CSS Modules, Google Analytics, Bridal Live",
     background: Zazous,
     logos: [ZazousPage, ZazousPage2, ZazousPage3, ZazousPage4],
     moreButton: MoreButton,
