@@ -28,7 +28,7 @@
 }
 
 .nameTitleGroup {
-  padding-left: 1rem;
+  max-width: 300px;
 }
 
 /* screen sizes */

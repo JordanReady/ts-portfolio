@@ -262,6 +262,17 @@ lg:col-span-3 lg:row-span-2 mb-6 flex flex-col justify-center align-middle"
                   </CarouselItem>
                   <CarouselItem>
                     <Review
+                      name="Jodi Stricker"
+                      profession="Zazou's Bridal Boutique & Tuxedos"
+                      date="03/22/2024"
+                      review="Amazing Experience working with Jordan Ready building our new robust website! From our first meeting, Jordan was extremely organized and eager to learn about our business first and foremost. He asked us detailed questions about our store operations, our culture, what inspires us to do what we do and more. He got to know who we were as a family company first-he listened to what was working and what our challenges were. He then proceeded to offer suggestions and he explained everything to me in layman terms and ensured I could always understand what tools he was implementing and how it would better serve us and our clients. Jordan fully understood our Mission and Value Statement at Zazou's Bridal Boutique & Tuxedos and built us the most functional and user friendly website! Jordan took his service to the next level when he supported our company in our Google partnership. Wow...I could have NEVER done this without his assistance! He was in countless meetings with Google Representatives and myself taking our website to the next level. Jordan took the lead on our Google calls to set up correlating campaigns, triggers and more! He then went even further with his service and ran a trial campaign next to Google to ensure we could capture the exact date our business was needing for analytics. This was priceless!! Thank you for all your hard work, answering all my questions and building us the best customer friendly website! I will recommend you to everyone! Jodi Stricker and Team Zazou's"
+                      img="https://lh3.googleusercontent.com/a/ACg8ocLZeGxvAs2Uhs_atIDsWGESZ8kjDh6TU1pPO9wFIGLcbLs=s96-c"
+                      rating={5}
+                      reviewId="null"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Review
                       name="Jordan Ready"
                       profession="Software Developer"
                       date="01/15/2024"

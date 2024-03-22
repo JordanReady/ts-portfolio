@@ -82,7 +82,7 @@ function Review({
         </button>
       )}
       <div className="bg-white p-2 md:p-5 rounded-md dark:bg-slate-900">
-        <div className={styles.topRow}>
+        <div className={`${styles.topRow} gap-3`}>
           <Reveal direction="left" delayTime={0.4}>
             <div
               className={`${styles.logo} relative p-0.5 mb-2  overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 shadow-md`}
@@ -94,9 +94,9 @@ function Review({
                   sizes="fill"
                   src={img}
                   alt="Profile Image"
-                  width={155}
-                  height={155}
-                  className={`${styles.logoImg} bg-white dark:bg-slate-900 border-b-1 gap-2 rounded-full`}
+                  width={150}
+                  height={150}
+                  className={`${styles.logoImg} bg-white dark:bg-slate-900 border-b-1 rounded-full`}
                 />
               )}
               {!img && (
