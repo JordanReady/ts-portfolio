@@ -91,7 +91,7 @@ function Project() {
       ]}
       images={[Photo, Photo2, Photo3, Photo4]}
       repoLink="https://github.com/JordanReady/jrui"
-      siteLink="https://jrui.vercel.app/"
+      siteLink="https://jrui.org/"
       performance={Performance}
       performanceText={[
         `I take immense pride in crafting high-performance websites that not only meet industry standards but exceed them. My efforts are validated through Google Lighthouse, a tool that evaluates web pages in terms of performance, accessibility, best practices, and SEO.`,

@@ -28,7 +28,7 @@ const components = [
   },
   {
     title: "JRui",
-    href: "https://jrui.vercel.app/",
+    href: "https://jrui.org",
     description: [
       "The best way to get your full-stack applications developed and deployed!",
     ],
