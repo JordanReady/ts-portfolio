@@ -30,6 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://www.jordanready.com/production-sites/2",
     },
     {
+      url: "https://www.jordanready.com/production-sites/3",
+    },
+    {
       url: "https://www.jordanready.com/fullstack",
     },
     {
