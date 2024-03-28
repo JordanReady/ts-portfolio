@@ -82,10 +82,16 @@ function Contact() {
                   <p className=" mb-2">Dubuque, IA</p>
                 </Reveal>
                 <Reveal direction="top" delayTime={0.55} color="grey">
-                  <p className=" mb-2">563-593-3110</p>
+                  <p className="mb-2">
+                    <a href="tel:563-593-3110">563-593-3110</a>
+                  </p>
                 </Reveal>
                 <Reveal direction="top" delayTime={0.6} color="grey">
-                  <p className=" mb-4">jready112@gmail.com</p>
+                  <p className=" mb-4">
+                    <a href="mailto:jready112@gmail.com" className="mb-4">
+                      jready112@gmail.com
+                    </a>
+                  </p>
                 </Reveal>
                 <Reveal direction="top" delayTime={0.7} color="#9333ea">
                   <CustomButton
